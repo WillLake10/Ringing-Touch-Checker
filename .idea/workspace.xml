@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aed8ce6f-4487-430c-872d-54367adf78c0" name="Default Changelist" comment="" />
+    <list default="true" id="aed8ce6f-4487-430c-872d-54367adf78c0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Ringing-Touch-Checker.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ringing-Touch-Checker/src/com/williamLake/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ringing-Touch-Checker/src/com/williamLake/main/Main.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,21 +23,17 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/williamLake/main/Main.java">
+        <entry file="file://$PROJECT_DIR$/Ringing-Touch-Checker/src/com/williamLake/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+            <state relative-caret-position="138">
+              <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/williamLake/test/MainTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/Ringing-Touch-Checker/src/com/williamLake/test/MainTest.java">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -44,14 +47,15 @@
         <option value="$PROJECT_DIR$/src/com/williamLake/Main.java" />
         <option value="$PROJECT_DIR$/src/com/williamLake/Main/Main.java" />
         <option value="$PROJECT_DIR$/src/com/williamLake/main/Main.java" />
+        <option value="$PROJECT_DIR$/Ringing-Touch-Checker/src/com/williamLake/main/Main.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-20" />
     <option name="y" value="-20" />
-    <option name="width" value="2798" />
-    <option name="height" value="1514" />
+    <option name="width" value="2799" />
+    <option name="height" value="1515" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -59,6 +63,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -69,25 +75,44 @@
             <path>
               <item name="Ringing-Touch-Checker" type="b2602c69:ProjectViewProjectNode" />
               <item name="Ringing-Touch-Checker" type="462c0819:PsiDirectoryNode" />
+              <item name="Ringing-Touch-Checker" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Ringing-Touch-Checker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ringing-Touch-Checker" type="462c0819:PsiDirectoryNode" />
+              <item name="Ringing-Touch-Checker" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Ringing-Touch-Checker" type="b2602c69:ProjectViewProjectNode" />
               <item name="Ringing-Touch-Checker" type="462c0819:PsiDirectoryNode" />
+              <item name="Ringing-Touch-Checker" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Ringing-Touch-Checker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ringing-Touch-Checker" type="462c0819:PsiDirectoryNode" />
+              <item name="Ringing-Touch-Checker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="williamLake" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Ringing-Touch-Checker" type="b2602c69:ProjectViewProjectNode" />
               <item name="Ringing-Touch-Checker" type="462c0819:PsiDirectoryNode" />
+              <item name="Ringing-Touch-Checker" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="williamLake" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Ringing-Touch-Checker" type="b2602c69:ProjectViewProjectNode" />
               <item name="Ringing-Touch-Checker" type="462c0819:PsiDirectoryNode" />
+              <item name="Ringing-Touch-Checker" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="williamLake" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -95,8 +120,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -146,16 +169,18 @@
       <option name="presentableId" value="Default" />
       <updated>1578159593737</updated>
       <workItem from="1578159601990" duration="1512000" />
+      <workItem from="1578164804479" duration="51000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2079000" />
+    <option name="totallyTimeSpent" value="2130000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25302014" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25637585" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -189,17 +214,15 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/williamLake/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="25" column="24" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/com/williamLake/main/Main.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/williamLake/test/MainTest.java" />
+    <entry file="file://$PROJECT_DIR$/Ringing-Touch-Checker/src/com/williamLake/test/MainTest.java">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/williamLake/test/MainTest.java">
+    <entry file="file://$PROJECT_DIR$/Ringing-Touch-Checker/src/com/williamLake/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        <state relative-caret-position="138">
+          <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
         </state>
       </provider>
     </entry>

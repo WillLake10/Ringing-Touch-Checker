@@ -12,7 +12,7 @@ public class Main {
         int numOfBells = 0;
         boolean valid = false;
         while (valid == false){
-            System.out.print("How many bells in methord (Enter number between 4 and 12): ");
+            System.out.print("How many bells in the methord (Enter number between 4 and 12): ");
             numOfBells = GetIntInput();
             if (CheckNumOfBellsValid((numOfBells))){
                 valid = true;
