@@ -1,4 +1,4 @@
-package com.williamlake.main.dto;
+package com.williamlake.main.data;
 
 public class Methord {
     private String methord_proper;
