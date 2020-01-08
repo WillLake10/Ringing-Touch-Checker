@@ -1,11 +1,14 @@
 package com.williamlake.main;
 
+
+import com.williamlake.main.data.Methord;
+
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        // write your code here
+        Methord newMethord;
     }
 
     public static int numberOfBells(){
