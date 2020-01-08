@@ -13,13 +13,13 @@ public class Methord {
         this.name = getName(no_of_bells,methord_proper);
     }
 
-    public String getName(int no_of_bells, String methord_proper){
+    public static String getName(int no_of_bells, String methord_proper){
         String Name;
-        Name = methord_proper + getStage(no_of_bells);
+        Name = methord_proper + " " + getStage(no_of_bells);
         return Name;
     }
 
-    public String getStage(int no_of_bells){
+    public static String getStage(int no_of_bells){
         switch (no_of_bells) {
             case 4:
                 return "Minimus";
