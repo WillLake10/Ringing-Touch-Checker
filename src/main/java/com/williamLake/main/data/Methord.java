@@ -9,14 +9,7 @@ public class Methord {
     private String single_notation;
 
 
-    public Methord(String notation, int no_of_bells, String methord_proper){
-        this.no_of_bells = no_of_bells;
-        this.notation = notation;
-        this.methord_proper = methord_proper;
-        this.name = getName(no_of_bells,methord_proper);
-    }
-
-    public Methord(String methord_proper, String notation, int no_of_bells, String bob_notation, String single_notation, String extra1_name, String extra1_notation, String extra2_name, String extra2_notation) {
+    public Methord(String methord_proper, String notation, int no_of_bells, String bob_notation, String single_notation) {
         this.methord_proper = methord_proper;
         this.notation = notation;
         this.no_of_bells = no_of_bells;

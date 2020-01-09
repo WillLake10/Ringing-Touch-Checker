@@ -25,4 +25,17 @@ public class MethordTest {
         name = Methord.getName(8, "Plain Bob");
         assertEquals("Plain Bob Major", name);
     }
+
+    @Test
+    public void canCreateAndRetrieveMethord(){
+        Methord methord = new Methord("Plain Bob", "x,16,x,16,x,16,x,16,x,16,x,12", 6, "x,14,x", "x,1234,x");
+        methord.toString();
+
+        assertEquals("Plain Bob Minor", methord.getName());
+        assertEquals("x,16,x,16,x,16,x,16,x,16,x,12", methord.getNotation());
+        assertEquals("x,14,x", methord.getBob_notation());
+        assertEquals("x,1234,x", methord.getSingle_notation());
+
+
+    }
 }
