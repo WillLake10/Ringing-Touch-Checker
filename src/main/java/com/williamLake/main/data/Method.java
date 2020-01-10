@@ -1,7 +1,9 @@
 package com.williamlake.main.data;
 
+import java.util.Scanner;
+
 public class Method {
-    private String methord_proper;
+    private String method_proper;
     private String notation;
     private int no_of_bells;
     private String name;
@@ -9,20 +11,20 @@ public class Method {
     private String single_notation;
 
 
-    public Method(String methord_proper, String notation, int no_of_bells, String bob_notation, String single_notation) {
-        this.methord_proper = methord_proper;
+    public Method(String method_proper, String notation, int no_of_bells, String bob_notation, String single_notation) {
+        this.method_proper = method_proper;
         this.notation = notation;
         this.no_of_bells = no_of_bells;
-        setName(no_of_bells,methord_proper);
+        setName(no_of_bells,method_proper);
         this.bob_notation = bob_notation;
         this.single_notation = single_notation;
     }
 
     public Method() {
-        this.methord_proper = "";
+        this.method_proper = "";
         this.notation = "";
         this.no_of_bells = 0;
-        setName(no_of_bells,methord_proper);
+        setName(no_of_bells,method_proper);
         this.bob_notation = "";
         this.single_notation = "";
     }
@@ -59,12 +61,12 @@ public class Method {
         return null;
     }
 
-    public String getMethord_proper() {
-        return methord_proper;
+    public String getMethod_proper() {
+        return method_proper;
     }
 
-    public void setMethord_proper(String methord_proper) {
-        this.methord_proper = methord_proper;
+    public void setMethod_proper(String methord_proper) {
+        this.method_proper = methord_proper;
     }
 
     public String getNotation() {
@@ -106,7 +108,7 @@ public class Method {
     @Override
     public String toString() {
         return "Methord{" +
-                "methord_proper='" + methord_proper + '\'' +
+                "methord_proper='" + method_proper + '\'' +
                 ", notation='" + notation + '\'' +
                 ", no_of_bells=" + no_of_bells +
                 ", name='" + name + '\'' +
@@ -114,4 +116,102 @@ public class Method {
                 ", single_notation='" + single_notation + '\'' +
                 '}';
     }
+
+    //Method working functions
+
+    public static Method getInstance(){
+        Method method = new Method();
+        if(addNewMethod() == true){
+            method = Method.getNewMethod();
+            System.out.println(method.toString());
+        } else {
+
+        }
+        return method;
+    }
+
+    private static boolean addNewMethod(){
+        System.out.println("Please select an option:");
+        System.out.println("   1 - Add new method");
+        System.out.println("   2 - Open method");
+        int choice = getIntInput();
+        if(choice == 1){
+            return true;
+        } else{
+            return false;
+        }
+    }
+
+    private static Method openMethodFromFile(){
+        Method method = new Method();
+        
+        return method;
+    }
+
+    private static void listAllMethods(){
+
+    }
+
+    //Creates new method from user input
+    private static Method getNewMethod(){
+        Method newMethod = new Method();
+        String name = getMethordName();
+        int numBells = numberOfBells();
+        newMethod.setNo_of_bells(numBells);
+        newMethod.setMethod_proper(name);
+        newMethod.setName(numBells,name);
+        newMethod.setNotation(getNotation("main methord"));
+        newMethod.setBob_notation(getNotation("bob"));
+        newMethod.setSingle_notation(getNotation("single"));
+        return newMethod;
+    }
+
+    private static String getNotation(String notationType){
+        System.out.print("Enter " + notationType + " notation separated by a comma (e.g. x,16): ");
+        return getStringInput();
+    }
+
+    private static String getMethordName(){
+        System.out.print("Enter Methord name without number of bells (e.g. Plain Bob): ");
+        return getStringInputMulti();
+    }
+
+    private static int numberOfBells(){
+        int numOfBells = 0;
+        boolean valid = false;
+        while (valid == false){
+            System.out.print("How many bells in the methord (Enter number between 4 and 12): ");
+            numOfBells = getIntInput();
+            if (numOfBellsValid((numOfBells))){
+                valid = true;
+            }
+        }
+        return numOfBells;
+    }
+
+    private static boolean numOfBellsValid(int numOfBells){
+        if (numOfBells >= 4 && numOfBells <= 12){
+            return true;
+        } else{
+            System.out.println("Invalid input");
+            return false;
+        }
+    }
+
+    private static int getIntInput(){
+        Scanner keyboard = new Scanner(System.in);
+        return keyboard.nextInt();
+    }
+
+    private static String getStringInput(){
+        Scanner keyboard = new Scanner(System.in);
+        return keyboard.next();
+    }
+
+    private static String getStringInputMulti(){
+        Scanner keyboard = new Scanner(System.in);
+        return keyboard.nextLine();
+    }
+
+
 }
