@@ -1,6 +1,11 @@
 package com.williamlake.main.data;
 
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Scanner;
+import java.util.stream.Stream;
 
 public class Method {
     private String method_proper;
@@ -125,7 +130,7 @@ public class Method {
             method = Method.getNewMethod();
             System.out.println(method.toString());
         } else {
-
+            method = Method.openMethodFromFile();
         }
         return method;
     }
@@ -144,12 +149,16 @@ public class Method {
 
     private static Method openMethodFromFile(){
         Method method = new Method();
-        
+        listAllMethods();
         return method;
     }
 
     private static void listAllMethods(){
 
+        File temp = new File("method/");
+        File folder = new File(temp.getAbsolutePath());
+        String[] listOfFiles = folder.list();
+        System.out.println(listOfFiles);
     }
 
     //Creates new method from user input
