@@ -1,6 +1,6 @@
 package com.williamlake.main.data;
 
-public class Methord {
+public class Method {
     private String methord_proper;
     private String notation;
     private int no_of_bells;
@@ -9,23 +9,34 @@ public class Methord {
     private String single_notation;
 
 
-    public Methord(String methord_proper, String notation, int no_of_bells, String bob_notation, String single_notation) {
+    public Method(String methord_proper, String notation, int no_of_bells, String bob_notation, String single_notation) {
         this.methord_proper = methord_proper;
         this.notation = notation;
         this.no_of_bells = no_of_bells;
-        this.name = getName(no_of_bells,methord_proper);
+        setName(no_of_bells,methord_proper);
         this.bob_notation = bob_notation;
         this.single_notation = single_notation;
     }
 
-    public static String getName(int no_of_bells, String methord_proper){
+    public Method() {
+        this.methord_proper = "";
+        this.notation = "";
+        this.no_of_bells = 0;
+        setName(no_of_bells,methord_proper);
+        this.bob_notation = "";
+        this.single_notation = "";
+    }
+
+    public void setName(int no_of_bells, String methord_proper){
         String Name;
         Name = methord_proper + " " + getStage(no_of_bells);
-        return Name;
+        this.name = Name;
     }
 
     public static String getStage(int no_of_bells){
         switch (no_of_bells) {
+            case 0:
+                return "";
             case 4:
                 return "Minimus";
             case 5:
@@ -74,10 +85,6 @@ public class Methord {
 
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getBob_notation() {
