@@ -1,9 +1,11 @@
 package com.williamlake.main.data;
 
 import java.io.File;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.stream.Stream;
 
@@ -130,7 +132,7 @@ public class Method {
             method = Method.getNewMethod();
             System.out.println(method.toString());
         } else {
-            method = Method.openMethodFromFile();
+            method = Method.getMethodWantedLength();
         }
         return method;
     }
@@ -147,18 +149,29 @@ public class Method {
         }
     }
 
-    private static Method openMethodFromFile(){
+    private static Method getMethodWantedLength(){
         Method method = new Method();
-        listAllMethods();
+
+        method = Method.openMethodFromFile("methods");
         return method;
     }
 
-    private static void listAllMethods(){
+    private static Method openMethodFromFile(String location){
+        Method method = new Method();
+        File[] fileList = getResourceFolderFiles(location);
+        String[] methodsList = new String[fileList.length];
+        for (int i = 0; i < fileList.length; i++) {
+            methodsList[i] = fileList[i].getName().substring(0, fileList[i].getName().length() - 4);
+            System.out.println(methodsList[i]);
+        }
+        return method;
+    }
 
-        File temp = new File("method/");
-        File folder = new File(temp.getAbsolutePath());
-        String[] listOfFiles = folder.list();
-        System.out.println(listOfFiles);
+    private static File[] getResourceFolderFiles (String folder) {
+        ClassLoader loader = Thread.currentThread().getContextClassLoader();
+        URL url = loader.getResource(folder);
+        String path = url.getPath();
+        return new File(path).listFiles();
     }
 
     //Creates new method from user input
@@ -169,7 +182,7 @@ public class Method {
         newMethod.setNo_of_bells(numBells);
         newMethod.setMethod_proper(name);
         newMethod.setName(numBells,name);
-        newMethod.setNotation(getNotation("main methord"));
+        newMethod.setNotation(getNotation("main method"));
         newMethod.setBob_notation(getNotation("bob"));
         newMethod.setSingle_notation(getNotation("single"));
         return newMethod;
@@ -181,7 +194,7 @@ public class Method {
     }
 
     private static String getMethordName(){
-        System.out.print("Enter Methord name without number of bells (e.g. Plain Bob): ");
+        System.out.print("Enter Method name without number of bells (e.g. Plain Bob): ");
         return getStringInputMulti();
     }
 
@@ -189,7 +202,7 @@ public class Method {
         int numOfBells = 0;
         boolean valid = false;
         while (valid == false){
-            System.out.print("How many bells in the methord (Enter number between 4 and 12): ");
+            System.out.print("How many bells in the method (Enter number between 4 and 12): ");
             numOfBells = getIntInput();
             if (numOfBellsValid((numOfBells))){
                 valid = true;
