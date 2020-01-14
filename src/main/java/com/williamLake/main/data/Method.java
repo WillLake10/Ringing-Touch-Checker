@@ -1,15 +1,11 @@
 package com.williamlake.main.data;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.Arrays;
 import java.util.Scanner;
-import java.util.stream.Stream;
 
 public class Method {
     private String method_proper;
@@ -154,12 +150,13 @@ public class Method {
     }
     private static void saveMethodToFile(Method method){
         try {
-            FileWriter myWriter = new FileWriter("src/main/resources/methods/"+getStage(method.getNo_of_bells())+"/"+method.getName()+".txt");
-            myWriter.write(method.getName()+"|");
-            myWriter.write(method.getMethod_proper()+"|");
-            myWriter.write(method.getNo_of_bells()+"|");
-            myWriter.write(method.getNotation()+"|");
-            myWriter.write(method.getBob_notation()+"|");
+            FileWriter myWriter = new FileWriter("src/main/resources/methods/"+getStage(method.getNo_of_bells())
+                    +"/"+method.getMethod_proper()+".txt");
+            myWriter.write(method.getName()+"-");
+            myWriter.write(method.getMethod_proper()+"-");
+            myWriter.write(method.getNo_of_bells()+"-");
+            myWriter.write(method.getNotation()+"-");
+            myWriter.write(method.getBob_notation()+"-");
             myWriter.write(method.getSingle_notation());
             myWriter.close();
             System.out.println("Successfully wrote to the file.");
@@ -188,7 +185,6 @@ public class Method {
     }
 
     private static Method openMethodFromFile(String location){
-        Method method = new Method();
         File[] fileList = getResourceFolderFiles(location);
         try{
             String[] methodsList = new String[fileList.length];
@@ -197,8 +193,7 @@ public class Method {
                 methodsList[i] = fileList[i].getName().substring(0, fileList[i].getName().length() - 4);
                 System.out.println(" - " + methodsList[i]);
             }
-            //add open method
-            return method;
+            return openFile(location);
         }catch (Exception e){
             System.out.println("No methods available please try again");
             return null;
@@ -206,10 +201,20 @@ public class Method {
 
     }
 
-    private static Method openFile(Method method){
-        System.out.println("Which method do you want to open: ");
+    private static Method openFile(String location){
+        System.out.print("Which method do you want to open: ");
         String fileName = getStringInputMulti();
-
+        try {
+            File myObj = new File("src/main/resources/methods/"+location+"/"+fileName+".txt");
+            Scanner myReader = new Scanner(myObj);
+            String data[] = myReader.nextLine().split("-");
+            Method method = new Method(data[1], data[3], Integer.parseInt(data[2]), data[4], data[5]);
+            myReader.close();
+            return method;
+        } catch (FileNotFoundException e) {
+            System.out.println("An error occurred.");
+        }
+        return null;
     }
 
     private static File[] getResourceFolderFiles (String folder) {
