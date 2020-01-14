@@ -1,6 +1,8 @@
 package com.williamlake.main.data;
 
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -131,12 +133,43 @@ public class Method {
         if(addNewMethod() == true){
             method = Method.getNewMethod();
             System.out.println(method.toString());
+            wantToSaveToFile(method);
         } else {
-            method = Method.getMethodWantedLength();
+            method = null;
+            while (method == null){
+                method = Method.openMethodFromFile(findWantedStage());
+            }
         }
         return method;
     }
 
+    //save method
+    private static void wantToSaveToFile(Method method){
+        System.out.print("Want to save this method (Y/N): ");
+        String answer = getStringInput();
+        if(answer == "y" || answer == "Y"){
+            saveMethodToFile(method);
+        }
+        saveMethodToFile(method);
+    }
+    private static void saveMethodToFile(Method method){
+        try {
+            FileWriter myWriter = new FileWriter("src/main/resources/methods/"+getStage(method.getNo_of_bells())+"/"+method.getName()+".txt");
+            myWriter.write(method.getName()+"|");
+            myWriter.write(method.getMethod_proper()+"|");
+            myWriter.write(method.getNo_of_bells()+"|");
+            myWriter.write(method.getNotation()+"|");
+            myWriter.write(method.getBob_notation()+"|");
+            myWriter.write(method.getSingle_notation());
+            myWriter.close();
+            System.out.println("Successfully wrote to the file.");
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
+
+    //open saved method
     private static boolean addNewMethod(){
         System.out.println("Please select an option:");
         System.out.println("   1 - Add new method");
@@ -149,29 +182,45 @@ public class Method {
         }
     }
 
-    private static Method getMethodWantedLength(){
-        Method method = new Method();
-
-        method = Method.openMethodFromFile("methods");
-        return method;
+    private static String findWantedStage(){
+        System.out.print("How many bells in method you are looking for: ");
+        return getStage(getIntInput());
     }
 
     private static Method openMethodFromFile(String location){
         Method method = new Method();
         File[] fileList = getResourceFolderFiles(location);
-        String[] methodsList = new String[fileList.length];
-        for (int i = 0; i < fileList.length; i++) {
-            methodsList[i] = fileList[i].getName().substring(0, fileList[i].getName().length() - 4);
-            System.out.println(methodsList[i]);
+        try{
+            String[] methodsList = new String[fileList.length];
+            System.out.println(location + " Methods");
+            for (int i = 0; i < fileList.length; i++) {
+                methodsList[i] = fileList[i].getName().substring(0, fileList[i].getName().length() - 4);
+                System.out.println(" - " + methodsList[i]);
+            }
+            //add open method
+            return method;
+        }catch (Exception e){
+            System.out.println("No methods available please try again");
+            return null;
         }
-        return method;
+
+    }
+
+    private static Method openFile(Method method){
+        System.out.println("Which method do you want to open: ");
+        String fileName = getStringInputMulti();
+
     }
 
     private static File[] getResourceFolderFiles (String folder) {
         ClassLoader loader = Thread.currentThread().getContextClassLoader();
-        URL url = loader.getResource(folder);
-        String path = url.getPath();
-        return new File(path).listFiles();
+        URL url = loader.getResource("methods/" + folder);
+        try{
+            String path = url.getPath();
+            return new File(path).listFiles();
+        }catch (Exception e){
+            return null;
+        }
     }
 
     //Creates new method from user input
