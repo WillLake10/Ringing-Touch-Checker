@@ -11,11 +11,11 @@ import javax.swing.*;    // Using Swing's components and containers
 public class draw extends JFrame {
     // Define constants
     public static final int CANVAS_WIDTH  = 20;
-    public static final int CANVAS_HEIGHT = 1000;
+    public static final int CANVAS_HEIGHT = 2000;
     public static final int LINE_HIGHT = 10;
     public static final int LINE_WIDTH = 20;
     public static final int HOME_X = 20;
-    public static final int HOME_Y = 20;
+    public static final int HOME_Y = 50;
 
     // Declare an instance of the drawing canvas,
     // which is an inner class called DrawCanvas extending javax.swing.JPanel.
@@ -25,6 +25,9 @@ public class draw extends JFrame {
     public draw(Method method) {
         canvas = new DrawCanvas(method);    // Construct the drawing canvas
         canvas.setPreferredSize(new Dimension(CANVAS_WIDTH+(LINE_WIDTH*method.getNo_of_bells()), CANVAS_HEIGHT));
+
+        JScrollPane scrollPane = new JScrollPane();
+        canvas.add(scrollPane);
 
         // Set the Drawing JPanel as the JFrame's content-pane
         Container cp = getContentPane();
@@ -53,8 +56,14 @@ public class draw extends JFrame {
             super.paintComponent(g);     // paint parent's background
             g.setColor(Color.lightGray);
             for(int i = 0; i < method.getNo_of_bells(); i++){
-                g.drawLine(HOME_X + (LINE_WIDTH*i), HOME_Y, HOME_X + (LINE_WIDTH*i), HOME_Y + (LINE_HIGHT*100));
+                g.drawLine(HOME_X + (LINE_WIDTH*i), HOME_Y, HOME_X + (LINE_WIDTH*i), HOME_Y + (LINE_HIGHT*250));
             }
+
+            g.setColor(Color.black);
+            Font font = new Font("Serif", Font.BOLD, 15);
+
+            g.setFont(font);
+            g.drawString(method.getName(), HOME_X, HOME_Y - 20);
 
             String[] not = method.getNotation().split(",");
             String[] firstLine = initiliseFirstLine(method.getNo_of_bells());
@@ -79,17 +88,46 @@ public class draw extends JFrame {
 
             g.setColor(Color.RED);
             g.drawLine(HOME_X, HOME_Y+((lineNumber)*LINE_HIGHT), HOME_X+(treblePos*LINE_WIDTH), HOME_Y+((lineNumber+1)*LINE_HIGHT));
- }
+            outLine(currentLine);
+            int placeBellLastPos;
+            int trebleLastPos;
+            int temp = 1;
+            while(!checkRounds(currentLine, firstLine)){
+                for (int notNumber = temp; notNumber < not.length; notNumber++) {
+                    placeBellLastPos = nextPos;
+                    trebleLastPos = treblePos;
+                    currentLine = getNextLine(currentLine, not[notNumber]);
+                    outLine(currentLine);
+                    lineNumber += 1;
+                    for (int x = 0; x < method.getNo_of_bells(); x++) {
+                        if (currentLine[x].equals(placeBell)) {
+                            nextPos = x;
+                        }
+                    }
+                    g.setColor(Color.BLUE);
+                    g.drawLine(HOME_X + (placeBellLastPos * LINE_WIDTH), HOME_Y + ((lineNumber) * LINE_HIGHT), HOME_X + (nextPos * LINE_WIDTH), HOME_Y + ((lineNumber + 1) * LINE_HIGHT));
 
-        public Boolean checkRounds(String[] currentLine, String[] firstLine){
-            if (Arrays.equals(currentLine, firstLine)){
-                return true;
-            } else {
-                return false;
+                    for (int x = 0; x < method.getNo_of_bells(); x++) {
+                        if (currentLine[x].equals("1")) {
+                            treblePos = x;
+                        }
+                    }
+
+                    g.setColor(Color.RED);
+                    g.drawLine(HOME_X + (trebleLastPos * LINE_WIDTH), HOME_Y + ((lineNumber) * LINE_HIGHT), HOME_X + (treblePos * LINE_WIDTH), HOME_Y + ((lineNumber + 1) * LINE_HIGHT));
+                }
+                temp = 0;
+
+                g.setColor(Color.gray);
+                g.drawLine(HOME_X, HOME_Y + ((lineNumber+1) * LINE_HIGHT) - LINE_HIGHT / 2, HOME_X + ((method.getNo_of_bells()-1) * LINE_WIDTH), HOME_Y + ((lineNumber + 1) * LINE_HIGHT) - LINE_HIGHT / 2);
             }
         }
 
-        public String[] getNextLine(String[] currentline, String notation) {
+        Boolean checkRounds(String[] currentLine, String[] firstLine){
+            return Arrays.equals(currentLine, firstLine);
+        }
+
+        String[] getNextLine(String[] currentline, String notation) {
             String[] nextLine;
             if ("x".equals(notation) || "X".equals(notation)) {
                 nextLine = getLineIfAllChange(currentline);
@@ -99,7 +137,7 @@ public class draw extends JFrame {
             return nextLine;
         }
 
-        public String[] getLineIfAllChange(String[] currentline) {
+        String[] getLineIfAllChange(String[] currentline) {
             String[] nextLine = new String[currentline.length];
             int size = currentline.length;
             for (int i = 0; i < size; i++) {
@@ -112,7 +150,7 @@ public class draw extends JFrame {
             return nextLine;
         }
 
-        public String[] getLineIfNotAllChange(String[] currentline, String notation) {
+        String[] getLineIfNotAllChange(String[] currentline, String notation) {
             String[] nextLine = new String[currentline.length];
             boolean[] done = new boolean[currentline.length];
             int temp;
@@ -150,7 +188,7 @@ public class draw extends JFrame {
             return nextLine;
         }
 
-        public String[] initiliseFirstLine(int numBells) {
+        String[] initiliseFirstLine(int numBells) {
             String[] firstLine = new String[numBells];
             String position;
             for (int i = 1; i <= numBells; i++) {
@@ -166,6 +204,13 @@ public class draw extends JFrame {
                 firstLine[i - 1] = position;
             }
             return firstLine;
+        }
+
+        void outLine(String[] line){
+            for(String bell : line){
+                System.out.print(bell);
+            }
+            System.out.println();
         }
     }
 
