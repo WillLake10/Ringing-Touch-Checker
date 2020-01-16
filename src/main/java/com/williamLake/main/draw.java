@@ -15,7 +15,7 @@ public class draw extends JFrame {
     public static final int LINE_HIGHT = 10;
     public static final int LINE_WIDTH = 20;
     public static final int HOME_X = 20;
-    public static final int HOME_Y = 50;
+    public static final int HOME_Y = 70;
 
     // Declare an instance of the drawing canvas,
     // which is an inner class called DrawCanvas extending javax.swing.JPanel.
@@ -63,7 +63,12 @@ public class draw extends JFrame {
             Font font = new Font("Serif", Font.BOLD, 15);
 
             g.setFont(font);
-            g.drawString(method.getName(), HOME_X, HOME_Y - 20);
+            g.drawString(method.getName().split(" ")[0], HOME_X, HOME_Y - 50);
+            g.drawString(method.getName().split(" ")[1], HOME_X, HOME_Y - 35);
+            try{
+                g.drawString(method.getName().split(" ")[2], HOME_X, HOME_Y - 20);
+            }catch (Exception e){}
+
 
             String[] not = method.getNotation().split(",");
             String[] firstLine = initiliseFirstLine(method.getNo_of_bells());
@@ -120,6 +125,10 @@ public class draw extends JFrame {
 
                 g.setColor(Color.gray);
                 g.drawLine(HOME_X, HOME_Y + ((lineNumber+1) * LINE_HIGHT) - LINE_HIGHT / 2, HOME_X + ((method.getNo_of_bells()-1) * LINE_WIDTH), HOME_Y + ((lineNumber + 1) * LINE_HIGHT) - LINE_HIGHT / 2);
+
+                g.setColor(Color.black);
+                g.setFont(font);
+                g.drawString(Integer.toString(nextPos +1 ), HOME_X + (method.getNo_of_bells() * LINE_WIDTH) -10, HOME_Y + ((lineNumber+1) * LINE_HIGHT));
             }
         }
 
