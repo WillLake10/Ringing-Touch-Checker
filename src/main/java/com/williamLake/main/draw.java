@@ -11,7 +11,7 @@ import javax.swing.*;    // Using Swing's components and containers
 public class draw extends JFrame {
     // Define constants
     public static final int CANVAS_WIDTH  = 20;
-    public static final int CANVAS_HEIGHT = 2000;
+    public static final int CANVAS_HEIGHT = 100;
     public static final int LINE_HIGHT = 10;
     public static final int LINE_WIDTH = 20;
     public static final int HOME_X = 20;
@@ -24,7 +24,7 @@ public class draw extends JFrame {
     // Constructor to set up the GUI components and event handlers
     public draw(Method method) {
         canvas = new DrawCanvas(method);    // Construct the drawing canvas
-        canvas.setPreferredSize(new Dimension(CANVAS_WIDTH+(LINE_WIDTH*method.getNo_of_bells()), CANVAS_HEIGHT));
+        canvas.setPreferredSize(new Dimension(CANVAS_WIDTH+(LINE_WIDTH*method.getNo_of_bells()), CANVAS_HEIGHT + (LINE_HIGHT*method.getPlain_course_length())));
 
         JScrollPane scrollPane = new JScrollPane();
         canvas.add(scrollPane);
@@ -56,7 +56,7 @@ public class draw extends JFrame {
             super.paintComponent(g);     // paint parent's background
             g.setColor(Color.lightGray);
             for(int i = 0; i < method.getNo_of_bells(); i++){
-                g.drawLine(HOME_X + (LINE_WIDTH*i), HOME_Y, HOME_X + (LINE_WIDTH*i), HOME_Y + (LINE_HIGHT*250));
+                g.drawLine(HOME_X + (LINE_WIDTH*i), HOME_Y, HOME_X + (LINE_WIDTH*i), HOME_Y + (LINE_HIGHT*method.getPlain_course_length()));
             }
 
             g.setColor(Color.black);

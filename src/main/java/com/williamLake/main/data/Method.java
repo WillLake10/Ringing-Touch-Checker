@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Method {
@@ -14,7 +15,15 @@ public class Method {
     private String name;
     private String bob_notation;
     private String single_notation;
+    private int plain_course_length;
 
+    public int getPlain_course_length() {
+        return plain_course_length;
+    }
+
+    public void setPlain_course_length(int plain_course_length) {
+        this.plain_course_length = plain_course_length;
+    }
 
     public Method(String method_proper, String notation, int no_of_bells, String bob_notation, String single_notation) {
         this.method_proper = method_proper;
@@ -23,7 +32,9 @@ public class Method {
         setName(no_of_bells,method_proper);
         this.bob_notation = bob_notation;
         this.single_notation = single_notation;
+        this.plain_course_length = findPlainCourseLength(notation,no_of_bells);
     }
+
 
     public Method() {
         this.method_proper = "";
@@ -32,6 +43,7 @@ public class Method {
         setName(no_of_bells,method_proper);
         this.bob_notation = "";
         this.single_notation = "";
+        this.plain_course_length = 0;
     }
 
     public void setName(int no_of_bells, String methord_proper){
@@ -112,14 +124,118 @@ public class Method {
 
     @Override
     public String toString() {
-        return "Methord{" +
-                "methord_proper='" + method_proper + '\'' +
+        return "Method{" +
+                "method_proper='" + method_proper + '\'' +
                 ", notation='" + notation + '\'' +
                 ", no_of_bells=" + no_of_bells +
                 ", name='" + name + '\'' +
                 ", bob_notation='" + bob_notation + '\'' +
                 ", single_notation='" + single_notation + '\'' +
+                ", plain_course_length='" + plain_course_length + '\'' +
                 '}';
+    }
+
+    private int findPlainCourseLength(String notation, int No_of_bells){
+        int length = 0;
+
+        String[] not = notation.split(",");
+        String[] firstLine = initiliseFirstLine(No_of_bells);
+        String[] currentLine = firstLine;
+
+        Boolean firstTime = true;
+        while(!checkRounds(currentLine, firstLine) && !firstTime){
+            firstTime = true;
+            for (int notNumber = 0; notNumber < not.length; notNumber++) {
+
+                currentLine = getNextLine(currentLine, not[notNumber]);
+
+                length += 1;
+            }
+        }
+        return length;
+    }
+
+    Boolean checkRounds(String[] currentLine, String[] firstLine){
+        return Arrays.equals(currentLine, firstLine);
+    }
+
+    public String[] getNextLine(String[] currentline, String notation) {
+        String[] nextLine;
+        if ("x".equals(notation) || "X".equals(notation)) {
+            nextLine = getLineIfAllChange(currentline);
+        } else {
+            nextLine = getLineIfNotAllChange(currentline, notation);
+        }
+        return nextLine;
+    }
+
+    String[] getLineIfAllChange(String[] currentline) {
+        String[] nextLine = new String[currentline.length];
+        int size = currentline.length;
+        for (int i = 0; i < size; i++) {
+            if (i % 2 == 0) {
+                nextLine[i] = currentline[i + 1];
+            } else {
+                nextLine[i] = currentline[i - 1];
+            }
+        }
+        return nextLine;
+    }
+
+    String[] getLineIfNotAllChange(String[] currentline, String notation) {
+        String[] nextLine = new String[currentline.length];
+        boolean[] done = new boolean[currentline.length];
+        int temp;
+        String[] parts = new String[notation.length()];
+        for (int i = 0; i < notation.length(); i++){
+            parts[i] = Character.toString(notation.charAt(i));
+        }
+
+        for (int i = 0; i < parts.length; i++) {
+            if ("1".equals(parts[i]) || "2".equals(parts[i]) || "3".equals(parts[i]) ||
+                    "4".equals(parts[i]) || "5".equals(parts[i]) ||
+                    "6".equals(parts[i]) || "7".equals(parts[i]) ||
+                    "8".equals(parts[i]) || "9".equals(parts[i])) {
+                temp = Integer.parseInt(parts[i]) - 1;
+            } else if ("0".equals(parts[i])) {
+                temp = 9;
+            } else if ("E".equals(parts[i])) {
+                temp = 10;
+            } else {
+                temp = 11;
+            }
+            nextLine[temp] = currentline[temp];
+            done[temp] = true;
+        }
+
+        for (int j = 0; j < done.length; j++) {
+            if (done[j] == false) {
+                nextLine[j] = currentline[j + 1];
+                nextLine[j + 1] = currentline[j];
+                done[j] = true;
+                done[j + 1] = true;
+            }
+        }
+
+        return nextLine;
+    }
+
+    String[] initiliseFirstLine(int numBells) {
+        String[] firstLine = new String[numBells];
+        String position;
+        for (int i = 1; i <= numBells; i++) {
+            if (i == 10) {
+                position = "0";
+            } else if (i == 11) {
+                position = "E";
+            } else if (i == 12) {
+                position = "T";
+            } else {
+                position = Integer.toString(i);
+            }
+            firstLine[i - 1] = position;
+        }
+        return firstLine;
     }
 
     //Method working functions
@@ -157,7 +273,8 @@ public class Method {
             myWriter.write(method.getNo_of_bells()+"-");
             myWriter.write(method.getNotation()+"-");
             myWriter.write(method.getBob_notation()+"-");
-            myWriter.write(method.getSingle_notation());
+            myWriter.write(method.getSingle_notation()+"-");
+            myWriter.write(method.getPlain_course_length());
             myWriter.close();
             System.out.println("Successfully wrote to the file.");
         } catch (IOException e) {
