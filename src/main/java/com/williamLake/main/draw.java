@@ -54,44 +54,21 @@ public class draw extends JFrame {
         @Override
         public void paintComponent(Graphics g) {
             super.paintComponent(g);     // paint parent's background
-            g.setColor(Color.lightGray);
-            for(int i = 0; i < method.getNo_of_bells(); i++){
-                g.drawLine(HOME_X + (LINE_WIDTH*i), HOME_Y, HOME_X + (LINE_WIDTH*i), HOME_Y + (LINE_HIGHT*method.getPlain_course_length()));
-            }
 
-            g.setColor(Color.black);
             Font font = new Font("Serif", Font.BOLD, 15);
-
-            g.setFont(font);
-            g.drawString(method.getName().split(" ")[0], HOME_X, HOME_Y - 50);
-            g.drawString(method.getName().split(" ")[1], HOME_X, HOME_Y - 35);
-            try{
-                g.drawString(method.getName().split(" ")[2], HOME_X, HOME_Y - 20);
-            }catch (Exception e){}
-
-
-
-            String[] not = method.getNotation().split(",");
-            String[] firstLine = initiliseFirstLine(method.getNo_of_bells());
             int lineNumber = 0;
             int nextPos = 1;
             int treblePos = 0;
+            String[] not = method.getNotation().split(",");
+            String[] firstLine = initiliseFirstLine(method.getNo_of_bells());
 
-            g.setColor(Color.gray);
-            //g.drawLine(HOME_X, HOME_Y , HOME_X + ((method.getNo_of_bells()-1) * LINE_WIDTH), HOME_Y);
-
-            g.setColor(Color.BLUE);
-            g.fillOval(HOME_X + (nextPos * LINE_WIDTH) - 3, HOME_Y  - 3, 6,6);
-
-            g.setColor(Color.black);
-            g.setFont(font);
-            g.drawString(Integer.toString(nextPos +1 ),
-                    HOME_X + (method.getNo_of_bells() * LINE_WIDTH) - Math.round(LINE_WIDTH/2),
-                    HOME_Y + ((lineNumber+1) * LINE_HIGHT)- Math.round(LINE_HIGHT/2));
-
+            drawVerticalLines(g);
+            drawTitle(g, font);
+            drawNewLeadMarkers(g, nextPos, lineNumber-1, font);
 
             String placeBell = "2";
             String[] currentLine = getNextLine(firstLine, not[0]);
+
             for(int x = 0; x < method.getNo_of_bells() - 1; x++){
                 if (currentLine[x].equals(placeBell)){
                     nextPos = x;
@@ -116,17 +93,7 @@ public class draw extends JFrame {
             while(!checkRounds(currentLine, firstLine)){
 
                 if(temp == 0){
-                    g.setColor(Color.gray);
-                    //g.drawLine(HOME_X, HOME_Y + ((lineNumber+1) * LINE_HIGHT), HOME_X + ((method.getNo_of_bells()-1) * LINE_WIDTH), HOME_Y + (lineNumber + 1) * LINE_HIGHT);
-
-                    g.setColor(Color.BLUE);
-                    g.fillOval(HOME_X + (nextPos * LINE_WIDTH) - 3, HOME_Y + ((lineNumber + 1) * LINE_HIGHT) - 3, 6,6);
-
-                    g.setColor(Color.black);
-                    g.setFont(font);
-                    g.drawString(Integer.toString(nextPos +1 ),
-                            HOME_X + (method.getNo_of_bells() * LINE_WIDTH) - Math.round(LINE_WIDTH/2),
-                            HOME_Y + ((lineNumber+1) * LINE_HIGHT) + Math.round(LINE_HIGHT/2));
+                    drawNewLeadMarkers(g, nextPos, lineNumber, font);
                 }
 
                 for (int notNumber = temp; notNumber < not.length; notNumber++) {
@@ -140,8 +107,8 @@ public class draw extends JFrame {
                             nextPos = x;
                         }
                     }
-                    g.setColor(Color.BLUE);
-                    g.drawLine(HOME_X + (placeBellLastPos * LINE_WIDTH), HOME_Y + ((lineNumber) * LINE_HIGHT), HOME_X + (nextPos * LINE_WIDTH), HOME_Y + ((lineNumber + 1) * LINE_HIGHT));
+
+                    drawBellLine(g, placeBellLastPos, nextPos, Color.BLUE, lineNumber);
 
                     for (int x = 0; x < method.getNo_of_bells(); x++) {
                         if (currentLine[x].equals("1")) {
@@ -149,12 +116,51 @@ public class draw extends JFrame {
                         }
                     }
 
-                    g.setColor(Color.RED);
-                    g.drawLine(HOME_X + (trebleLastPos * LINE_WIDTH), HOME_Y + ((lineNumber) * LINE_HIGHT), HOME_X + (treblePos * LINE_WIDTH), HOME_Y + ((lineNumber + 1) * LINE_HIGHT));
+                    drawBellLine(g, trebleLastPos, treblePos, Color.RED, lineNumber);
                 }
                 temp = 0;
 
                }
+        }
+
+        void drawNewLeadMarkers(Graphics g, int nextPos, int lineNumber, Font font){
+            g.setColor(Color.gray);
+            //g.drawLine(HOME_X, HOME_Y + ((lineNumber+1) * LINE_HIGHT), HOME_X + ((method.getNo_of_bells()-1) * LINE_WIDTH), HOME_Y + (lineNumber + 1) * LINE_HIGHT);
+
+            g.setColor(Color.BLUE);
+            g.fillOval(HOME_X + (nextPos * LINE_WIDTH) - 3, HOME_Y + ((lineNumber + 1) * LINE_HIGHT) - 3, 6,6);
+
+            g.setColor(Color.black);
+            g.setFont(font);
+            g.drawString(Integer.toString(nextPos +1 ),
+                    HOME_X + (method.getNo_of_bells() * LINE_WIDTH) - Math.round(LINE_WIDTH/2),
+                    HOME_Y + ((lineNumber+1) * LINE_HIGHT) + Math.round(LINE_HIGHT/2));
+
+        }
+
+        void drawBellLine(Graphics g, int lastPos, int nextPos, Color color, int lineNumber){
+            g.setColor(color);
+            g.drawLine(HOME_X + (lastPos * LINE_WIDTH), HOME_Y + ((lineNumber) * LINE_HIGHT), HOME_X + (nextPos * LINE_WIDTH), HOME_Y + ((lineNumber + 1) * LINE_HIGHT));
+
+        }
+
+        void drawTitle(Graphics g, Font font){
+
+            g.setColor(Color.black);
+
+            g.setFont(font);
+            g.drawString(method.getName().split(" ")[0], HOME_X, HOME_Y - 50);
+            g.drawString(method.getName().split(" ")[1], HOME_X, HOME_Y - 35);
+            try{
+                g.drawString(method.getName().split(" ")[2], HOME_X, HOME_Y - 20);
+            }catch (Exception e){}
+        }
+
+        void drawVerticalLines(Graphics g){
+            g.setColor(Color.lightGray);
+            for(int i = 0; i < method.getNo_of_bells(); i++){
+                g.drawLine(HOME_X + (LINE_WIDTH*i), HOME_Y, HOME_X + (LINE_WIDTH*i), HOME_Y + (LINE_HIGHT*method.getPlain_course_length()));
+            }
         }
 
         Boolean checkRounds(String[] currentLine, String[] firstLine){
