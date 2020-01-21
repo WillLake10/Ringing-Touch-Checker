@@ -70,11 +70,26 @@ public class draw extends JFrame {
             }catch (Exception e){}
 
 
+
             String[] not = method.getNotation().split(",");
             String[] firstLine = initiliseFirstLine(method.getNo_of_bells());
             int lineNumber = 0;
             int nextPos = 1;
             int treblePos = 0;
+
+            g.setColor(Color.gray);
+            //g.drawLine(HOME_X, HOME_Y , HOME_X + ((method.getNo_of_bells()-1) * LINE_WIDTH), HOME_Y);
+
+            g.setColor(Color.BLUE);
+            g.fillOval(HOME_X + (nextPos * LINE_WIDTH) - 3, HOME_Y  - 3, 6,6);
+
+            g.setColor(Color.black);
+            g.setFont(font);
+            g.drawString(Integer.toString(nextPos +1 ),
+                    HOME_X + (method.getNo_of_bells() * LINE_WIDTH) - Math.round(LINE_WIDTH/2),
+                    HOME_Y + ((lineNumber+1) * LINE_HIGHT)- Math.round(LINE_HIGHT/2));
+
+
             String placeBell = "2";
             String[] currentLine = getNextLine(firstLine, not[0]);
             for(int x = 0; x < method.getNo_of_bells() - 1; x++){
@@ -83,7 +98,8 @@ public class draw extends JFrame {
                 }
             }
             g.setColor(Color.BLUE);
-            g.drawLine(HOME_X + ((Integer.parseInt(placeBell) - 1)*LINE_WIDTH), HOME_Y+((lineNumber)*LINE_HIGHT), HOME_X+(nextPos*LINE_WIDTH), HOME_Y+((lineNumber+1)*LINE_HIGHT));
+            g.drawLine(HOME_X + ((Integer.parseInt(placeBell) - 1)*LINE_WIDTH), HOME_Y+((lineNumber)*LINE_HIGHT),
+                    HOME_X+(nextPos*LINE_WIDTH), HOME_Y+((lineNumber+1)*LINE_HIGHT));
 
             for(int x = 0; x < method.getNo_of_bells() - 1; x++){
                 if (currentLine[x].equals("1")){
@@ -98,10 +114,19 @@ public class draw extends JFrame {
             int trebleLastPos;
             int temp = 1;
             while(!checkRounds(currentLine, firstLine)){
+
                 if(temp == 0){
+                    g.setColor(Color.gray);
+                    //g.drawLine(HOME_X, HOME_Y + ((lineNumber+1) * LINE_HIGHT), HOME_X + ((method.getNo_of_bells()-1) * LINE_WIDTH), HOME_Y + (lineNumber + 1) * LINE_HIGHT);
+
+                    g.setColor(Color.BLUE);
+                    g.fillOval(HOME_X + (nextPos * LINE_WIDTH) - 3, HOME_Y + ((lineNumber + 1) * LINE_HIGHT) - 3, 6,6);
+
                     g.setColor(Color.black);
                     g.setFont(font);
-                    g.drawString(Integer.toString(nextPos +1 ), HOME_X + (method.getNo_of_bells() * LINE_WIDTH), HOME_Y + ((lineNumber+1) * LINE_HIGHT));
+                    g.drawString(Integer.toString(nextPos +1 ),
+                            HOME_X + (method.getNo_of_bells() * LINE_WIDTH) - Math.round(LINE_WIDTH/2),
+                            HOME_Y + ((lineNumber+1) * LINE_HIGHT) + Math.round(LINE_HIGHT/2));
                 }
 
                 for (int notNumber = temp; notNumber < not.length; notNumber++) {
@@ -128,9 +153,6 @@ public class draw extends JFrame {
                     g.drawLine(HOME_X + (trebleLastPos * LINE_WIDTH), HOME_Y + ((lineNumber) * LINE_HIGHT), HOME_X + (treblePos * LINE_WIDTH), HOME_Y + ((lineNumber + 1) * LINE_HIGHT));
                 }
                 temp = 0;
-
-                g.setColor(Color.gray);
-                g.drawLine(HOME_X, HOME_Y + ((lineNumber+1) * LINE_HIGHT), HOME_X + ((method.getNo_of_bells()-1) * LINE_WIDTH), HOME_Y + (lineNumber + 1) * LINE_HIGHT);
 
                }
         }
