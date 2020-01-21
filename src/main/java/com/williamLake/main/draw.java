@@ -98,6 +98,12 @@ public class draw extends JFrame {
             int trebleLastPos;
             int temp = 1;
             while(!checkRounds(currentLine, firstLine)){
+                if(temp == 0){
+                    g.setColor(Color.black);
+                    g.setFont(font);
+                    g.drawString(Integer.toString(nextPos +1 ), HOME_X + (method.getNo_of_bells() * LINE_WIDTH), HOME_Y + ((lineNumber+1) * LINE_HIGHT));
+                }
+
                 for (int notNumber = temp; notNumber < not.length; notNumber++) {
                     placeBellLastPos = nextPos;
                     trebleLastPos = treblePos;
@@ -124,12 +130,9 @@ public class draw extends JFrame {
                 temp = 0;
 
                 g.setColor(Color.gray);
-                g.drawLine(HOME_X, HOME_Y + ((lineNumber+1) * LINE_HIGHT) - LINE_HIGHT / 2, HOME_X + ((method.getNo_of_bells()-1) * LINE_WIDTH), HOME_Y + ((lineNumber + 1) * LINE_HIGHT) - LINE_HIGHT / 2);
+                g.drawLine(HOME_X, HOME_Y + ((lineNumber+1) * LINE_HIGHT), HOME_X + ((method.getNo_of_bells()-1) * LINE_WIDTH), HOME_Y + (lineNumber + 1) * LINE_HIGHT);
 
-                g.setColor(Color.black);
-                g.setFont(font);
-                g.drawString(Integer.toString(nextPos +1 ), HOME_X + (method.getNo_of_bells() * LINE_WIDTH) -10, HOME_Y + ((lineNumber+1) * LINE_HIGHT));
-            }
+               }
         }
 
         Boolean checkRounds(String[] currentLine, String[] firstLine){

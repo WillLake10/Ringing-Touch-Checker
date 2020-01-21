@@ -143,8 +143,8 @@ public class Method {
         String[] currentLine = firstLine;
 
         Boolean firstTime = true;
-        while(!checkRounds(currentLine, firstLine) && !firstTime){
-            firstTime = true;
+        while(!checkRounds(currentLine, firstLine) || firstTime){
+            firstTime = false;
             for (int notNumber = 0; notNumber < not.length; notNumber++) {
 
                 currentLine = getNextLine(currentLine, not[notNumber]);
