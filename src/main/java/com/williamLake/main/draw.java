@@ -54,6 +54,7 @@ public class draw extends JFrame {
         @Override
         public void paintComponent(Graphics g) {
             super.paintComponent(g);     // paint parent's background
+            Graphics2D g2 = (Graphics2D) g;
 
             Font font = new Font("Serif", Font.BOLD, 15);
             int lineNumber = 0;
@@ -62,8 +63,8 @@ public class draw extends JFrame {
             String[] not = method.getNotation().split(",");
             String[] firstLine = initiliseFirstLine(method.getNo_of_bells());
 
-            drawVerticalLines(g);
-            drawTitle(g, font);
+            drawVerticalLines(g2);
+            drawTitle(g2, font);
 
             String[] currentLine = getNextLine(firstLine, not[0]);
             for(int i = 0; i < 12; i++){
@@ -88,13 +89,13 @@ public class draw extends JFrame {
             g.setColor(Color.RED);
             g.drawLine(HOME_X, HOME_Y+((lineNumber)*LINE_HIGHT), HOME_X+(treblePos*LINE_WIDTH), HOME_Y+((lineNumber+1)*LINE_HIGHT));
             */
-            nextPosition = drawLine(g, currentLine, lastPos, lineNumber);
-            drawNewLeadMarkers(g,  1, lineNumber-1, font);
+            nextPosition = drawLine(g2, currentLine, lastPos, lineNumber);
+            drawNewLeadMarkers(g2,  1, lineNumber-1, font);
             outLine(currentLine);
             int temp = 1;
             while(!checkRounds(currentLine, firstLine)){
                 if(temp == 0){
-                    drawNewLeadMarkers(g, nextPosition[2], lineNumber, font);
+                    drawNewLeadMarkers(g2, nextPosition[2], lineNumber, font);
                 }
 
                 for (int notNumber = temp; notNumber < not.length; notNumber++) {
@@ -103,18 +104,19 @@ public class draw extends JFrame {
                     lineNumber += 1;
 
                     lastPos = nextPosition;
-                    nextPosition = drawLine(g, currentLine, lastPos, lineNumber);
+                    nextPosition = drawLine(g2, currentLine, lastPos, lineNumber);
                 }
                 temp = 0;
 
             }
         }
 
-        int[] drawLine(Graphics g, String[] currentLine, int[] lastPos, int lineNumber){
+        int[] drawLine(Graphics2D g, String[] currentLine, int[] lastPos, int lineNumber){
             int[] nextPos;
             Color color;
+            color = Color.BLUE;
             nextPos = getNextLinePos(currentLine);
-            for(int i = method.getNo_of_bells(); i >= 0; i--){
+            for(int i = method.getNo_of_bells(); i > 0; i--){
                 if(i == 1){
                     color = Color.RED;
                 }else if(i == 2){
@@ -134,6 +136,7 @@ public class draw extends JFrame {
                 }else{
                     color = Color.LIGHT_GRAY;
                 }
+                g.setStroke(new BasicStroke(2));
                 drawBellLine(g, lastPos[i], nextPos[i], color, lineNumber);
             }
             return nextPos;
@@ -171,7 +174,7 @@ public class draw extends JFrame {
             return nextPos;
         }
 
-        void drawNewLeadMarkers(Graphics g, int nextPos, int lineNumber, Font font){
+        void drawNewLeadMarkers(Graphics2D g, int nextPos, int lineNumber, Font font){
             g.setColor(Color.gray);
             //g.drawLine(HOME_X, HOME_Y + ((lineNumber+1) * LINE_HIGHT), HOME_X + ((method.getNo_of_bells()-1) * LINE_WIDTH), HOME_Y + (lineNumber + 1) * LINE_HIGHT);
 
@@ -186,13 +189,13 @@ public class draw extends JFrame {
 
         }
 
-        void drawBellLine(Graphics g, int lastPos, int nextPos, Color color, int lineNumber){
+        void drawBellLine(Graphics2D g, int lastPos, int nextPos, Color color, int lineNumber){
             g.setColor(color);
             g.drawLine(HOME_X + (lastPos * LINE_WIDTH), HOME_Y + ((lineNumber) * LINE_HIGHT), HOME_X + (nextPos * LINE_WIDTH), HOME_Y + ((lineNumber + 1) * LINE_HIGHT));
 
         }
 
-        void drawTitle(Graphics g, Font font){
+        void drawTitle(Graphics2D g, Font font){
 
             g.setColor(Color.black);
 
@@ -204,7 +207,7 @@ public class draw extends JFrame {
             }catch (Exception e){}
         }
 
-        void drawVerticalLines(Graphics g){
+        void drawVerticalLines(Graphics2D g){
             g.setColor(Color.lightGray);
             for(int i = 0; i < method.getNo_of_bells(); i++){
                 g.drawLine(HOME_X + (LINE_WIDTH*i), HOME_Y, HOME_X + (LINE_WIDTH*i), HOME_Y + (LINE_HIGHT*method.getPlain_course_length()));
