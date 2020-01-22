@@ -57,18 +57,19 @@ public class draw extends JFrame {
 
             Font font = new Font("Serif", Font.BOLD, 15);
             int lineNumber = 0;
-            int nextPos = 1;
-            int treblePos = 0;
+            int[] nextPosition = new int[12];
+            int[] lastPos = nextPosition;
             String[] not = method.getNotation().split(",");
             String[] firstLine = initiliseFirstLine(method.getNo_of_bells());
 
             drawVerticalLines(g);
             drawTitle(g, font);
-            drawNewLeadMarkers(g, nextPos, lineNumber-1, font);
 
-            String placeBell = "2";
             String[] currentLine = getNextLine(firstLine, not[0]);
-
+            for(int i = 0; i < 12; i++){
+                lastPos[i] = i - 1;
+            }
+        /*
             for(int x = 0; x < method.getNo_of_bells() - 1; x++){
                 if (currentLine[x].equals(placeBell)){
                     nextPos = x;
@@ -86,41 +87,88 @@ public class draw extends JFrame {
 
             g.setColor(Color.RED);
             g.drawLine(HOME_X, HOME_Y+((lineNumber)*LINE_HIGHT), HOME_X+(treblePos*LINE_WIDTH), HOME_Y+((lineNumber+1)*LINE_HIGHT));
+            */
+            nextPosition = drawLine(g, currentLine, lastPos, lineNumber);
+            drawNewLeadMarkers(g,  1, lineNumber-1, font);
             outLine(currentLine);
-            int placeBellLastPos;
-            int trebleLastPos;
             int temp = 1;
             while(!checkRounds(currentLine, firstLine)){
-
                 if(temp == 0){
-                    drawNewLeadMarkers(g, nextPos, lineNumber, font);
+                    drawNewLeadMarkers(g, nextPosition[2], lineNumber, font);
                 }
 
                 for (int notNumber = temp; notNumber < not.length; notNumber++) {
-                    placeBellLastPos = nextPos;
-                    trebleLastPos = treblePos;
                     currentLine = getNextLine(currentLine, not[notNumber]);
                     outLine(currentLine);
                     lineNumber += 1;
-                    for (int x = 0; x < method.getNo_of_bells(); x++) {
-                        if (currentLine[x].equals(placeBell)) {
-                            nextPos = x;
-                        }
-                    }
 
-                    drawBellLine(g, placeBellLastPos, nextPos, Color.BLUE, lineNumber);
-
-                    for (int x = 0; x < method.getNo_of_bells(); x++) {
-                        if (currentLine[x].equals("1")) {
-                            treblePos = x;
-                        }
-                    }
-
-                    drawBellLine(g, trebleLastPos, treblePos, Color.RED, lineNumber);
+                    lastPos = nextPosition;
+                    nextPosition = drawLine(g, currentLine, lastPos, lineNumber);
                 }
                 temp = 0;
 
-               }
+            }
+        }
+
+        int[] drawLine(Graphics g, String[] currentLine, int[] lastPos, int lineNumber){
+            int[] nextPos;
+            Color color;
+            nextPos = getNextLinePos(currentLine);
+            for(int i = method.getNo_of_bells(); i >= 0; i--){
+                if(i == 1){
+                    color = Color.RED;
+                }else if(i == 2){
+                    color = Color.BLUE;
+                }else if(i == 3){
+                    color = Color.GREEN;
+                }else if(i == 4){
+                    color = Color.MAGENTA;
+                }else if(i == 5){
+                    color = Color.YELLOW;
+                }else if(i == 6){
+                    color = Color.CYAN;
+                }else if(i == 7){
+                    color = Color.gray;
+                }else if(i == 8){
+                    color = Color.BLACK;
+                }else{
+                    color = Color.LIGHT_GRAY;
+                }
+                drawBellLine(g, lastPos[i], nextPos[i], color, lineNumber);
+            }
+            return nextPos;
+        }
+
+        int[] getNextLinePos(String[] currentLine){
+            int[] nextPos = new int[12];
+            for (int x = 0; x < method.getNo_of_bells(); x++) {
+                if (currentLine[x].equals("1")) {
+                    nextPos[1] = x;
+                }else if (currentLine[x].equals("2")) {
+                    nextPos[2] = x;
+                }else if (currentLine[x].equals("3")) {
+                    nextPos[3] = x;
+                }else if (currentLine[x].equals("4")) {
+                    nextPos[4] = x;
+                }else if (currentLine[x].equals("5")) {
+                    nextPos[5] = x;
+                }else if (currentLine[x].equals("6")) {
+                    nextPos[6] = x;
+                }else if (currentLine[x].equals("7")) {
+                    nextPos[7] = x;
+                }else if (currentLine[x].equals("8")) {
+                    nextPos[8] = x;
+                }else if (currentLine[x].equals("9")) {
+                    nextPos[9] = x;
+                }else if (currentLine[x].equals("0")) {
+                    nextPos[10] = x;
+                }else if (currentLine[x].equals("E")) {
+                    nextPos[11] = x;
+                }else if (currentLine[x].equals("T")) {
+                    nextPos[12] = x;
+                }
+            }
+            return nextPos;
         }
 
         void drawNewLeadMarkers(Graphics g, int nextPos, int lineNumber, Font font){
