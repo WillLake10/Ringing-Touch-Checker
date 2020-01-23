@@ -12,8 +12,8 @@ public class draw extends JFrame {
     // Define constants
     public static final int CANVAS_WIDTH  = 20;
     public static final int CANVAS_HEIGHT = 100;
-    public static final int LINE_HIGHT = 10;
-    public static final int LINE_WIDTH = 20;
+    public static final int LINE_HIGHT = 20;
+    public static final int LINE_WIDTH = 40;
     public static final int HOME_X = 20;
     public static final int HOME_Y = 70;
 
@@ -22,9 +22,15 @@ public class draw extends JFrame {
     private DrawCanvas canvas;
 
     // Constructor to set up the GUI components and event handlers
-    public draw(Method method) {
-        canvas = new DrawCanvas(method);    // Construct the drawing canvas
-        canvas.setPreferredSize(new Dimension(CANVAS_WIDTH+(LINE_WIDTH*method.getNo_of_bells()), CANVAS_HEIGHT + (LINE_HIGHT*method.getPlain_course_length())));
+    public draw(Method method, int option) {
+        canvas = new DrawCanvas(method, option);    // Construct the drawing canvas
+        if (option == 3){
+            canvas.setPreferredSize(new Dimension(CANVAS_WIDTH+(LINE_WIDTH*method.getNo_of_bells()),
+                    CANVAS_HEIGHT + (LINE_HIGHT*method.getNotation().split(",").length)));
+        }else{
+            canvas.setPreferredSize(new Dimension(CANVAS_WIDTH+(LINE_WIDTH*method.getNo_of_bells()),
+                    CANVAS_HEIGHT + (LINE_HIGHT*method.getPlain_course_length())));
+        }
 
         JScrollPane scrollPane = new JScrollPane();
         canvas.add(scrollPane);
@@ -45,9 +51,11 @@ public class draw extends JFrame {
      */
     private class DrawCanvas extends JPanel {
         private Method method;
+        private int option;
 
-        public DrawCanvas(Method method) {
+        public DrawCanvas(Method method, int option) {
             this.method = method;
+            this.option = option;
         }
 
         // Override paintComponent to perform your own painting
@@ -70,30 +78,13 @@ public class draw extends JFrame {
             for(int i = 0; i < 12; i++){
                 lastPos[i] = i - 1;
             }
-        /*
-            for(int x = 0; x < method.getNo_of_bells() - 1; x++){
-                if (currentLine[x].equals(placeBell)){
-                    nextPos = x;
-                }
-            }
-            g.setColor(Color.BLUE);
-            g.drawLine(HOME_X + ((Integer.parseInt(placeBell) - 1)*LINE_WIDTH), HOME_Y+((lineNumber)*LINE_HIGHT),
-                    HOME_X+(nextPos*LINE_WIDTH), HOME_Y+((lineNumber+1)*LINE_HIGHT));
 
-            for(int x = 0; x < method.getNo_of_bells() - 1; x++){
-                if (currentLine[x].equals("1")){
-                    treblePos = x;
-                }
-            }
-
-            g.setColor(Color.RED);
-            g.drawLine(HOME_X, HOME_Y+((lineNumber)*LINE_HIGHT), HOME_X+(treblePos*LINE_WIDTH), HOME_Y+((lineNumber+1)*LINE_HIGHT));
-            */
             nextPosition = drawLine(g2, currentLine, lastPos, lineNumber);
             drawNewLeadMarkers(g2,  1, lineNumber-1, font);
             outLine(currentLine);
             int temp = 1;
-            while(!checkRounds(currentLine, firstLine)){
+            int grid = 0;
+            while(!checkRounds(currentLine, firstLine) && grid == 0){
                 if(temp == 0){
                     drawNewLeadMarkers(g2, nextPosition[2], lineNumber, font);
                 }
@@ -108,6 +99,11 @@ public class draw extends JFrame {
                 }
                 temp = 0;
 
+                if (option == 3){
+                    grid = 1;
+                }
+
+
             }
         }
 
@@ -117,18 +113,23 @@ public class draw extends JFrame {
             color = Color.BLUE;
             nextPos = getNextLinePos(currentLine);
             for(int i = method.getNo_of_bells(); i > 0; i--){
+                g.setStroke(new BasicStroke(2));
                 if(i == 1){
                     color = Color.RED;
                 }else if(i == 2){
+                    g.setStroke(new BasicStroke(3));
                     color = Color.BLUE;
                 }else if(i == 3){
-                    color = Color.GREEN;
+                    final Color DARK_GREEN = new Color(0, 255, 0);
+                    color = DARK_GREEN;
                 }else if(i == 4){
                     color = Color.MAGENTA;
                 }else if(i == 5){
-                    color = Color.YELLOW;
+                    final Color MUSTARD_YELLOW = new Color(144, 0, 255);
+                    color = MUSTARD_YELLOW;
                 }else if(i == 6){
-                    color = Color.CYAN;
+                    final Color TURQUOISE = new Color(17,244, 241);
+                    color = TURQUOISE;
                 }else if(i == 7){
                     color = Color.gray;
                 }else if(i == 8){
@@ -136,8 +137,15 @@ public class draw extends JFrame {
                 }else{
                     color = Color.LIGHT_GRAY;
                 }
-                g.setStroke(new BasicStroke(2));
-                drawBellLine(g, lastPos[i], nextPos[i], color, lineNumber);
+                if (option == 3) {
+                    g.setStroke(new BasicStroke(3));
+                    drawBellLine(g, lastPos[i], nextPos[i], color, lineNumber);
+                } else{
+                    if (i >= 1 && i <= 2){
+                        drawBellLine(g, lastPos[i], nextPos[i], color, lineNumber);
+                    }
+                }
+
             }
             return nextPos;
         }
@@ -210,7 +218,11 @@ public class draw extends JFrame {
         void drawVerticalLines(Graphics2D g){
             g.setColor(Color.lightGray);
             for(int i = 0; i < method.getNo_of_bells(); i++){
-                g.drawLine(HOME_X + (LINE_WIDTH*i), HOME_Y, HOME_X + (LINE_WIDTH*i), HOME_Y + (LINE_HIGHT*method.getPlain_course_length()));
+                if(option == 3){
+                    g.drawLine(HOME_X + (LINE_WIDTH*i), HOME_Y, HOME_X + (LINE_WIDTH*i), HOME_Y + (LINE_HIGHT*method.getNotation().split(",").length));
+                } else{
+                    g.drawLine(HOME_X + (LINE_WIDTH*i), HOME_Y, HOME_X + (LINE_WIDTH*i), HOME_Y + (LINE_HIGHT*method.getPlain_course_length()));
+                }
             }
         }
 
@@ -306,12 +318,12 @@ public class draw extends JFrame {
     }
 
     // The entry main method
-    public static void main(Method method) {
+    public static void main(Method method, int option) {
         // Run the GUI codes on the Event-Dispatching thread for thread safety
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new draw(method); // Let the constructor do the job
+                new draw(method, option);
             }
         });
     }

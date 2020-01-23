@@ -15,11 +15,13 @@ public class Main {
     }
 
     public static void drawBlueLine(Method method){
-        System.out.println("Want to draw blue line (1-yes, 0-no): ");
+        System.out.println("Chose an option: ");
+        System.out.println("  1 - Draw just blue line");
+        System.out.println("  2 - Draw blue line with others gray");
+        System.out.println("  3 - Draw grid");
         int answer = getStringInput();
-        if(answer == 1){
-            draw.main(method);
-        }
+        draw.main(method, answer);
+
     }
 
     private static int getStringInput(){
