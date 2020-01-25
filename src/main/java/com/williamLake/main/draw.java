@@ -2,32 +2,31 @@ package com.williamlake.main;
 
 import com.williamlake.main.data.Method;
 
-import java.awt.*;       // Using AWT's Graphics and Color
+import java.awt.*;
 import java.util.Arrays;
-import javax.swing.*;    // Using Swing's components and containers
+import javax.swing.*;
 
-/** Custom Drawing Code Template */
-// A Swing application extends javax.swing.JFrame
 public class draw extends JFrame {
     // Define constants
     public static final int CANVAS_WIDTH  = 20;
     public static final int CANVAS_HEIGHT = 100;
-    public static final int LINE_HIGHT = 20;
+    public static final int LINE_HIGHT = 10;
     public static final int LINE_WIDTH = 40;
     public static final int HOME_X = 20;
     public static final int HOME_Y = 70;
 
-    // Declare an instance of the drawing canvas,
-    // which is an inner class called DrawCanvas extending javax.swing.JPanel.
     private DrawCanvas canvas;
 
-    // Constructor to set up the GUI components and event handlers
-    public draw(Method method, int option) {
-        canvas = new DrawCanvas(method, option);    // Construct the drawing canvas
+    public draw(Method method, int option, int x) {
+        canvas = new DrawCanvas(method, option);
         if (option == 3){
             canvas.setPreferredSize(new Dimension(CANVAS_WIDTH+(LINE_WIDTH*method.getNo_of_bells()),
                     CANVAS_HEIGHT + (LINE_HIGHT*method.getNotation().split(",").length)));
-        }else{
+        }else if (option == 4 || option == 5){
+            canvas.setPreferredSize(new Dimension(CANVAS_WIDTH+(LINE_WIDTH*method.getNo_of_bells()),
+                    CANVAS_HEIGHT + (2*LINE_HIGHT*method.getNotation().split(",").length)));
+        }
+        else{
             canvas.setPreferredSize(new Dimension(CANVAS_WIDTH+(LINE_WIDTH*method.getNo_of_bells()),
                     CANVAS_HEIGHT + (LINE_HIGHT*method.getPlain_course_length())));
         }
@@ -35,15 +34,14 @@ public class draw extends JFrame {
         JScrollPane scrollPane = new JScrollPane();
         canvas.add(scrollPane);
 
-        // Set the Drawing JPanel as the JFrame's content-pane
         Container cp = getContentPane();
         cp.add(canvas);
-        // or "setContentPane(canvas);"
 
-        setDefaultCloseOperation(EXIT_ON_CLOSE);   // Handle the CLOSE button
-        pack();              // Either pack() the components; or setSize()
-        setTitle("Blue Line");  // "super" JFrame sets the title
-        setVisible(true);    // "super" JFrame show
+        setLocation(x, 10);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        pack();
+        setTitle("Blue Line");
+        setVisible(true);
     }
 
     /**
@@ -69,6 +67,18 @@ public class draw extends JFrame {
             int[] nextPosition = new int[12];
             int[] lastPos = nextPosition;
             String[] not = method.getNotation().split(",");
+
+            String[] plain_lead = new String[not.length];
+            String[] bob_lead = new String[not.length];
+            String[] single_lead = new String[not.length];
+            for(int i = 0; i < not.length; i++){
+                plain_lead[i] = not[i];
+                bob_lead[i] = not[i];
+                single_lead[i] = not[i];
+            }
+            bob_lead[Integer.parseInt(method.getCall_point())] = method.getBob_notation();
+            single_lead[Integer.parseInt(method.getCall_point())] = method.getSingle_notation();
+
             String[] firstLine = initiliseFirstLine(method.getNo_of_bells());
 
             drawVerticalLines(g2);
@@ -81,17 +91,28 @@ public class draw extends JFrame {
 
             nextPosition = drawLine(g2, currentLine, lastPos, lineNumber);
             drawNewLeadMarkers(g2,  1, lineNumber-1, font);
-            outLine(currentLine);
+            //outLine(currentLine);
+
+
+
             int temp = 1;
             int grid = 0;
-            while(!checkRounds(currentLine, firstLine) && grid == 0){
+            not = plain_lead;
+            if(option == 4){
+                not = bob_lead;
+            }else if(option == 5){
+                not = single_lead;
+            }
+
+
+            while(!checkRounds(currentLine, firstLine) && grid != 2){
                 if(temp == 0){
                     drawNewLeadMarkers(g2, nextPosition[2], lineNumber, font);
                 }
 
                 for (int notNumber = temp; notNumber < not.length; notNumber++) {
                     currentLine = getNextLine(currentLine, not[notNumber]);
-                    outLine(currentLine);
+                    //outLine(currentLine);
                     lineNumber += 1;
 
                     lastPos = nextPosition;
@@ -100,9 +121,11 @@ public class draw extends JFrame {
                 temp = 0;
 
                 if (option == 3){
-                    grid = 1;
+                    grid = 2;
+                } else if (option == 4 || option == 5){
+                    grid += 1;
+                    not = plain_lead;
                 }
-
 
             }
         }
@@ -114,33 +137,67 @@ public class draw extends JFrame {
             nextPos = getNextLinePos(currentLine);
             for(int i = method.getNo_of_bells(); i > 0; i--){
                 g.setStroke(new BasicStroke(2));
-                if(i == 1){
-                    color = Color.RED;
-                }else if(i == 2){
-                    g.setStroke(new BasicStroke(3));
-                    color = Color.BLUE;
-                }else if(i == 3){
-                    final Color DARK_GREEN = new Color(0, 255, 0);
-                    color = DARK_GREEN;
-                }else if(i == 4){
-                    color = Color.MAGENTA;
-                }else if(i == 5){
-                    final Color MUSTARD_YELLOW = new Color(144, 0, 255);
-                    color = MUSTARD_YELLOW;
-                }else if(i == 6){
-                    final Color TURQUOISE = new Color(17,244, 241);
-                    color = TURQUOISE;
-                }else if(i == 7){
-                    color = Color.gray;
-                }else if(i == 8){
-                    color = Color.BLACK;
-                }else{
-                    color = Color.LIGHT_GRAY;
+                color = Color.LIGHT_GRAY;
+
+                if(option == 3){
+                    if(i == 3){
+                        final Color DARK_GREEN = new Color(0, 255, 0);
+                        color = DARK_GREEN;
+                    }else if(i == 4){
+                        color = Color.MAGENTA;
+                    }else if(i == 5){
+                        final Color MUSTARD_YELLOW = new Color(144, 0, 255);
+                        color = MUSTARD_YELLOW;
+                    }else if(i == 6){
+                        final Color TURQUOISE = new Color(17,244, 241);
+                        color = TURQUOISE;
+                    }else if(i == 7){
+                        color = Color.gray;
+                    }else if(i == 8){
+                        color = Color.BLACK;
+                    }
                 }
-                if (option == 3) {
-                    g.setStroke(new BasicStroke(3));
+
+                if(option == 1 || option == 2 || option == 3){
+                    if(i <= method.getHunt_bells()){
+                        color = Color.RED;
+                    }else if(i == method.getHunt_bells()+1) {
+                        g.setStroke(new BasicStroke(3));
+                        color = Color.BLUE;
+                    }
+                }
+
+                if(option == 4 || option == 5){
+                    g.setStroke(new BasicStroke(1));
+                    if(i == 1 && method.getHunt_bells() >= 1){
+                        color = Color.RED;
+                    }
+                    if(option == 4){
+                        if(i == 3){
+                            color = Color.BLACK;
+                            g.setStroke(new BasicStroke(3));
+                        }else if(i == 6){
+                            color = Color.MAGENTA;
+                            g.setStroke(new BasicStroke(3));
+                        }else if(i == 5){
+                            color = Color.BLUE;
+                            g.setStroke(new BasicStroke(3));
+                        }
+                    } else if(option == 5){
+                        if(i == 3){
+                            color = Color.BLACK;
+                            g.setStroke(new BasicStroke(3));
+                        }else if(i == 6){
+                            color = Color.MAGENTA;
+                            g.setStroke(new BasicStroke(3));
+                        }
+                    }
+                }
+
+
+                if (option >= 2 && option <= 5) {
                     drawBellLine(g, lastPos[i], nextPos[i], color, lineNumber);
-                } else{
+                } else {
                     if (i >= 1 && i <= 2){
                         drawBellLine(g, lastPos[i], nextPos[i], color, lineNumber);
                     }
@@ -184,17 +241,20 @@ public class draw extends JFrame {
 
         void drawNewLeadMarkers(Graphics2D g, int nextPos, int lineNumber, Font font){
             g.setColor(Color.gray);
-            //g.drawLine(HOME_X, HOME_Y + ((lineNumber+1) * LINE_HIGHT), HOME_X + ((method.getNo_of_bells()-1) * LINE_WIDTH), HOME_Y + (lineNumber + 1) * LINE_HIGHT);
+            if(option == 4 || option == 5){
+                g.drawLine(HOME_X, HOME_Y + ((lineNumber+1) * LINE_HIGHT), HOME_X + ((method.getNo_of_bells()-1) * LINE_WIDTH), HOME_Y + (lineNumber + 1) * LINE_HIGHT);
+            }
 
-            g.setColor(Color.BLUE);
-            g.fillOval(HOME_X + (nextPos * LINE_WIDTH) - 3, HOME_Y + ((lineNumber + 1) * LINE_HIGHT) - 3, 6,6);
+            if(option <= 2){
+                g.setColor(Color.BLUE);
+                g.fillOval(HOME_X + (nextPos * LINE_WIDTH) - 5, HOME_Y + ((lineNumber + 1) * LINE_HIGHT) - 5, 10,10);
 
-            g.setColor(Color.black);
-            g.setFont(font);
-            g.drawString(Integer.toString(nextPos +1 ),
-                    HOME_X + (method.getNo_of_bells() * LINE_WIDTH) - Math.round(LINE_WIDTH/2),
-                    HOME_Y + ((lineNumber+1) * LINE_HIGHT) + Math.round(LINE_HIGHT/2));
-
+                g.setColor(Color.black);
+                g.setFont(font);
+                g.drawString(Integer.toString(nextPos +1 ),
+                        HOME_X + (method.getNo_of_bells() * LINE_WIDTH) - Math.round(LINE_WIDTH/2),
+                        HOME_Y + ((lineNumber+1) * LINE_HIGHT) + Math.round(LINE_HIGHT/2));
+            }
         }
 
         void drawBellLine(Graphics2D g, int lastPos, int nextPos, Color color, int lineNumber){
@@ -318,12 +378,12 @@ public class draw extends JFrame {
     }
 
     // The entry main method
-    public static void main(Method method, int option) {
+    public static void main(Method method, int option, int x) {
         // Run the GUI codes on the Event-Dispatching thread for thread safety
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new draw(method, option);
+                new draw(method, option, x);
             }
         });
     }

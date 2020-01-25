@@ -19,8 +19,19 @@ public class Main {
         System.out.println("  1 - Draw just blue line");
         System.out.println("  2 - Draw blue line with others gray");
         System.out.println("  3 - Draw grid");
+        System.out.println("  4 - Draw Bob");
+        System.out.println("  5 - Draw Single");
+        System.out.println("  6 - Draw All");
+        System.out.println("  9 - End");
         int answer = getStringInput();
-        draw.main(method, answer);
+        if (answer == 6){
+            draw.main(method, 1, 10);
+            draw.main(method, 4, 500);
+            draw.main(method, 5, 1000);
+        } else {
+            draw.main(method, answer, 10);
+        }
+
 
     }
 

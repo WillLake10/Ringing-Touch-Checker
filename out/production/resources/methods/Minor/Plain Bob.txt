@@ -1,1 +1,9 @@
-Plain Bob Minor-Plain Bob-6-x,16,x,16,x,16,x,16,x,16,x,12-x,14,x-x,1234,x
+Plain Bob Minor
+Plain Bob
+6
+x,16,x,16,x,16,x,16,x,16,x,12
+14
+1234
+60
+11
+1

@@ -16,6 +16,8 @@ public class Method {
     private String bob_notation;
     private String single_notation;
     private int plain_course_length;
+    private String call_point;
+    private int hunt_bells;
 
     public int getPlain_course_length() {
         return plain_course_length;
@@ -25,7 +27,7 @@ public class Method {
         this.plain_course_length = plain_course_length;
     }
 
-    public Method(String method_proper, String notation, int no_of_bells, String bob_notation, String single_notation) {
+    public Method(String method_proper, String notation, int no_of_bells, String bob_notation, String single_notation, String call_point, int hunt_bells) {
         this.method_proper = method_proper;
         this.notation = notation;
         this.no_of_bells = no_of_bells;
@@ -33,6 +35,8 @@ public class Method {
         this.bob_notation = bob_notation;
         this.single_notation = single_notation;
         this.plain_course_length = findPlainCourseLength(notation,no_of_bells);
+        this.call_point = call_point;
+        this.hunt_bells = hunt_bells;
     }
 
 
@@ -44,6 +48,24 @@ public class Method {
         this.bob_notation = "";
         this.single_notation = "";
         this.plain_course_length = 0;
+        this.call_point = "";
+        this.hunt_bells = 1;
+    }
+
+    public int getHunt_bells() {
+        return hunt_bells;
+    }
+
+    public void setHunt_bells(int hunt_bells) {
+        this.hunt_bells = hunt_bells;
+    }
+
+    public String getCall_point() {
+        return call_point;
+    }
+
+    public void setCall_point(String call_point) {
+        this.call_point = call_point;
     }
 
     public void setName(int no_of_bells, String methord_proper){
@@ -131,11 +153,13 @@ public class Method {
                 ", name='" + name + '\'' +
                 ", bob_notation='" + bob_notation + '\'' +
                 ", single_notation='" + single_notation + '\'' +
-                ", plain_course_length='" + plain_course_length + '\'' +
+                ", plain_course_length=" + plain_course_length +
+                ", call_point='" + call_point + '\'' +
+                ", hunt_bells=" + hunt_bells +
                 '}';
     }
 
-    private int findPlainCourseLength(String notation, int No_of_bells){
+    private static int findPlainCourseLength(String notation, int No_of_bells){
         int length = 0;
 
         String[] not = notation.split(",");
@@ -155,11 +179,11 @@ public class Method {
         return length;
     }
 
-    Boolean checkRounds(String[] currentLine, String[] firstLine){
+    static Boolean checkRounds(String[] currentLine, String[] firstLine){
         return Arrays.equals(currentLine, firstLine);
     }
 
-    public String[] getNextLine(String[] currentline, String notation) {
+    public static String[] getNextLine(String[] currentline, String notation) {
         String[] nextLine;
         if ("x".equals(notation) || "X".equals(notation)) {
             nextLine = getLineIfAllChange(currentline);
@@ -169,7 +193,7 @@ public class Method {
         return nextLine;
     }
 
-    String[] getLineIfAllChange(String[] currentline) {
+    static String[] getLineIfAllChange(String[] currentline) {
         String[] nextLine = new String[currentline.length];
         int size = currentline.length;
         for (int i = 0; i < size; i++) {
@@ -182,7 +206,7 @@ public class Method {
         return nextLine;
     }
 
-    String[] getLineIfNotAllChange(String[] currentline, String notation) {
+    static String[] getLineIfNotAllChange(String[] currentline, String notation) {
         String[] nextLine = new String[currentline.length];
         boolean[] done = new boolean[currentline.length];
         int temp;
@@ -220,7 +244,7 @@ public class Method {
         return nextLine;
     }
 
-    String[] initiliseFirstLine(int numBells) {
+    static String[] initiliseFirstLine(int numBells) {
         String[] firstLine = new String[numBells];
         String position;
         for (int i = 1; i <= numBells; i++) {
@@ -251,6 +275,7 @@ public class Method {
             while (method == null){
                 method = Method.openMethodFromFile(findWantedStage());
             }
+            saveMethodToFile(method);
         }
         return method;
     }
@@ -268,13 +293,27 @@ public class Method {
         try {
             FileWriter myWriter = new FileWriter("src/main/resources/methods/"+getStage(method.getNo_of_bells())
                     +"/"+method.getMethod_proper()+".txt");
+            /*
             myWriter.write(method.getName()+"-");
             myWriter.write(method.getMethod_proper()+"-");
             myWriter.write(method.getNo_of_bells()+"-");
             myWriter.write(method.getNotation()+"-");
             myWriter.write(method.getBob_notation()+"-");
             myWriter.write(method.getSingle_notation()+"-");
-            myWriter.write(method.getPlain_course_length());
+            myWriter.write(method.getPlain_course_length()+"-");
+            myWriter.write(method.getCall_point()+"-");
+            System.out.println("Writing hunt bells as: "+method.getHunt_bells());
+            myWriter.write(method.getHunt_bells());*/
+            myWriter.write(method.getName()+"\r\n");
+            myWriter.write(method.getMethod_proper()+"\r\n");
+            myWriter.write(method.getNo_of_bells()+"\r\n");
+            myWriter.write(method.getNotation()+"\r\n");
+            myWriter.write(method.getBob_notation()+"\r\n");
+            myWriter.write(method.getSingle_notation()+"\r\n");
+            myWriter.write(method.getPlain_course_length()+"\r\n");
+            myWriter.write(method.getCall_point()+"\r\n");
+            System.out.println("Writing hunt bells as: "+method.getHunt_bells());
+            myWriter.write(method.getHunt_bells()+"\r\n");
             myWriter.close();
             System.out.println("Successfully wrote to the file.");
         } catch (IOException e) {
@@ -308,9 +347,12 @@ public class Method {
             System.out.println(location + " Methods");
             for (int i = 0; i < fileList.length; i++) {
                 methodsList[i] = fileList[i].getName().substring(0, fileList[i].getName().length() - 4);
-                System.out.println(" - " + methodsList[i]);
+                System.out.println((i+1) + " - " + methodsList[i]);
             }
-            return openFile(location);
+            System.out.print("Which method do you want to open: ");
+            int fileNum = getIntInput();
+            //fileNum = 4;
+            return openFile(location, methodsList[fileNum-1]);
         }catch (Exception e){
             System.out.println("No methods available please try again");
             return null;
@@ -318,14 +360,17 @@ public class Method {
 
     }
 
-    private static Method openFile(String location){
-        System.out.print("Which method do you want to open: ");
-        String fileName = getStringInputMulti();
+    private static Method openFile(String location, String fileName){
+
         try {
             File myObj = new File("src/main/resources/methods/"+location+"/"+fileName+".txt");
             Scanner myReader = new Scanner(myObj);
-            String data[] = myReader.nextLine().split("-");
-            Method method = new Method(data[1], data[3], Integer.parseInt(data[2]), data[4], data[5]);
+            String data[] = new String[9];
+            for (int i = 0; i < 9; i++){
+                data[i] = myReader.nextLine();
+            }
+
+            Method method = new Method(data[1], data[3], Integer.parseInt(data[2]), data[4], data[5], data[7], Integer.parseInt(data[8]));
             myReader.close();
             return method;
         } catch (FileNotFoundException e) {
@@ -356,12 +401,29 @@ public class Method {
         newMethod.setNotation(getNotation("main method"));
         newMethod.setBob_notation(getNotation("bob"));
         newMethod.setSingle_notation(getNotation("single"));
+        newMethod.setCall_point(callPoint(newMethod));
+        newMethod.setPlain_course_length(findPlainCourseLength(newMethod.getNotation(),newMethod.getNo_of_bells()));
+        newMethod.setHunt_bells(getNumOfHuntBells());
         return newMethod;
+    }
+
+    private static int getNumOfHuntBells() {
+        System.out.print("Enter number of hunt bells in method: ");
+        return getIntInput();
     }
 
     private static String getNotation(String notationType){
         System.out.print("Enter " + notationType + " notation separated by a comma (e.g. x,16): ");
         return getStringInput();
+    }
+
+    private static String callPoint(Method method){
+        String[] not = method.getNotation().split(",");
+        System.out.println("Select line of call point or points:");
+        for(int i = 1; i < not.length; i++){
+            System.out.println(i + " - " + not[i]);
+        }
+        return getStringInputMulti();
     }
 
     private static String getMethordName(){
