@@ -7,8 +7,8 @@ import static com.williamlake.main.userInput.*;
 
 
 public class touchGenaration {
-    public Touch getTouchInstance(Method method){
-        Touch touch = new Touch();
+    public Touch getTouchInstanceFromUser(Method method){
+        Touch touch = new Touch(getCallOrderrFromUser(), method);
         return touch;
     }
 
@@ -27,13 +27,10 @@ public class touchGenaration {
     }
 
     private boolean checkOnlyCharsWanted(char[] validInput, String stringToTest){
-        String str = "pqrst";
-        // characters to be searched
-        char[] chSearch = {'p', 'q', 'r'};
-        for (int i = 0; i < str.length(); i++) {
-            char ch = str.charAt(i);
-            for (int j = 0; j < chSearch.length; j++) {
-                if (chSearch[j] != ch) {
+        for (int i = 0; i < stringToTest.length(); i++) {
+            char ch = stringToTest.charAt(i);
+            for (int j = 0; j < validInput.length; j++) {
+                if (validInput[j] != ch) {
                     return false;
                 }
             }

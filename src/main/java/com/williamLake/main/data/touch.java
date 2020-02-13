@@ -5,11 +5,12 @@ public class Touch extends Method {
     private Boolean isTrue;
     private String[][] bellLines;
 
-    public Touch(String callOrder, Boolean isTrue, String[][] bellLines, Method method) {
+    public Touch(String callOrder,  Method method) {
         super(method.getMethod_proper(), method.getNotation(), method.getNo_of_bells(), method.getBob_notation(), method.getSingle_notation(), method.getCall_point(), method.getHunt_bells());
         this.callOrder = callOrder;
-        this.isTrue = isTrue;
         this.bellLines = bellLines;
+        this.isTrue = isTrue;
+
     }
 
     public Touch() {
