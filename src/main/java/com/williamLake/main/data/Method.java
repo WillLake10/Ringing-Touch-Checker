@@ -8,6 +8,8 @@ import java.net.URL;
 import java.util.Arrays;
 import java.util.Scanner;
 
+import static com.williamlake.main.userInput.*;
+
 public class Method {
     private String method_proper;
     private String notation;
@@ -452,21 +454,4 @@ public class Method {
             return false;
         }
     }
-
-    private static int getIntInput(){
-        Scanner keyboard = new Scanner(System.in);
-        return keyboard.nextInt();
-    }
-
-    private static String getStringInput(){
-        Scanner keyboard = new Scanner(System.in);
-        return keyboard.next();
-    }
-
-    private static String getStringInputMulti(){
-        Scanner keyboard = new Scanner(System.in);
-        return keyboard.nextLine();
-    }
-
-
 }

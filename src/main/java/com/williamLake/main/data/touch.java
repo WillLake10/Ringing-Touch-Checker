@@ -12,6 +12,12 @@ public class Touch extends Method {
         this.bellLines = bellLines;
     }
 
+    public Touch() {
+        this.callOrder = "";
+        this.isTrue = true;
+        this.bellLines = new String[0][0];
+    }
+
     public String getCallOrder() {
         return callOrder;
     }
