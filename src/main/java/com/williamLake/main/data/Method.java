@@ -1,17 +1,5 @@
 package com.williamlake.main.data;
 
-import com.williamlake.main.lead;
-import com.williamlake.main.methodGenaration;
-
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.net.URL;
-import java.util.Arrays;
-import java.util.Scanner;
-
-import static com.williamlake.main.methodGenaration.*;
 import static com.williamlake.main.lead.*;
 
 public class Method {
@@ -37,10 +25,10 @@ public class Method {
         this.method_proper = method_proper;
         this.notation = notation;
         this.no_of_bells = no_of_bells;
-        setName(no_of_bells,method_proper);
+        setName(no_of_bells, method_proper);
         this.bob_notation = bob_notation;
         this.single_notation = single_notation;
-        this.plain_course_length = findPlainCourseLength(notation,no_of_bells);
+        this.plain_course_length = findPlainCourseLength(notation, no_of_bells);
         this.call_point = call_point;
         this.hunt_bells = hunt_bells;
     }
@@ -50,7 +38,7 @@ public class Method {
         this.method_proper = "";
         this.notation = "";
         this.no_of_bells = 0;
-        setName(no_of_bells,method_proper);
+        setName(no_of_bells, method_proper);
         this.bob_notation = "";
         this.single_notation = "";
         this.plain_course_length = 0;
@@ -74,13 +62,13 @@ public class Method {
         this.call_point = call_point;
     }
 
-    public void setName(int no_of_bells, String methord_proper){
+    public void setName(int no_of_bells, String methord_proper) {
         String Name;
         Name = methord_proper + " " + getStage(no_of_bells);
         this.name = Name;
     }
 
-    public static String getStage(int no_of_bells){
+    public static String getStage(int no_of_bells) {
         switch (no_of_bells) {
             case 0:
                 return "";
@@ -165,7 +153,7 @@ public class Method {
                 '}';
     }
 
-    public static int findPlainCourseLength(String notation, int No_of_bells){
+    public static int findPlainCourseLength(String notation, int No_of_bells) {
         int length = 0;
 
         String[] not = notation.split(",");
@@ -173,12 +161,10 @@ public class Method {
         String[] currentLine = firstLine;
 
         Boolean firstTime = true;
-        while(!checkRounds(currentLine, firstLine) || firstTime){
+        while (!checkLineMatch(currentLine, firstLine) || firstTime) {
             firstTime = false;
             for (int notNumber = 0; notNumber < not.length; notNumber++) {
-
                 currentLine = getNextLine(currentLine, not[notNumber]);
-
                 length += 1;
             }
         }

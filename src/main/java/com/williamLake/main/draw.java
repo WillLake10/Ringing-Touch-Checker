@@ -3,7 +3,6 @@ package com.williamlake.main;
 import com.williamlake.main.data.Method;
 
 import java.awt.*;
-import java.util.Arrays;
 import javax.swing.*;
 
 import static com.williamlake.main.lead.*;
@@ -107,7 +106,7 @@ public class draw extends JFrame {
             }
 
 
-            while(!checkRounds(currentLine, firstLine) && grid != 2){
+            while(!checkLineMatch(currentLine, firstLine) && grid != 2){
                 if(temp == 0){
                     drawNewLeadMarkers(g2, nextPosition[2], lineNumber, font);
                 }
@@ -137,76 +136,131 @@ public class draw extends JFrame {
             Color color;
             color = Color.BLUE;
             nextPos = getNextLinePos(currentLine);
-            for(int i = method.getNo_of_bells(); i > 0; i--){
+            int bellsEffectedByBob[] = getBellsEffectedByCall(method.getNotation(), method.getNo_of_bells(), method.getBob_notation());
+            int bellsEffectedBySingle[] = getBellsEffectedByCall(method.getNotation(), method.getNo_of_bells(), method.getSingle_notation());
+
+            for(int i = method.getNo_of_bells(); i > 0; i--) {
                 g.setStroke(new BasicStroke(2));
                 color = Color.LIGHT_GRAY;
 
-                if(option == 3){
-                    if(i == 3){
+                if (option == 3) {
+                    if (i == 3) {
                         final Color DARK_GREEN = new Color(0, 255, 0);
                         color = DARK_GREEN;
-                    }else if(i == 4){
+                    } else if (i == 4) {
                         color = Color.MAGENTA;
-                    }else if(i == 5){
+                    } else if (i == 5) {
                         final Color MUSTARD_YELLOW = new Color(144, 0, 255);
                         color = MUSTARD_YELLOW;
-                    }else if(i == 6){
-                        final Color TURQUOISE = new Color(17,244, 241);
+                    } else if (i == 6) {
+                        final Color TURQUOISE = new Color(17, 244, 241);
                         color = TURQUOISE;
-                    }else if(i == 7){
+                    } else if (i == 7) {
                         color = Color.gray;
-                    }else if(i == 8){
+                    } else if (i == 8) {
                         color = Color.BLACK;
                     }
                 }
 
-                if(option == 1 || option == 2 || option == 3){
-                    if(i <= method.getHunt_bells()){
+                if (option == 1 || option == 2 || option == 3) {
+                    if (i <= method.getHunt_bells()) {
                         color = Color.RED;
-                    }else if(i == method.getHunt_bells()+1) {
+                    } else if (i == method.getHunt_bells() + 1) {
                         g.setStroke(new BasicStroke(3));
                         color = Color.BLUE;
                     }
                 }
 
-                if(option == 4 || option == 5){
+                if (option == 4 || option == 5) {
                     g.setStroke(new BasicStroke(1));
-                    if(i == 1 && method.getHunt_bells() >= 1){
-                        color = Color.RED;
+
+                    if (option == 4) {
+                        for (int bell : bellsEffectedByBob) {
+                            if (bell == i) {
+                                color = getBellColor(bell);
+                                g.setStroke(new BasicStroke(3));
+                            }
+                        }
+                    } else if (option == 5) {
+                        for (int bell : bellsEffectedBySingle) {
+                            if (bell == i) {
+                                color = getBellColor(bell);
+                                g.setStroke(new BasicStroke(3));
+                            }
+                        }
                     }
-                    if(option == 4){
-                        if(i == 3){
-                            color = Color.BLACK;
-                            g.setStroke(new BasicStroke(3));
-                        }else if(i == 6){
-                            color = Color.MAGENTA;
-                            g.setStroke(new BasicStroke(3));
-                        }else if(i == 5){
-                            color = Color.BLUE;
-                            g.setStroke(new BasicStroke(3));
-                        }
-                    } else if(option == 5){
-                        if(i == 3){
-                            color = Color.BLACK;
-                            g.setStroke(new BasicStroke(3));
-                        }else if(i == 6){
-                            color = Color.MAGENTA;
-                            g.setStroke(new BasicStroke(3));
-                        }
+                    if (i == 1 && method.getHunt_bells() >= 1) {
+                        color = Color.RED;
+                        g.setStroke(new BasicStroke(2));
                     }
                 }
 
 
-                if (option >= 2 && option <= 5) {
+                if (option >= 2 && option <= 3) {
                     drawBellLine(g, lastPos[i], nextPos[i], color, lineNumber);
-                } else {
-                    if (i >= 1 && i <= 2){
-                        drawBellLine(g, lastPos[i], nextPos[i], color, lineNumber);
+                }else if(option == 4){
+                    for(int b : bellsEffectedByBob){
+                        if (i == 1 || i == b){
+                            drawBellLine(g, lastPos[i], nextPos[i], color, lineNumber);
+                        }
+                    }
+                }else if(option == 5){
+                    for(int b : bellsEffectedBySingle){
+                        if (i == 1 || i == b){
+                            drawBellLine(g, lastPos[i], nextPos[i], color, lineNumber);
+                        }
+                    }
+                }else if(option == 1){
+                    for(int b = 0; b <= method.getHunt_bells(); b++){
+                        if (i == b){
+                            drawBellLine(g, lastPos[i], nextPos[i], Color.RED, lineNumber);
+                        }else if(i == method.getHunt_bells()+1){
+                            drawBellLine(g, lastPos[i], nextPos[i], Color.BLUE, lineNumber);
+                        }
                     }
                 }
 
             }
             return nextPos;
+        }
+
+        Color getBellColor(int i){
+            Color color = Color.lightGray;
+            i += 1;
+            if(i == 1){
+                final Color DARK_GREEN = new Color(0, 255, 0);
+                color = DARK_GREEN;
+            }else if(i == 2){
+                final Color Col3 = new Color(255, 206, 0);
+                color = Col3;
+            }else if(i == 3){
+                final Color MUSTARD_YELLOW = new Color(144, 0, 255);
+                color = MUSTARD_YELLOW;
+            }else if(i == 4){
+                final Color TURQUOISE = new Color(17,244, 241);
+                color = TURQUOISE;
+            }else if(i == 5){
+                color = Color.gray;
+            }else if(i == 6){
+                color = Color.ORANGE;
+            }else if(i == 7){
+                color = Color.MAGENTA;
+            }else if(i == 8){
+                color = Color.BLUE;
+            }else if(i == 9){
+                final Color TURQUOISE = new Color(244, 0, 80);
+                color = TURQUOISE;
+            }else if(i == 10){
+                final Color TURQUOISE = new Color(85, 122, 244);
+                color = TURQUOISE;
+            }else if(i == 11){
+                final Color TURQUOISE = new Color(244, 90, 1);
+                color = TURQUOISE;
+            }else if(i == 12){
+                final Color TURQUOISE = new Color(212, 31, 244);
+                color = TURQUOISE;
+            }
+            return color;
         }
 
         int[] getNextLinePos(String[] currentLine){

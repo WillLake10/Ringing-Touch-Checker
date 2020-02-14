@@ -3,7 +3,7 @@ package com.williamlake.main;
 import java.util.Arrays;
 
 public class lead {
-    public static Boolean checkRounds(String[] currentLine, String[] firstLine){
+    public static Boolean checkLineMatch(String[] currentLine, String[] firstLine){
         return Arrays.equals(currentLine, firstLine);
     }
 
@@ -84,6 +84,74 @@ public class lead {
             firstLine[i - 1] = position;
         }
         return firstLine;
+    }
+
+    public static String[] getLeadEnd(String[] currentLine, String notation){
+        String[] not = notation.split(",");
+        for (int notNumber = 0; notNumber < not.length; notNumber++) {
+            currentLine = getNextLine(currentLine, not[notNumber]);
+        }
+        return currentLine;
+    }
+
+    public static int[] getBellsEffectedByCall(String notation, int No_of_bells, String callNot){
+        char[] planeMove = new char[No_of_bells];
+        char[] callMove = new char[No_of_bells];
+        String[] not = notation.split(",");
+        String notTemp = not[not.length - 1];
+        char[] notOriginal = notTemp.toCharArray();
+        char[] notCall = callNot.toCharArray();
+        int[] temp = new int[12];
+        int length = 0;
+
+        for(char bell : notOriginal){
+            planeMove[Character.getNumericValue(bell) - 1] = 's';
+        }
+        for(char bell : notCall){
+            callMove[Character.getNumericValue(bell) - 1] = 's';
+        }
+
+        char lastOrigingal = 'd';
+        char lastCall = 'd';
+        for(int i = 0; i < No_of_bells; i++){
+            if(planeMove[i] != 's'){
+                if(lastOrigingal == 'd'){
+                    planeMove[i] = 'u';
+                    lastOrigingal = 'u';
+                }else if(lastOrigingal == 'u'){
+                    planeMove[i] = 'd';
+                    lastOrigingal = 'd';
+                }
+            }
+            if(callMove[i] != 's'){
+                if(lastCall == 'd'){
+                    callMove[i] = 'u';
+                    lastCall = 'u';
+                }else if(lastCall == 'u'){
+                    callMove[i] = 'd';
+                    lastCall = 'd';
+                }
+            }
+
+            if(planeMove[i] != callMove[i]){
+                temp[length] = i;
+                length += 1;
+            }
+        }
+        int bellPos[] = new int[length];
+        int returnVal[] = new int[length];
+
+        for(int j = 0; j < length; j++){
+            bellPos[j] = temp[j];
+        }
+
+        String[] leadEnd = getLeadEnd(initiliseFirstLine(No_of_bells), notation);
+
+        for(int j = 0; j < length; j++){
+            returnVal[j] = Integer.parseInt(leadEnd[bellPos[j]]);
+        }
+
+        return returnVal;
     }
 
     void outLine(String[] line){
