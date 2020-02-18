@@ -17,8 +17,8 @@ public class Main {
 
     public static void drawBlueLine(Method method){
         System.out.println("Chose an option: ");
-        System.out.println("  1 - Draw just blue line");
-        System.out.println("  2 - Draw blue line with others gray");
+        System.out.println("  1 - Draw just blue Line");
+        System.out.println("  2 - Draw blue Line with others gray");
         System.out.println("  3 - Draw grid");
         System.out.println("  4 - Draw Bob");
         System.out.println("  5 - Draw Single");

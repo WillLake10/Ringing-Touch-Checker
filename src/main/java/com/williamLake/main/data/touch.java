@@ -1,22 +1,18 @@
 package com.williamlake.main.data;
 
+import static com.williamlake.main.touchGenaration.checkLineIsTrue;
+import static com.williamlake.main.touchGenaration.getTouchBellLine;
+
 public class Touch extends Method {
     private String callOrder;
     private Boolean isTrue;
-    private String[][] bellLines;
+    private Line[] bellLines;
 
-    public Touch(String callOrder,  Method method) {
+    public Touch(String callOrder, Method method) {
         super(method.getMethod_proper(), method.getNotation(), method.getNo_of_bells(), method.getBob_notation(), method.getSingle_notation(), method.getCall_point(), method.getHunt_bells());
         this.callOrder = callOrder;
-        this.bellLines = bellLines;
-        this.isTrue = isTrue;
-
-    }
-
-    public Touch() {
-        this.callOrder = "";
-        this.isTrue = true;
-        this.bellLines = new String[0][0];
+        this.bellLines = getTouchBellLine(callOrder, method);
+        this.isTrue = checkLineIsTrue(bellLines);
     }
 
     public String getCallOrder() {
@@ -35,11 +31,11 @@ public class Touch extends Method {
         isTrue = aTrue;
     }
 
-    public String[][] getBellLines() {
+    public Line[] getBellLines() {
         return bellLines;
     }
 
-    public void setBellLines(String[][] bellLines) {
+    public void setBellLines(Line[] bellLines) {
         this.bellLines = bellLines;
     }
 }

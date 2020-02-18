@@ -157,8 +157,8 @@ public class Method {
         int length = 0;
 
         String[] not = notation.split(",");
-        String[] firstLine = initiliseFirstLine(No_of_bells);
-        String[] currentLine = firstLine;
+        Line firstLine = initiliseFirstLine(No_of_bells);
+        Line currentLine = firstLine;
 
         Boolean firstTime = true;
         while (!checkLineMatch(currentLine, firstLine) || firstTime) {

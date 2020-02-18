@@ -158,7 +158,7 @@ public class methodGenaration {
 
     private static String callPoint(Method method) {
         String[] not = method.getNotation().split(",");
-        System.out.println("Select line of call point or points:");
+        System.out.println("Select Line of call point or points:");
         for (int i = 1; i < not.length; i++) {
             System.out.println(i + " - " + not[i]);
         }

@@ -2,6 +2,7 @@ package com.williamlake.main;
 
 import com.williamlake.main.data.Method;
 import com.williamlake.main.data.Touch;
+import com.williamlake.main.data.Line;
 
 import static com.williamlake.main.userInput.*;
 
@@ -36,6 +37,25 @@ public class touchGenaration {
             }
         }
         return true;
+    }
+
+    private static int getRoughLength(String callOrder, Method method){
+        return (method.getPlain_course_length()/(method.getNo_of_bells()-method.getHunt_bells()))*callOrder.length();
+    }
+
+    public static Line[] getTouchBellLine(String callOrder, Method method){
+        Line bellLine[] = new Line[5000];
+        for(int i = 0; i < 5000; i++){
+            bellLine[i] = new Line(getRoughLength(callOrder, method));
+        }
+
+        return bellLine;
+    }
+
+    public static boolean checkLineIsTrue(Line[] line){
+        boolean isTrue = true;
+
+        return isTrue;
     }
 
 }

@@ -1,14 +1,16 @@
 package com.williamlake.main;
 
+import com.williamlake.main.data.Line;
+
 import java.util.Arrays;
 
 public class lead {
-    public static Boolean checkLineMatch(String[] currentLine, String[] firstLine){
-        return Arrays.equals(currentLine, firstLine);
+    public static Boolean checkLineMatch(Line currentLine, Line firstLine){
+        return Arrays.equals(currentLine.getbLine(), firstLine.getbLine());
     }
 
-    public static String[] getNextLine(String[] currentline, String notation) {
-        String[] nextLine;
+    public static Line getNextLine(Line currentline, String notation) {
+        Line nextLine;
         if ("x".equals(notation) || "X".equals(notation)) {
             nextLine = getLineIfAllChange(currentline);
         } else {
@@ -17,22 +19,22 @@ public class lead {
         return nextLine;
     }
 
-    public static String[] getLineIfAllChange(String[] currentline) {
-        String[] nextLine = new String[currentline.length];
-        int size = currentline.length;
+    public static Line getLineIfAllChange(Line currentline) {
+        Line nextLine = new Line(currentline.getbLine().length);
+        int size = currentline.getbLine().length;
         for (int i = 0; i < size; i++) {
             if (i % 2 == 0) {
-                nextLine[i] = currentline[i + 1];
+                nextLine.getbLine()[i] = currentline.getbLine()[i + 1];
             } else {
-                nextLine[i] = currentline[i - 1];
+                nextLine.getbLine()[i] = currentline.getbLine()[i - 1];
             }
         }
         return nextLine;
     }
 
-    public static String[] getLineIfNotAllChange(String[] currentline, String notation) {
-        String[] nextLine = new String[currentline.length];
-        boolean[] done = new boolean[currentline.length];
+    public static Line getLineIfNotAllChange(Line currentline, String notation) {
+        Line nextLine = new Line(currentline.getbLine().length);
+        boolean[] done = new boolean[currentline.getbLine().length];
         int temp;
         String[] parts = new String[notation.length()];
         for (int i = 0; i < notation.length(); i++){
@@ -52,14 +54,14 @@ public class lead {
             } else {
                 temp = 11;
             }
-            nextLine[temp] = currentline[temp];
+            nextLine.getbLine()[temp] = currentline.getbLine()[temp];
             done[temp] = true;
         }
 
         for (int j = 0; j < done.length; j++) {
             if (done[j] == false) {
-                nextLine[j] = currentline[j + 1];
-                nextLine[j + 1] = currentline[j];
+                nextLine.getbLine()[j] = currentline.getbLine()[j + 1];
+                nextLine.getbLine()[j + 1] = currentline.getbLine()[j];
                 done[j] = true;
                 done[j + 1] = true;
             }
@@ -68,8 +70,8 @@ public class lead {
         return nextLine;
     }
 
-    public static String[] initiliseFirstLine(int numBells) {
-        String[] firstLine = new String[numBells];
+    public static Line initiliseFirstLine(int numBells) {
+        Line firstLine = new Line(numBells);
         String position;
         for (int i = 1; i <= numBells; i++) {
             if (i == 10) {
@@ -81,12 +83,12 @@ public class lead {
             } else {
                 position = Integer.toString(i);
             }
-            firstLine[i - 1] = position;
+            firstLine.getbLine()[i - 1] = position;
         }
         return firstLine;
     }
 
-    public static String[] getLeadEnd(String[] currentLine, String notation){
+    public static Line getLeadEnd(Line currentLine, String notation){
         String[] not = notation.split(",");
         for (int notNumber = 0; notNumber < not.length; notNumber++) {
             currentLine = getNextLine(currentLine, not[notNumber]);
@@ -100,44 +102,48 @@ public class lead {
         String[] not = notation.split(",");
         String notTemp = not[not.length - 1];
         char[] notOriginal = notTemp.toCharArray();
-        char[] notCall = callNot.toCharArray();
-        int[] temp = new int[12];
+        int[] temp = new int[30];
         int length = 0;
+        for(String cNot : callNot.split(",")){
+            char[] notCall = cNot.toCharArray();
+            for(char bell : notOriginal){
+                planeMove[Character.getNumericValue(bell) - 1] = 's';
+            }
+            for(char bell : notCall){
+                callMove[Character.getNumericValue(bell) - 1] = 's';
+            }
 
-        for(char bell : notOriginal){
-            planeMove[Character.getNumericValue(bell) - 1] = 's';
-        }
-        for(char bell : notCall){
-            callMove[Character.getNumericValue(bell) - 1] = 's';
-        }
+            char lastOrigingal = 'd';
+            char lastCall = 'd';
+            for(int i = 0; i < No_of_bells; i++){
+                if(planeMove[i] != 's'){
+                    if(lastOrigingal == 'd'){
+                        planeMove[i] = 'u';
+                        lastOrigingal = 'u';
+                    }else if(lastOrigingal == 'u'){
+                        planeMove[i] = 'd';
+                        lastOrigingal = 'd';
+                    }
+                }
+                if(callMove[i] != 's'){
+                    if(lastCall == 'd'){
+                        callMove[i] = 'u';
+                        lastCall = 'u';
+                    }else if(lastCall == 'u'){
+                        callMove[i] = 'd';
+                        lastCall = 'd';
+                    }
+                }
 
-        char lastOrigingal = 'd';
-        char lastCall = 'd';
-        for(int i = 0; i < No_of_bells; i++){
-            if(planeMove[i] != 's'){
-                if(lastOrigingal == 'd'){
-                    planeMove[i] = 'u';
-                    lastOrigingal = 'u';
-                }else if(lastOrigingal == 'u'){
-                    planeMove[i] = 'd';
-                    lastOrigingal = 'd';
+                if(planeMove[i] != callMove[i]){
+                    temp[length] = i;
+                    length += 1;
                 }
             }
-            if(callMove[i] != 's'){
-                if(lastCall == 'd'){
-                    callMove[i] = 'u';
-                    lastCall = 'u';
-                }else if(lastCall == 'u'){
-                    callMove[i] = 'd';
-                    lastCall = 'd';
-                }
-            }
 
-            if(planeMove[i] != callMove[i]){
-                temp[length] = i;
-                length += 1;
-            }
         }
+
+
         int bellPos[] = new int[length];
         int returnVal[] = new int[length];
 
@@ -145,10 +151,10 @@ public class lead {
             bellPos[j] = temp[j];
         }
 
-        String[] leadEnd = getLeadEnd(initiliseFirstLine(No_of_bells), notation);
+        Line leadEnd = getLeadEnd(initiliseFirstLine(No_of_bells), notation);
 
         for(int j = 0; j < length; j++){
-            returnVal[j] = Integer.parseInt(leadEnd[bellPos[j]]);
+            returnVal[j] = Integer.parseInt(leadEnd.getbLine()[bellPos[j]]);
         }
 
         return returnVal;

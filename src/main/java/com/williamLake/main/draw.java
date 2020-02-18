@@ -1,5 +1,6 @@
 package com.williamlake.main;
 
+import com.williamlake.main.data.Line;
 import com.williamlake.main.data.Method;
 
 import java.awt.*;
@@ -80,12 +81,12 @@ public class draw extends JFrame {
             bob_lead[Integer.parseInt(method.getCall_point())] = method.getBob_notation();
             single_lead[Integer.parseInt(method.getCall_point())] = method.getSingle_notation();
 
-            String[] firstLine = initiliseFirstLine(method.getNo_of_bells());
+            Line firstLine = initiliseFirstLine(method.getNo_of_bells());
 
             drawVerticalLines(g2);
             drawTitle(g2, font);
 
-            String[] currentLine = getNextLine(firstLine, not[0]);
+            Line currentLine = getNextLine(firstLine, not[0]);
             for(int i = 0; i < 12; i++){
                 lastPos[i] = i - 1;
             }
@@ -131,7 +132,7 @@ public class draw extends JFrame {
             }
         }
 
-        int[] drawLine(Graphics2D g, String[] currentLine, int[] lastPos, int lineNumber){
+        int[] drawLine(Graphics2D g, Line currentLine, int[] lastPos, int lineNumber){
             int[] nextPos;
             Color color;
             color = Color.BLUE;
@@ -263,32 +264,32 @@ public class draw extends JFrame {
             return color;
         }
 
-        int[] getNextLinePos(String[] currentLine){
+        int[] getNextLinePos(Line currentLine){
             int[] nextPos = new int[12];
             for (int x = 0; x < method.getNo_of_bells(); x++) {
-                if (currentLine[x].equals("1")) {
+                if (currentLine.getbLine()[x].equals("1")) {
                     nextPos[1] = x;
-                }else if (currentLine[x].equals("2")) {
+                }else if (currentLine.getbLine()[x].equals("2")) {
                     nextPos[2] = x;
-                }else if (currentLine[x].equals("3")) {
+                }else if (currentLine.getbLine()[x].equals("3")) {
                     nextPos[3] = x;
-                }else if (currentLine[x].equals("4")) {
+                }else if (currentLine.getbLine()[x].equals("4")) {
                     nextPos[4] = x;
-                }else if (currentLine[x].equals("5")) {
+                }else if (currentLine.getbLine()[x].equals("5")) {
                     nextPos[5] = x;
-                }else if (currentLine[x].equals("6")) {
+                }else if (currentLine.getbLine()[x].equals("6")) {
                     nextPos[6] = x;
-                }else if (currentLine[x].equals("7")) {
+                }else if (currentLine.getbLine()[x].equals("7")) {
                     nextPos[7] = x;
-                }else if (currentLine[x].equals("8")) {
+                }else if (currentLine.getbLine()[x].equals("8")) {
                     nextPos[8] = x;
-                }else if (currentLine[x].equals("9")) {
+                }else if (currentLine.getbLine()[x].equals("9")) {
                     nextPos[9] = x;
-                }else if (currentLine[x].equals("0")) {
+                }else if (currentLine.getbLine()[x].equals("0")) {
                     nextPos[10] = x;
-                }else if (currentLine[x].equals("E")) {
+                }else if (currentLine.getbLine()[x].equals("E")) {
                     nextPos[11] = x;
-                }else if (currentLine[x].equals("T")) {
+                }else if (currentLine.getbLine()[x].equals("T")) {
                     nextPos[12] = x;
                 }
             }
