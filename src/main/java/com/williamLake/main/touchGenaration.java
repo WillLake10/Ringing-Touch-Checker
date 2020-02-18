@@ -4,6 +4,7 @@ import com.williamlake.main.data.Method;
 import com.williamlake.main.data.Touch;
 import com.williamlake.main.data.Line;
 
+import static com.williamlake.main.lead.*;
 import static com.williamlake.main.userInput.*;
 
 
@@ -44,12 +45,49 @@ public class touchGenaration {
     }
 
     public static Line[] getTouchBellLine(String callOrder, Method method){
-        Line bellLine[] = new Line[5000];
-        for(int i = 0; i < 5000; i++){
-            bellLine[i] = new Line(getRoughLength(callOrder, method));
+        Line bellLine[] = new Line[getRoughLength(callOrder, method)];
+        Line firstLine = initiliseFirstLine(method.getNo_of_bells());
+        Line currentLine = firstLine;
+        String[] not = method.getNotation().split(",");
+        String[] plain_lead = new String[not.length];
+        String[] bob_lead = new String[not.length];
+        String[] single_lead = new String[not.length];
+        int length = 0;
+
+        for(int i = 0; i < not.length; i++){
+            plain_lead[i] = not[i];
+            bob_lead[i] = not[i];
+            single_lead[i] = not[i];
         }
 
-        return bellLine;
+        bob_lead[Integer.parseInt(method.getCall_point())] = method.getBob_notation();
+        single_lead[Integer.parseInt(method.getCall_point())] = method.getSingle_notation();
+
+
+        for(int i = 0; i < bellLine.length; i++){
+            bellLine[i] = new Line(method.getNo_of_bells());
+        }
+
+        for(char call : callOrder.toCharArray()){
+            if(call == 'b'){
+                not = bob_lead;
+            }else if(call == 's'){
+                not = bob_lead;
+            }else{
+                not = plain_lead;
+            }
+            for (int notNumber = 0; notNumber < not.length; notNumber++) {
+                bellLine[length] = getNextLine(bellLine[length-1], not[notNumber]);
+                length += 1;
+                System.out.println(bellLine[length-1].toStringJustNum());
+            }
+        }
+        Line returnLine[] = new Line[length];
+        for(int i = 0; i < length; i++){
+            returnLine[i] = new Line(method.getNo_of_bells());
+            returnLine[i] = bellLine[i];
+        }
+        return returnLine;
     }
 
     public static boolean checkLineIsTrue(Line[] line){

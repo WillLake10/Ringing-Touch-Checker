@@ -1,5 +1,7 @@
 package com.williamlake.main.data;
 
+import java.util.Arrays;
+
 public class Line {
     private String[] bLine;
 
@@ -17,5 +19,16 @@ public class Line {
 
     public void setbLine(String[] bLine) {
         this.bLine = bLine;
+    }
+
+    @Override
+    public String toString() {
+        return "Line{" +
+                "bLine=" + Arrays.toString(bLine) +
+                '}';
+    }
+
+    public String toStringJustNum() {
+        return "Arrays.toString(bLine)";
     }
 }

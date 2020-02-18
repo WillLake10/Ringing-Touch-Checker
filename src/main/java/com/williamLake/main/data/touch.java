@@ -7,12 +7,14 @@ public class Touch extends Method {
     private String callOrder;
     private Boolean isTrue;
     private Line[] bellLines;
+    private int length;
 
     public Touch(String callOrder, Method method) {
         super(method.getMethod_proper(), method.getNotation(), method.getNo_of_bells(), method.getBob_notation(), method.getSingle_notation(), method.getCall_point(), method.getHunt_bells());
         this.callOrder = callOrder;
         this.bellLines = getTouchBellLine(callOrder, method);
         this.isTrue = checkLineIsTrue(bellLines);
+        this.length= bellLines.length;
     }
 
     public String getCallOrder() {
