@@ -29,6 +29,10 @@ public class Line {
     }
 
     public String toStringJustNum() {
-        return "Arrays.toString(bLine)";
+        String returnString = "";
+        for(int i = 0; i < bLine.length; i++){
+            returnString += bLine[i];
+        }
+        return returnString;
     }
 }

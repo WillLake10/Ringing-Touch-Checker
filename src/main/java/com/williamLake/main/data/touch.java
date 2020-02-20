@@ -14,7 +14,7 @@ public class Touch extends Method {
         this.callOrder = callOrder;
         this.bellLines = getTouchBellLine(callOrder, method);
         this.isTrue = checkLineIsTrue(bellLines);
-        this.length= bellLines.length;
+        this.length= bellLines.length - 1;
     }
 
     public String getCallOrder() {
@@ -39,5 +39,27 @@ public class Touch extends Method {
 
     public void setBellLines(Line[] bellLines) {
         this.bellLines = bellLines;
+    }
+
+    @Override
+    public String toString() {
+        String returnString = "Touch{" + System.lineSeparator() +
+                "callOrder = " + callOrder.toUpperCase()  + System.lineSeparator() +
+                "isTrue = " + isTrue + System.lineSeparator() +
+                "length = " + length + System.lineSeparator() +
+                "bellLines =";
+        int x = 0;
+        boolean first = true;
+        returnString = returnString + "  " + bellLines[0].toStringJustNum() + System.lineSeparator();
+        for (int i = 0; i < length; i++){
+            if(i != 0 && i % (this.getPlain_course_length()/(this.getNo_of_bells()-this.getHunt_bells())) == 0){
+
+                returnString = returnString + "           " + callOrder.split("")[x].toUpperCase() + " " + bellLines[i].toStringJustNum() + System.lineSeparator();
+                x++;
+            }
+        }
+        returnString = returnString + "           " + callOrder.split("")[x].toUpperCase() + " " + bellLines[bellLines.length - 1].toStringJustNum() + System.lineSeparator();
+
+        return returnString;
     }
 }
