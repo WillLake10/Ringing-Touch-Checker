@@ -10,9 +10,32 @@ import static com.williamlake.main.userInput.*;
 
 public class touchGenaration {
     public static Touch getTouchInstanceFromUser(Method method) {
-        Touch touch = new Touch(getCallOrderrFromUser(), method);
+        System.out.println("Chose an option: ");
+        System.out.println("  1 - Enter calls");
+        System.out.println("  2 - Enter tenner position at calls");
+        int ans = getIntInput();
+        Touch touch;
+        if(ans == 1){
+            touch = new Touch(getCallOrderrFromUser(), method, 1);
+        }else{
+            touch = new Touch(getCallPosFromUser(), method, 2);
+        }
 
         return touch;
+    }
+
+    private static String getCallPosFromUser() {
+        System.out.print("Enter the call Position for tenner: ");
+        String call = getStringInput();
+        System.out.println();
+        String[] validChar = {"W", "H", "M", "S", "B", "I", "3rds", "4ths", "5ths", "6ths", "7ths", "8ths", "9ths"};
+        while (!checkOnlyStringsWanted(validChar, call)) {
+            System.out.println("Invalid input");
+            System.out.print("Enter the call order: ");
+            call = getStringInput();
+            System.out.println();
+        }
+        return call;
     }
 
     private static String getCallOrderrFromUser() {
@@ -35,6 +58,23 @@ public class touchGenaration {
             char ch = stringToTest.charAt(i);
             for (int j = 0; j < validInput.length; j++) {
                 if (validInput[j] != ch) {
+                    found = true;
+                }
+            }
+            if (!found) {
+                return false;
+            }
+            found = false;
+        }
+        return true;
+    }
+
+    private static boolean checkOnlyStringsWanted(String[] validInput, String stringToTest) {
+        boolean found = false;
+        for (int i = 0; i < stringToTest.length(); i++) {
+            String ch = stringToTest.split(",")[i];
+            for (int j = 0; j < validInput.length; j++) {
+                if (!validInput[j].equals(ch)) {
                     found = true;
                 }
             }
@@ -121,6 +161,61 @@ public class touchGenaration {
         }
         //System.out.println(isTrue);
         return isTrue;
+    }
+
+    public static String getCalledFromBell(String callOrder, Line[] bellLines, int leadLength, int no_bells){
+        String calledFromBell = "";
+        char[] calls = callOrder.toCharArray();
+        for(int i = 0; i < bellLines.length/leadLength; i++){
+            if(calls[i] == 'b' || calls[i] == 's'){
+                for(int j = 0; j < no_bells; j++){
+                    if(bellLines[(i+1)*leadLength].getbLine()[j].equals(Integer.toString(no_bells))){
+                        if(calls[i] == 's'){
+                            calledFromBell += "S";
+                        }
+                        if(j == no_bells - 1){
+                            calledFromBell += "H,";
+                        }else if(j == no_bells - 2 && no_bells > 5){
+                            calledFromBell += "W,";
+                        }else if(j == no_bells - 3 && no_bells > 6){
+                            calledFromBell += "M,";
+                        }else if(j == 1){
+                            if(calls[i] == 's'){
+                                calledFromBell += "B,";
+                            }else{
+                                calledFromBell += "I,";
+                            }
+                        }else if(j == 2){
+                            if(calls[i] == 's'){
+                                calledFromBell += "3rds,";
+                            }else{
+                                calledFromBell += "B,";
+                            }
+                        }else if(j == 3){
+                            calledFromBell += "4ths,";
+                        }else if(j == 4){
+                            calledFromBell += "5ths,";
+                        }else if(j == 5){
+                            calledFromBell += "6ths,";
+                        }else if(j == 6){
+                            calledFromBell += "7ths,";
+                        }else if(j == 7){
+                            calledFromBell += "8ths,";
+                        }else if(j == 8){
+                            calledFromBell += "9ths,";
+                        }
+                    }
+                }
+            }
+
+        }
+        calledFromBell = calledFromBell.substring(0,calledFromBell.length()-1);
+        return calledFromBell;
+    }
+
+    public static String CalledFromToCallOrder(){
+        String callOrder = "";
+        return callOrder;
     }
 
 }

@@ -26,7 +26,8 @@ public class methodGenaration {
             }
             saveMethodToFile(method);
         }
-        return method;
+        Method returnMethod = new Method(method.getMethod_proper(),method.getNotation(),method.getNo_of_bells(),method.getBob_notation(),method.getSingle_notation(),method.getCall_point(),method.getHunt_bells());
+        return returnMethod;
     }
 
     //save method

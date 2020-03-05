@@ -12,6 +12,8 @@ public class Method {
     private int plain_course_length;
     private String call_point;
     private int hunt_bells;
+    private int lead_length;
+    private String coursing_order;;
 
     public int getPlain_course_length() {
         return plain_course_length;
@@ -31,6 +33,25 @@ public class Method {
         this.plain_course_length = findPlainCourseLength(notation, no_of_bells);
         this.call_point = call_point;
         this.hunt_bells = hunt_bells;
+        this.lead_length = plain_course_length / (no_of_bells - hunt_bells);
+        this.coursing_order = getCoursingOrder(no_of_bells, notation);
+    }
+
+    private String getCoursingOrder(int num_bells, String notation) {
+        Line first = initiliseFirstLine(num_bells);
+        Line leadend = getLeadEnd(first, notation);
+        String current = Integer.toString(num_bells);
+        String coursingOrder = current;
+        for(int i = 0; i < num_bells; i++){
+            for(int j = 0; j < leadend.getbLine().length; j++){
+                if(leadend.getbLine()[j] .equals(current)){
+                    coursingOrder += Integer.toString(j+1);
+                    current = Integer.toString(j+1);
+                    break;
+                }
+            }
+        }
+        return coursingOrder;
     }
 
 
@@ -44,6 +65,19 @@ public class Method {
         this.plain_course_length = 0;
         this.call_point = "";
         this.hunt_bells = 1;
+        this.lead_length = 0;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getLead_length() {
+        return lead_length;
+    }
+
+    public void setLead_length(int lead_length) {
+        this.lead_length = lead_length;
     }
 
     public int getHunt_bells() {
@@ -150,6 +184,8 @@ public class Method {
                 ", plain_course_length=" + plain_course_length +
                 ", call_point='" + call_point + '\'' +
                 ", hunt_bells=" + hunt_bells +
+                ", lead_length=" + lead_length +
+                ", coursing_order='" + coursing_order + '\'' +
                 '}';
     }
 
