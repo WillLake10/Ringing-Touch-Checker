@@ -42,7 +42,7 @@ public class Method {
         Line leadend = getLeadEnd(first, notation);
         String current = Integer.toString(num_bells);
         String coursingOrder = current;
-        for(int i = 0; i < num_bells; i++){
+        for(int i = 0; i < num_bells - 1; i++){
             for(int j = 0; j < leadend.getbLine().length; j++){
                 if(leadend.getbLine()[j] .equals(current)){
                     coursingOrder += Integer.toString(j+1);

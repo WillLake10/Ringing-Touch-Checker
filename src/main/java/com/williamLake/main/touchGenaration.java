@@ -213,6 +213,43 @@ public class touchGenaration {
         return calledFromBell;
     }
 
+    public static int getBellPosPreviousLead(String call, String coursing_order, int num_bells){
+        String bell = "";
+        if(call.equals("H") || call.equals("SH")){
+            bell = Integer.toString(num_bells);
+        }else if((call.equals("W") || call.equals("SW")) && num_bells > 5){
+            bell = Integer.toString(num_bells-1);
+        }else if((call.equals("M") || call.equals("SM")) && num_bells > 6){
+            bell = Integer.toString(num_bells-2);
+        }else if((call.equals("I") || call.equals("SB")) && num_bells > 6){
+            bell = "2";
+        }else if((call.equals("B") || call.equals("S3rds")) && num_bells > 6){
+            bell = "3";
+        }else if((call.equals("4ths") || call.equals("S4ths")) && num_bells > 6){
+            bell = "4";
+        }else if((call.equals("5ths") || call.equals("S5ths")) && num_bells > 6){
+            bell = "5";
+        }else if((call.equals("6ths") || call.equals("S6ths")) && num_bells > 6){
+            bell = "6";
+        }else if((call.equals("7ths") || call.equals("S7ths")) && num_bells > 6){
+            bell = "7";
+        }else if((call.equals("8ths") || call.equals("S8ths")) && num_bells > 6){
+            bell = "8";
+        }else if((call.equals("9ths") || call.equals("S9ths")) && num_bells > 6){
+            bell = "9";
+        }
+        String[] split = coursing_order.split("");
+        int returnBell = 0;
+
+        for(int i=coursing_order.length(); i >= 0; i--){
+            if(bell.equals(split[i])){
+                returnBell = Integer.parseInt(split[i-1]);
+                break;
+            }
+        }
+        return returnBell;
+    }
+
     public static String CalledFromToCallOrder(){
         String callOrder = "";
         return callOrder;
