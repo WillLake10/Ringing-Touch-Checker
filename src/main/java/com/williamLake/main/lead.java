@@ -1,6 +1,6 @@
-package com.williamlake.main;
+package com.williamLake.main;
 
-import com.williamlake.main.data.Line;
+import com.williamLake.main.data.Line;
 
 import java.util.Arrays;
 

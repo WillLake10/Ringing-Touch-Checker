@@ -25,3 +25,8 @@ dependencies {
     testRuntime 'org.apache.logging.log4j:log4j-core:2.8.2'
     testRuntime 'org.apache.logging.log4j:log4j-slf4j-impl:2.8.2'
 }
+
+task runApp(group: 'williamLake.run', type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'com.williamLake.main.Main'
+}

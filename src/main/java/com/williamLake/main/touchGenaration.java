@@ -1,11 +1,10 @@
-package com.williamlake.main;
+package com.williamLake.main;
 
-import com.williamlake.main.data.Method;
-import com.williamlake.main.data.Touch;
-import com.williamlake.main.data.Line;
+import com.williamLake.main.data.Method;
+import com.williamLake.main.data.Touch;
+import com.williamLake.main.data.Line;
 
-import static com.williamlake.main.lead.*;
-import static com.williamlake.main.userInput.*;
+import static com.williamLake.main.userInput.*;
 
 
 public class touchGenaration {
@@ -92,7 +91,7 @@ public class touchGenaration {
 
     public static Line[] getTouchBellLine(String callOrder, Method method) {
         Line bellLine[] = new Line[getRoughLength(callOrder, method) + method.getNo_of_bells()];
-        Line firstLine = initiliseFirstLine(method.getNo_of_bells());
+        Line firstLine = lead.initiliseFirstLine(method.getNo_of_bells());
         boolean firstTime = true;
         String[] not = method.getNotation().split(",");
         String[] plain_lead = new String[not.length];
@@ -129,9 +128,9 @@ public class touchGenaration {
                 not = plain_lead;
             }
             for (int notNumber = 0; notNumber < not.length; notNumber++) {
-                if(!checkLineMatch(firstLine, bellLine[length]) || firstTime) {
+                if(!lead.checkLineMatch(firstLine, bellLine[length]) || firstTime) {
                     firstTime = false;
-                    bellLine[length + 1] = getNextLine(bellLine[length], not[notNumber]);
+                    bellLine[length + 1] = lead.getNextLine(bellLine[length], not[notNumber]);
                     //System.out.println(bellLine[length].toStringJustNum());
                     length += 1;
                 }

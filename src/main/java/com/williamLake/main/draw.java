@@ -1,12 +1,10 @@
-package com.williamlake.main;
+package com.williamLake.main;
 
-import com.williamlake.main.data.Line;
-import com.williamlake.main.data.Method;
+import com.williamLake.main.data.Method;
+import com.williamLake.main.data.Line;
 
 import java.awt.*;
 import javax.swing.*;
-
-import static com.williamlake.main.lead.*;
 
 public class draw extends JFrame {
     // Define constants
@@ -81,12 +79,12 @@ public class draw extends JFrame {
             bob_lead[Integer.parseInt(method.getCall_point())] = method.getBob_notation();
             single_lead[Integer.parseInt(method.getCall_point())] = method.getSingle_notation();
 
-            Line firstLine = initiliseFirstLine(method.getNo_of_bells());
+            Line firstLine = lead.initiliseFirstLine(method.getNo_of_bells());
 
             drawVerticalLines(g2);
             drawTitle(g2, font);
 
-            Line currentLine = getNextLine(firstLine, not[0]);
+            Line currentLine = lead.getNextLine(firstLine, not[0]);
             for(int i = 0; i < 12; i++){
                 lastPos[i] = i - 1;
             }
@@ -107,13 +105,13 @@ public class draw extends JFrame {
             }
 
 
-            while(!checkLineMatch(currentLine, firstLine) && grid != 2){
+            while(!lead.checkLineMatch(currentLine, firstLine) && grid != 2){
                 if(temp == 0){
                     drawNewLeadMarkers(g2, nextPosition[2], lineNumber, font);
                 }
 
                 for (int notNumber = temp; notNumber < not.length; notNumber++) {
-                    currentLine = getNextLine(currentLine, not[notNumber]);
+                    currentLine = lead.getNextLine(currentLine, not[notNumber]);
                     //outLine(currentLine);
                     lineNumber += 1;
 
@@ -137,8 +135,8 @@ public class draw extends JFrame {
             Color color;
             color = Color.BLUE;
             nextPos = getNextLinePos(currentLine);
-            int bellsEffectedByBob[] = getBellsEffectedByCall(method.getNotation(), method.getNo_of_bells(), method.getBob_notation());
-            int bellsEffectedBySingle[] = getBellsEffectedByCall(method.getNotation(), method.getNo_of_bells(), method.getSingle_notation());
+            int bellsEffectedByBob[] = lead.getBellsEffectedByCall(method.getNotation(), method.getNo_of_bells(), method.getBob_notation());
+            int bellsEffectedBySingle[] = lead.getBellsEffectedByCall(method.getNotation(), method.getNo_of_bells(), method.getSingle_notation());
 
             for(int i = method.getNo_of_bells(); i > 0; i--) {
                 g.setStroke(new BasicStroke(2));

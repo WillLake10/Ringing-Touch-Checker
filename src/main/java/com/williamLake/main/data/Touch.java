@@ -1,6 +1,6 @@
-package com.williamlake.main.data;
+package com.williamLake.main.data;
 
-import static com.williamlake.main.touchGenaration.*;
+import com.williamLake.main.touchGenaration;
 
 public class Touch extends Method {
     private String callOrder;
@@ -17,11 +17,11 @@ public class Touch extends Method {
             this.calledFromBell = callOrder;
         }
 
-        this.bellLines = getTouchBellLine(callOrder, method);
-        this.isTrue = checkLineIsTrue(bellLines);
+        this.bellLines = touchGenaration.getTouchBellLine(callOrder, method);
+        this.isTrue = touchGenaration.checkLineIsTrue(bellLines);
         this.length= bellLines.length - 1;
         if(type == 1){
-            this.calledFromBell = getCalledFromBell(callOrder, bellLines, method.getLead_length(), method.getNo_of_bells());
+            this.calledFromBell = touchGenaration.getCalledFromBell(callOrder, bellLines, method.getLead_length(), method.getNo_of_bells());
         }else if(type == 2){
 
         }

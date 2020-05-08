@@ -1,4 +1,4 @@
-package com.williamlake.main.data;
+package com.williamLake.main.data;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package com.williamlake.main;
+package com.williamLake.main;
 
 import java.util.Scanner;
 

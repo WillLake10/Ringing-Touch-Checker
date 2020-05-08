@@ -1,6 +1,6 @@
-package com.williamlake.main;
+package com.williamLake.main;
 
-import com.williamlake.main.data.Method;
+import com.williamLake.main.data.Method;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -9,8 +9,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Scanner;
 
-import static com.williamlake.main.data.Method.findPlainCourseLength;
-import static com.williamlake.main.userInput.*;
+import static com.williamLake.main.data.Method.findPlainCourseLength;
 
 public class methodGenaration {
     public static Method getMethodInstanceFromUser() {
@@ -33,7 +32,7 @@ public class methodGenaration {
     //save method
     private static void wantToSaveToFile(Method method) {
         System.out.print("Want to save this method (Y/N): ");
-        String answer = getStringInput();
+        String answer = userInput.getStringInput();
         if (answer == "y" || answer == "Y") {
             saveMethodToFile(method);
         }
@@ -67,7 +66,7 @@ public class methodGenaration {
         System.out.println("Please select an option:");
         System.out.println("   1 - Add new method");
         System.out.println("   2 - Open method");
-        int choice = getIntInput();
+        int choice = userInput.getIntInput();
         if (choice == 1) {
             return true;
         } else {
@@ -77,7 +76,7 @@ public class methodGenaration {
 
     private static String findWantedStage() {
         System.out.print("How many bells in method you are looking for: ");
-        return Method.getStage(getIntInput());
+        return Method.getStage(userInput.getIntInput());
     }
 
     private static Method openMethodFromFile(String location) {
@@ -90,7 +89,7 @@ public class methodGenaration {
                 System.out.println((i + 1) + " - " + methodsList[i]);
             }
             System.out.print("Which method do you want to open: ");
-            int fileNum = getIntInput();
+            int fileNum = userInput.getIntInput();
             //fileNum = 4;
             return openFile(location, methodsList[fileNum - 1]);
         } catch (Exception e) {
@@ -149,12 +148,12 @@ public class methodGenaration {
 
     private static int getNumOfHuntBells() {
         System.out.print("Enter number of hunt bells in method: ");
-        return getIntInput();
+        return userInput.getIntInput();
     }
 
     private static String getNotation(String notationType) {
         System.out.print("Enter " + notationType + " notation separated by a comma (e.g. x,16): ");
-        return getStringInput();
+        return userInput.getStringInput();
     }
 
     private static String callPoint(Method method) {
@@ -163,12 +162,12 @@ public class methodGenaration {
         for (int i = 1; i < not.length; i++) {
             System.out.println(i + " - " + not[i]);
         }
-        return getStringInputMulti();
+        return userInput.getStringInputMulti();
     }
 
     private static String getMethordName() {
         System.out.print("Enter Method name without number of bells (e.g. Plain Bob): ");
-        return getStringInputMulti();
+        return userInput.getStringInputMulti();
     }
 
     private static int numberOfBells() {
@@ -176,7 +175,7 @@ public class methodGenaration {
         boolean valid = false;
         while (valid == false) {
             System.out.print("How many bells in the method (Enter number between 4 and 12): ");
-            numOfBells = getIntInput();
+            numOfBells = userInput.getIntInput();
             if (numOfBellsValid((numOfBells))) {
                 valid = true;
             }

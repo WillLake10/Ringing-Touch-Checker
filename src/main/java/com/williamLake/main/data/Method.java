@@ -1,6 +1,6 @@
-package com.williamlake.main.data;
+package com.williamLake.main.data;
 
-import static com.williamlake.main.lead.*;
+import com.williamLake.main.lead;
 
 public class Method {
     private String method_proper;
@@ -38,8 +38,8 @@ public class Method {
     }
 
     private String getCoursingOrder(int num_bells, String notation) {
-        Line first = initiliseFirstLine(num_bells);
-        Line leadend = getLeadEnd(first, notation);
+        Line first = lead.initiliseFirstLine(num_bells);
+        Line leadend = lead.getLeadEnd(first, notation);
         String current = Integer.toString(num_bells);
         String coursingOrder = current;
         for(int i = 0; i < num_bells - 1; i++){
@@ -193,14 +193,14 @@ public class Method {
         int length = 0;
 
         String[] not = notation.split(",");
-        Line firstLine = initiliseFirstLine(No_of_bells);
+        Line firstLine = lead.initiliseFirstLine(No_of_bells);
         Line currentLine = firstLine;
 
         Boolean firstTime = true;
-        while (!checkLineMatch(currentLine, firstLine) || firstTime) {
+        while (!lead.checkLineMatch(currentLine, firstLine) || firstTime) {
             firstTime = false;
             for (int notNumber = 0; notNumber < not.length; notNumber++) {
-                currentLine = getNextLine(currentLine, not[notNumber]);
+                currentLine = lead.getNextLine(currentLine, not[notNumber]);
                 length += 1;
             }
         }

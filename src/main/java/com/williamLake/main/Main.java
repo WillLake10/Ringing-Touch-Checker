@@ -1,22 +1,18 @@
-package com.williamlake.main;
+package com.williamLake.main;
 
-import com.williamlake.main.data.Method;
-import com.williamlake.main.data.Touch;
-
-import static com.williamlake.main.methodGenaration.getMethodInstanceFromUser;
-import static com.williamlake.main.touchGenaration.getTouchInstanceFromUser;
-import static com.williamlake.main.userInput.getIntInput;
+import com.williamLake.main.data.Method;
+import com.williamLake.main.data.Touch;
 
 public class Main {
 
     public static void main(String[] args) {
-        Method workingMethod = getMethodInstanceFromUser();
+        Method workingMethod = methodGenaration.getMethodInstanceFromUser();
         System.out.println(workingMethod.toString());
         int answer = getWhatUsertWantsToDoWithMethod();
         if(answer == 1){
             drawBlueLine(workingMethod);
         } else if(answer == 2){
-            Touch workingTouch = getTouchInstanceFromUser(workingMethod);
+            Touch workingTouch = touchGenaration.getTouchInstanceFromUser(workingMethod);
             System.out.println(workingTouch.toString());
         }
 
@@ -31,7 +27,7 @@ public class Main {
         System.out.println("  5 - Draw Single");
         System.out.println("  6 - Draw All");
         System.out.println("  9 - End");
-        int answer = getIntInput();
+        int answer = userInput.getIntInput();
         if (answer == 6){
             draw.main(method, 1, 10);
             draw.main(method, 4, 500);
@@ -45,6 +41,6 @@ public class Main {
         System.out.println("Chose an option: ");
         System.out.println("  1 - Draw Blue Lines");
         System.out.println("  2 - Make Touch");
-        return getIntInput();
+        return userInput.getIntInput();
     }
 }
