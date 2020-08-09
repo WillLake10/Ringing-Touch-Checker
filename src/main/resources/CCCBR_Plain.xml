@@ -2,14 +2,14 @@
 <collection>
   <methodSet>
     <notes>Place Singles methods with a lead length of 6 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>3</stage>
       <classification
         plain="true">Place</classification>
       <lengthOfLead>6</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m34041">
       <notes>Retroactive recognition. Stage not recognised. Identity Change</notes>
@@ -35,7 +35,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Place Minimus methods with a lead length of 2 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>4</stage>
       <classification
         little="true"
@@ -43,7 +43,7 @@
       <lengthOfLead>2</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10471">
       <title>Cheeky Little Place Minimus</title>
@@ -59,7 +59,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Place Minimus methods with a lead length of 2 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>4</stage>
       <classification
         little="true"
@@ -67,7 +67,7 @@
       <lengthOfLead>2</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>4 4</huntbellPath>
-    </properties>
+    
     <method
       id="m10472">
       <title>Itram Little Place Minimus</title>
@@ -82,7 +82,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Minimus methods with a lead length of 4 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>4</stage>
       <classification
         little="true"
@@ -90,7 +90,7 @@
       <lengthOfLead>4</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10473">
       <title>Bastow Little Bob Minimus</title>
@@ -107,7 +107,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Place Minimus methods with a lead length of 4 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>4</stage>
       <classification
         little="true"
@@ -115,7 +115,7 @@
       <lengthOfLead>4</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10474">
       <title>St Aelhaiarn Little Place Minimus</title>
@@ -131,7 +131,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Place Minimus methods with a lead length of 4 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>4</stage>
       <classification
         little="true"
@@ -139,7 +139,7 @@
       <lengthOfLead>4</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>2 2 3 3</huntbellPath>
-    </properties>
+    
     <method
       id="m10475">
       <title>Double Trouble Little Place Minimus</title>
@@ -154,7 +154,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Minimus methods with a lead length of 4 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>4</stage>
       <classification
         little="true"
@@ -162,7 +162,7 @@
       <lengthOfLead>4</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>3 4 4 3</huntbellPath>
-    </properties>
+    
     <method
       id="m28932">
       <title>Llanarthne Little Bob Minimus</title>
@@ -177,7 +177,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Minimus methods with a lead length of 6 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>4</stage>
       <classification
         little="true"
@@ -185,7 +185,7 @@
       <lengthOfLead>6</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10476">
       <title>Barton Little Bob Minimus</title>
@@ -201,7 +201,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Place Minimus methods with a lead length of 6 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>4</stage>
       <classification
         little="true"
@@ -209,7 +209,7 @@
       <lengthOfLead>6</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10477">
       <title>Melsonby Little Place Minimus</title>
@@ -259,14 +259,14 @@
   </methodSet>
   <methodSet>
     <notes>Bob Minimus methods with a lead length of 8 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>4</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>8</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10460">
       <title>Plain Bob Minimus</title>
@@ -379,14 +379,14 @@
   </methodSet>
   <methodSet>
     <notes>Place Minimus methods with a lead length of 8 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>4</stage>
       <classification
         plain="true">Place</classification>
       <lengthOfLead>8</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10463">
       <title>Reverse Court Place Minimus</title>
@@ -530,14 +530,14 @@
   </methodSet>
   <methodSet>
     <notes>Asymmetric Bob Minimus methods with a lead length of 8 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>4</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>8</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m34085">
       <title>Dusty Bob Minimus</title>
@@ -549,14 +549,14 @@
   </methodSet>
   <methodSet>
     <notes>Place Minimus methods with a lead length of 8 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>4</stage>
       <classification
         plain="true">Place</classification>
       <lengthOfLead>8</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 4 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m29152">
       <title>Grandsire Minimus</title>
@@ -584,14 +584,14 @@
   </methodSet>
   <methodSet>
     <notes>Asymmetric Place Minimus methods with a lead length of 8 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>4</stage>
       <classification
         plain="true">Place</classification>
       <lengthOfLead>8</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 4 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m29174">
       <title>Lleyn Place Minimus</title>
@@ -615,14 +615,14 @@
   </methodSet>
   <methodSet>
     <notes>Asymmetric Bob Minimus methods with a lead length of 8 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>4</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>8</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 4 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m29176">
       <title>Soay Bob Minimus</title>
@@ -646,7 +646,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Doubles methods with a lead length of 4 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>5</stage>
       <classification
         little="true"
@@ -654,7 +654,7 @@
       <lengthOfLead>4</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10577">
       <title>Bistow Little Bob Doubles</title>
@@ -671,7 +671,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Doubles methods with a lead length of 6 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>5</stage>
       <classification
         little="true"
@@ -679,7 +679,7 @@
       <lengthOfLead>6</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10578">
       <title>Stanwell Little Bob Doubles</title>
@@ -732,7 +732,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Place Doubles methods with a lead length of 6 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>5</stage>
       <classification
         little="true"
@@ -740,7 +740,7 @@
       <lengthOfLead>6</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10579">
       <title>Clewer Little Place Doubles</title>
@@ -778,7 +778,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Place Doubles methods with a lead length of 8 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>5</stage>
       <classification
         little="true"
@@ -786,7 +786,7 @@
       <lengthOfLead>8</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10585">
       <title>Little Little Little Little Little Little Little Penultimus Little Place Doubles</title>
@@ -802,7 +802,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Doubles methods with a lead length of 8 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>5</stage>
       <classification
         little="true"
@@ -810,7 +810,7 @@
       <lengthOfLead>8</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m29855">
       <notes>Retroactive recognition. Quarter peal of spliced</notes>
@@ -828,14 +828,14 @@
   </methodSet>
   <methodSet>
     <notes>Bob Doubles methods with a lead length of 10 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>5</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>10</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10479">
       <title>Ancaster Bob Doubles</title>
@@ -2256,14 +2256,14 @@
   </methodSet>
   <methodSet>
     <notes>Place Doubles methods with a lead length of 10 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>5</stage>
       <classification
         plain="true">Place</classification>
       <lengthOfLead>10</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10497">
       <title>Slum Place Doubles</title>
@@ -3341,14 +3341,14 @@
   </methodSet>
   <methodSet>
     <notes>Asymmetric Bob Doubles methods with a lead length of 10 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>5</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>10</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10706">
       <title>Weston-by-Welland Bob Doubles</title>
@@ -6932,14 +6932,14 @@
   </methodSet>
   <methodSet>
     <notes>Asymmetric Place Doubles methods with a lead length of 10 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>5</stage>
       <classification
         plain="true">Place</classification>
       <lengthOfLead>10</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10772">
       <title>Cottingham Place Doubles</title>
@@ -7441,7 +7441,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Place Doubles methods with a lead length of 6 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>5</stage>
       <classification
         little="true"
@@ -7449,7 +7449,7 @@
       <lengthOfLead>6</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10001">
       <notes>Retroactive recognition. Neither extent nor in a peal</notes>
@@ -7495,7 +7495,7 @@
   </methodSet>
   <methodSet>
     <notes>Asymmetric Little Bob Doubles methods with a lead length of 6 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>5</stage>
       <classification
         little="true"
@@ -7503,7 +7503,7 @@
       <lengthOfLead>6</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10002">
       <notes>Retroactive recognition. Neither extent nor in a peal</notes>
@@ -7518,7 +7518,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Doubles methods with a lead length of 6 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>5</stage>
       <classification
         little="true"
@@ -7526,7 +7526,7 @@
       <lengthOfLead>6</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10697">
       <title>Bastow Little Bob Doubles</title>
@@ -7595,14 +7595,14 @@
   </methodSet>
   <methodSet>
     <notes>Bob Doubles methods with a lead length of 10 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>5</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>10</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 4 5 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10586">
       <title>Breaston Bob Doubles</title>
@@ -9117,14 +9117,14 @@
   </methodSet>
   <methodSet>
     <notes>Place Doubles methods with a lead length of 10 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>5</stage>
       <classification
         plain="true">Place</classification>
       <lengthOfLead>10</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 4 5 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10589">
       <title>Double Antelope Place Doubles</title>
@@ -10541,14 +10541,14 @@
   </methodSet>
   <methodSet>
     <notes>Asymmetric Bob Doubles methods with a lead length of 10 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>5</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>10</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 4 5 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m11012">
       <title>Laurence T Mainwaring Bob Doubles</title>
@@ -11719,14 +11719,14 @@
   </methodSet>
   <methodSet>
     <notes>Asymmetric Place Doubles methods with a lead length of 10 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>5</stage>
       <classification
         plain="true">Place</classification>
       <lengthOfLead>10</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 4 5 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m11033">
       <title>Rajah the Tiger Place Doubles</title>
@@ -11933,14 +11933,14 @@
   </methodSet>
   <methodSet>
     <notes>Place Doubles methods with a lead length of 10 and 3 hunt bells</notes>
-    <properties>
+    
       <stage>5</stage>
       <classification
         plain="true">Place</classification>
       <lengthOfLead>10</lengthOfLead>
       <numberOfHunts>3</numberOfHunts>
       <huntbellPath>1 2 3 4 5 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m29081">
       <notes>Retroactive recognition. Non-method when rung</notes>
@@ -12099,14 +12099,14 @@
   </methodSet>
   <methodSet>
     <notes>Asymmetric Bob Doubles methods with a lead length of 10 and 3 hunt bells</notes>
-    <properties>
+    
       <stage>5</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>10</lengthOfLead>
       <numberOfHunts>3</numberOfHunts>
       <huntbellPath>1 2 3 4 5 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m29244">
       <title>Gnu Bob Doubles</title>
@@ -12130,14 +12130,14 @@
   </methodSet>
   <methodSet>
     <notes>Bob Doubles methods with a lead length of 10 and 3 hunt bells</notes>
-    <properties>
+    
       <stage>5</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>10</lengthOfLead>
       <numberOfHunts>3</numberOfHunts>
       <huntbellPath>1 2 3 4 5 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m29248">
       <title>St Dunstan's Bob Doubles</title>
@@ -12405,7 +12405,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Minor methods with a lead length of 4 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>6</stage>
       <classification
         little="true"
@@ -12413,7 +12413,7 @@
       <lengthOfLead>4</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m11927">
       <title>Bastow Little Bob Minor</title>
@@ -12440,7 +12440,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Place Minor methods with a lead length of 4 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>6</stage>
       <classification
         little="true"
@@ -12448,7 +12448,7 @@
       <lengthOfLead>4</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m11929">
       <title>St Methodius Little Place Minor</title>
@@ -12463,7 +12463,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Minor methods with a lead length of 4 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>6</stage>
       <classification
         little="true"
@@ -12471,7 +12471,7 @@
       <lengthOfLead>4</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>3 4 4 3</huntbellPath>
-    </properties>
+    
     <method
       id="m11940">
       <title>Very Little Bob Minor</title>
@@ -12486,7 +12486,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Minor methods with a lead length of 6 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>6</stage>
       <classification
         little="true"
@@ -12494,7 +12494,7 @@
       <lengthOfLead>6</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m11930">
       <title>Little Fransham Little Bob Minor</title>
@@ -12523,7 +12523,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Minor methods with a lead length of 8 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>6</stage>
       <classification
         little="true"
@@ -12531,7 +12531,7 @@
       <lengthOfLead>8</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m11931">
       <title>Hinton Parva Little Bob Minor</title>
@@ -12631,7 +12631,7 @@
   </methodSet>
   <methodSet>
     <notes>Asymmetric Little Bob Minor methods with a lead length of 8 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>6</stage>
       <classification
         little="true"
@@ -12639,7 +12639,7 @@
       <lengthOfLead>8</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m12234">
       <title>New College Little Bob Minor</title>
@@ -12665,7 +12665,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Place Minor methods with a lead length of 8 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>6</stage>
       <classification
         little="true"
@@ -12673,7 +12673,7 @@
       <lengthOfLead>8</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m37431">
       <title>Cambray Little Place Minor</title>
@@ -12686,7 +12686,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Place Minor methods with a lead length of 10 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>6</stage>
       <classification
         little="true"
@@ -12694,7 +12694,7 @@
       <lengthOfLead>10</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m11939">
       <title>Little Little Little Little Little Little Penultimus Little Place Minor</title>
@@ -12710,7 +12710,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Minor methods with a lead length of 10 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>6</stage>
       <classification
         little="true"
@@ -12718,7 +12718,7 @@
       <lengthOfLead>10</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m29087">
       <notes>Retroactive recognition. Neither extent nor in a peal</notes>
@@ -12735,14 +12735,14 @@
   </methodSet>
   <methodSet>
     <notes>Bob Minor methods with a lead length of 12 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>6</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>12</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m11084">
       <title>Burton Pleasure Bob Minor</title>
@@ -27333,14 +27333,14 @@
   </methodSet>
   <methodSet>
     <notes>Place Minor methods with a lead length of 12 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>6</stage>
       <classification
         plain="true">Place</classification>
       <lengthOfLead>12</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m11236">
       <title>Panteg Place Minor</title>
@@ -28177,14 +28177,14 @@
   </methodSet>
   <methodSet>
     <notes>Asymmetric Bob Minor methods with a lead length of 12 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>6</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>12</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m12220">
       <title>Sugar of Lead Bob Minor</title>
@@ -28974,14 +28974,14 @@
   </methodSet>
   <methodSet>
     <notes>Asymmetric Place Minor methods with a lead length of 12 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>6</stage>
       <classification
         plain="true">Place</classification>
       <lengthOfLead>12</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m12233">
       <title>Roncobello Place Minor</title>
@@ -28995,7 +28995,7 @@
   </methodSet>
   <methodSet>
     <notes>Differential Bob Minor methods with a lead length of 12 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>6</stage>
       <classification
         differential="true"
@@ -29003,7 +29003,7 @@
       <lengthOfLead>12</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m28146">
       <title>New Cross Differential Bob Minor</title>
@@ -30524,7 +30524,7 @@
   </methodSet>
   <methodSet>
     <notes>Differential Place Minor methods with a lead length of 12 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>6</stage>
       <classification
         differential="true"
@@ -30532,7 +30532,7 @@
       <lengthOfLead>12</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m28218">
       <title>Shadwell Differential Place Minor</title>
@@ -30580,7 +30580,7 @@
   </methodSet>
   <methodSet>
     <notes>Asymmetric Differential Bob Minor methods with a lead length of 12 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>6</stage>
       <classification
         differential="true"
@@ -30588,7 +30588,7 @@
       <lengthOfLead>12</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m29157">
       <title>The Alphabet Ring Differential Bob Minor</title>
@@ -30632,7 +30632,7 @@
   </methodSet>
   <methodSet>
     <notes>Asymmetric Little Bob Minor methods with a lead length of 8 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>6</stage>
       <classification
         little="true"
@@ -30640,7 +30640,7 @@
       <lengthOfLead>8</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 4 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m12250">
       <title>Oriel College Little Bob Minor</title>
@@ -30664,14 +30664,14 @@
   </methodSet>
   <methodSet>
     <notes>Bob Minor methods with a lead length of 12 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>6</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>12</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m11941">
       <title>St Thecla Bob Minor</title>
@@ -35247,14 +35247,14 @@
   </methodSet>
   <methodSet>
     <notes>Place Minor methods with a lead length of 12 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>6</stage>
       <classification
         plain="true">Place</classification>
       <lengthOfLead>12</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m11943">
       <title>Reverse Canterbury Pleasure Place Minor</title>
@@ -35597,14 +35597,14 @@
   </methodSet>
   <methodSet>
     <notes>Asymmetric Bob Minor methods with a lead length of 12 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>6</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>12</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m12236">
       <title>Deadly Nightshade Bob Minor</title>
@@ -35882,14 +35882,14 @@
   </methodSet>
   <methodSet>
     <notes>Place Minor methods with a lead length of 12 and 3 hunt bells</notes>
-    <properties>
+    
       <stage>6</stage>
       <classification
         plain="true">Place</classification>
       <lengthOfLead>12</lengthOfLead>
       <numberOfHunts>3</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m29146">
       <title>Single Rayford Place Minor</title>
@@ -35937,14 +35937,14 @@
   </methodSet>
   <methodSet>
     <notes>Bob Minor methods with a lead length of 12 and 3 hunt bells</notes>
-    <properties>
+    
       <stage>6</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>12</lengthOfLead>
       <numberOfHunts>3</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m29147">
       <title>Plumb Bob Minor</title>
@@ -36157,7 +36157,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Place Triples methods with a lead length of 4 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>7</stage>
       <classification
         little="true"
@@ -36165,7 +36165,7 @@
       <lengthOfLead>4</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10251">
       <notes>Retroactive recognition. Quarter peal of spliced</notes>
@@ -36182,7 +36182,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Triples methods with a lead length of 4 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>7</stage>
       <classification
         little="true"
@@ -36190,7 +36190,7 @@
       <lengthOfLead>4</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10252">
       <notes>Retroactive recognition. Quarter peal</notes>
@@ -36220,7 +36220,7 @@
   </methodSet>
   <methodSet>
     <notes>Differential Little Place Triples methods with a lead length of 4 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>7</stage>
       <classification
         differential="true"
@@ -36229,7 +36229,7 @@
       <lengthOfLead>4</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m29847">
       <notes>Retroactive recognition. Quarter peal of spliced</notes>
@@ -36245,7 +36245,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Place Triples methods with a lead length of 4 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>7</stage>
       <classification
         little="true"
@@ -36253,7 +36253,7 @@
       <lengthOfLead>4</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>2 1 1 2</huntbellPath>
-    </properties>
+    
     <method
       id="m29846">
       <notes>Retroactive recognition. Quarter peal of spliced</notes>
@@ -36269,7 +36269,7 @@
   </methodSet>
   <methodSet>
     <notes>Differential Little Place Triples methods with a lead length of 4 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>7</stage>
       <classification
         differential="true"
@@ -36278,7 +36278,7 @@
       <lengthOfLead>4</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>3 4 4 3</huntbellPath>
-    </properties>
+    
     <method
       id="m29845">
       <notes>Retroactive recognition. Quarter peal of spliced</notes>
@@ -36294,7 +36294,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Place Triples methods with a lead length of 4 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>7</stage>
       <classification
         little="true"
@@ -36302,7 +36302,7 @@
       <lengthOfLead>4</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>4 3 3 4</huntbellPath>
-    </properties>
+    
     <method
       id="m29844">
       <notes>Retroactive recognition. Quarter peal of spliced</notes>
@@ -36318,7 +36318,7 @@
   </methodSet>
   <methodSet>
     <notes>Differential Little Place Triples methods with a lead length of 4 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>7</stage>
       <classification
         differential="true"
@@ -36327,7 +36327,7 @@
       <lengthOfLead>4</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>5 6 6 5</huntbellPath>
-    </properties>
+    
     <method
       id="m29843">
       <notes>Retroactive recognition. Quarter peal of spliced</notes>
@@ -36343,7 +36343,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Place Triples methods with a lead length of 4 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>7</stage>
       <classification
         little="true"
@@ -36351,7 +36351,7 @@
       <lengthOfLead>4</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>6 5 5 6</huntbellPath>
-    </properties>
+    
     <method
       id="m29842">
       <notes>Retroactive recognition. Quarter peal of spliced</notes>
@@ -36367,7 +36367,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Triples methods with a lead length of 6 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>7</stage>
       <classification
         little="true"
@@ -36375,7 +36375,7 @@
       <lengthOfLead>6</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m28303">
       <title>Ashford Little Bob Triples</title>
@@ -36392,7 +36392,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Triples methods with a lead length of 8 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>7</stage>
       <classification
         little="true"
@@ -36400,7 +36400,7 @@
       <lengthOfLead>8</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m28264">
       <title>Baldrick Little Bob Triples</title>
@@ -36437,7 +36437,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Triples methods with a lead length of 10 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>7</stage>
       <classification
         little="true"
@@ -36445,7 +36445,7 @@
       <lengthOfLead>10</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10253">
       <notes>Retroactive recognition. Quarter peal as New Sussex Little</notes>
@@ -36618,7 +36618,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Place Triples methods with a lead length of 12 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>7</stage>
       <classification
         little="true"
@@ -36626,7 +36626,7 @@
       <lengthOfLead>12</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m12411">
       <title>Little Little Little Little Little Penultimus Little Place Triples</title>
@@ -36642,7 +36642,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Triples methods with a lead length of 12 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>7</stage>
       <classification
         little="true"
@@ -36650,7 +36650,7 @@
       <lengthOfLead>12</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m30749">
       <title>Bob Palin Little Bob Triples</title>
@@ -36677,14 +36677,14 @@
   </methodSet>
   <methodSet>
     <notes>Bob Triples methods with a lead length of 14 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>7</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>14</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10003">
       <notes>Retroactive recognition. Non-compliant peal</notes>
@@ -46016,14 +46016,14 @@
   </methodSet>
   <methodSet>
     <notes>Place Triples methods with a lead length of 14 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>7</stage>
       <classification
         plain="true">Place</classification>
       <lengthOfLead>14</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10125">
       <notes>Retroactive recognition. Non-compliant peal</notes>
@@ -46220,14 +46220,14 @@
   </methodSet>
   <methodSet>
     <notes>Asymmetric Bob Triples methods with a lead length of 14 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>7</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>14</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10261">
       <notes>Added to CCCBR Library in 2018 as quarter in 2004 did not qualify for naming</notes>
@@ -46282,7 +46282,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Triples methods with a lead length of 10 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>7</stage>
       <classification
         little="true"
@@ -46290,7 +46290,7 @@
       <lengthOfLead>10</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 4 5 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10259">
       <notes>Retroactive recognition. Quarter peal</notes>
@@ -46322,7 +46322,7 @@
   </methodSet>
   <methodSet>
     <notes>Asymmetric Little Bob Triples methods with a lead length of 10 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>7</stage>
       <classification
         little="true"
@@ -46330,7 +46330,7 @@
       <lengthOfLead>10</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 4 5 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m32993">
       <title>Christ Church Little Bob Triples</title>
@@ -46345,14 +46345,14 @@
   </methodSet>
   <methodSet>
     <notes>Bob Triples methods with a lead length of 14 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>7</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>14</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10257">
       <notes>Originally rung in an unrecognised quarter peal in 2012</notes>
@@ -46933,14 +46933,14 @@
   </methodSet>
   <methodSet>
     <notes>Asymmetric Bob Triples methods with a lead length of 14 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>7</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>14</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10262">
       <title>Single Cambridge Cyclic Bob Triples</title>
@@ -47405,14 +47405,14 @@
   </methodSet>
   <methodSet>
     <notes>Bob Triples methods with a lead length of 14 and 3 hunt bells</notes>
-    <properties>
+    
       <stage>7</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>14</lengthOfLead>
       <numberOfHunts>3</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m31559">
       <title>Canny Bob Triples</title>
@@ -47427,7 +47427,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Triples methods with a lead length of 10 and 4 hunt bells</notes>
-    <properties>
+    
       <stage>7</stage>
       <classification
         little="true"
@@ -47435,7 +47435,7 @@
       <lengthOfLead>10</lengthOfLead>
       <numberOfHunts>4</numberOfHunts>
       <huntbellPath>1 2 3 4 5 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m34204">
       <notes>Retroactive recognition. Rung in spliced</notes>
@@ -47451,7 +47451,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Major methods with a lead length of 4 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>8</stage>
       <classification
         little="true"
@@ -47459,7 +47459,7 @@
       <lengthOfLead>4</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m13657">
       <title>Bastow Little Bob Major</title>
@@ -47531,7 +47531,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Major methods with a lead length of 6 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>8</stage>
       <classification
         little="true"
@@ -47539,7 +47539,7 @@
       <lengthOfLead>6</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m13661">
       <title>Oakridge Lynch Little Bob Major</title>
@@ -47656,7 +47656,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Major methods with a lead length of 8 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>8</stage>
       <classification
         little="true"
@@ -47664,7 +47664,7 @@
       <lengthOfLead>8</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10281">
       <notes>Retroactive recognition. Quarter peal</notes>
@@ -47926,7 +47926,7 @@
   </methodSet>
   <methodSet>
     <notes>Asymmetric Little Bob Major methods with a lead length of 8 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>8</stage>
       <classification
         little="true"
@@ -47934,7 +47934,7 @@
       <lengthOfLead>8</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m13782">
       <title>Dartford Little Bob Major</title>
@@ -48021,7 +48021,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Major methods with a lead length of 8 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>8</stage>
       <classification
         little="true"
@@ -48029,7 +48029,7 @@
       <lengthOfLead>8</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>8 7 6 5 5 6 7 8</huntbellPath>
-    </properties>
+    
     <method
       id="m28906">
       <title>Inverse Little Bob Major</title>
@@ -48044,7 +48044,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Major methods with a lead length of 10 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>8</stage>
       <classification
         little="true"
@@ -48052,7 +48052,7 @@
       <lengthOfLead>10</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10282">
       <notes>Retroactive recognition. Quarter peal</notes>
@@ -48352,7 +48352,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Major methods with a lead length of 12 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>8</stage>
       <classification
         little="true"
@@ -48360,7 +48360,7 @@
       <lengthOfLead>12</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m13701">
       <title>Oxford Little Bob Major</title>
@@ -49286,7 +49286,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Major methods with a lead length of 14 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>8</stage>
       <classification
         little="true"
@@ -49294,7 +49294,7 @@
       <lengthOfLead>14</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m13760">
       <title>Aileen's Little Bob Major</title>
@@ -49321,7 +49321,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Place Major methods with a lead length of 14 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>8</stage>
       <classification
         little="true"
@@ -49329,7 +49329,7 @@
       <lengthOfLead>14</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m13761">
       <title>Little Little Little Little Penultimus Little Place Major</title>
@@ -49354,14 +49354,14 @@
   </methodSet>
   <methodSet>
     <notes>Bob Major methods with a lead length of 16 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>8</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>16</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 8 8 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10263">
       <notes>Retroactive recognition. Quarter peal</notes>
@@ -65964,14 +65964,14 @@
   </methodSet>
   <methodSet>
     <notes>Asymmetric Bob Major methods with a lead length of 16 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>8</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>16</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 8 8 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10284">
       <title>Evening Exercise Bob Major</title>
@@ -66079,14 +66079,14 @@
   </methodSet>
   <methodSet>
     <notes>Place Major methods with a lead length of 16 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>8</stage>
       <classification
         plain="true">Place</classification>
       <lengthOfLead>16</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 8 8 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m12906">
       <title>Dore Place Major</title>
@@ -66178,7 +66178,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Major methods with a lead length of 8 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>8</stage>
       <classification
         little="true"
@@ -66186,7 +66186,7 @@
       <lengthOfLead>8</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 4 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m36804">
       <title>Crisps Little Bob Major</title>
@@ -66198,14 +66198,14 @@
   </methodSet>
   <methodSet>
     <notes>Bob Major methods with a lead length of 16 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>8</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>16</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 8 8 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10283">
       <notes>Retroactive recognition. Quarter peal</notes>
@@ -66481,7 +66481,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Major methods with a lead length of 2 and 3 hunt bells</notes>
-    <properties>
+    
       <stage>8</stage>
       <classification
         little="true"
@@ -66489,7 +66489,7 @@
       <lengthOfLead>2</lengthOfLead>
       <numberOfHunts>3</numberOfHunts>
       <huntbellPath>3 3</huntbellPath>
-    </properties>
+    
     <method
       id="m31112">
       <notes>Retroactive recognition. Quarter peal of Spliced</notes>
@@ -66505,7 +66505,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Place Major methods with a lead length of 6 and 3 hunt bells</notes>
-    <properties>
+    
       <stage>8</stage>
       <classification
         little="true"
@@ -66513,7 +66513,7 @@
       <lengthOfLead>6</lengthOfLead>
       <numberOfHunts>3</numberOfHunts>
       <huntbellPath>1 2 3 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m33096">
       <notes>Retroactive recognition. Quarter peal of spliced</notes>
@@ -66526,7 +66526,7 @@
   </methodSet>
   <methodSet>
     <notes>Asymmetric Little Bob Major methods with a lead length of 8 and 3 hunt bells</notes>
-    <properties>
+    
       <stage>8</stage>
       <classification
         little="true"
@@ -66534,7 +66534,7 @@
       <lengthOfLead>8</lengthOfLead>
       <numberOfHunts>3</numberOfHunts>
       <huntbellPath>1 2 3 4 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m31095">
       <notes>Retroactive recognition. Quarter peal of spliced</notes>
@@ -66549,7 +66549,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Major methods with a lead length of 8 and 3 hunt bells</notes>
-    <properties>
+    
       <stage>8</stage>
       <classification
         little="true"
@@ -66557,7 +66557,7 @@
       <lengthOfLead>8</lengthOfLead>
       <numberOfHunts>3</numberOfHunts>
       <huntbellPath>1 2 3 4 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m32128">
       <notes>Retroactive recognition. Quarter peal of spliced</notes>
@@ -66573,7 +66573,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Major methods with a lead length of 12 and 3 hunt bells</notes>
-    <properties>
+    
       <stage>8</stage>
       <classification
         little="true"
@@ -66581,7 +66581,7 @@
       <lengthOfLead>12</lengthOfLead>
       <numberOfHunts>3</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m29080">
       <notes>Retroactive recognition. Quarter peal of spliced</notes>
@@ -66594,7 +66594,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Caters methods with a lead length of 4 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>9</stage>
       <classification
         little="true"
@@ -66602,7 +66602,7 @@
       <lengthOfLead>4</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10293">
       <notes>Retroactive recognition. Quarter peal</notes>
@@ -66620,7 +66620,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Caters methods with a lead length of 6 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>9</stage>
       <classification
         little="true"
@@ -66628,7 +66628,7 @@
       <lengthOfLead>6</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m13801">
       <title>Stanwell Little Bob Caters</title>
@@ -66676,7 +66676,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Caters methods with a lead length of 8 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>9</stage>
       <classification
         little="true"
@@ -66684,7 +66684,7 @@
       <lengthOfLead>8</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m29839">
       <notes>Retroactive recognition. Quarter peal</notes>
@@ -66702,7 +66702,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Caters methods with a lead length of 10 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>9</stage>
       <classification
         little="true"
@@ -66710,7 +66710,7 @@
       <lengthOfLead>10</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10294">
       <notes>Retroactive recognition. Quarter peal as Derby Little</notes>
@@ -66787,7 +66787,7 @@
   </methodSet>
   <methodSet>
     <notes>Differential Little Bob Caters methods with a lead length of 10 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>9</stage>
       <classification
         differential="true"
@@ -66796,7 +66796,7 @@
       <lengthOfLead>10</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m28267">
       <title>Tabernacle Differential Little Bob Caters</title>
@@ -66811,7 +66811,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Caters methods with a lead length of 14 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>9</stage>
       <classification
         little="true"
@@ -66819,7 +66819,7 @@
       <lengthOfLead>14</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m34553">
       <title>New Music Wells 78-18 Little Bob Caters</title>
@@ -66832,7 +66832,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Place Caters methods with a lead length of 16 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>9</stage>
       <classification
         little="true"
@@ -66840,7 +66840,7 @@
       <lengthOfLead>16</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 8 8 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m13804">
       <title>Little Little Little Penultimus Little Place Caters</title>
@@ -66865,14 +66865,14 @@
   </methodSet>
   <methodSet>
     <notes>Place Caters methods with a lead length of 18 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>9</stage>
       <classification
         plain="true">Place</classification>
       <lengthOfLead>18</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 8 9 9 8 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10285">
       <notes>Originally rung in an unrecognised quarter peal in 2009</notes>
@@ -66913,14 +66913,14 @@
   </methodSet>
   <methodSet>
     <notes>Bob Caters methods with a lead length of 18 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>9</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>18</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 8 9 9 8 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10286">
       <notes>Added to CCCBR Library in 2018 as quarter in 2008 did not qualify for naming</notes>
@@ -67426,14 +67426,14 @@
   </methodSet>
   <methodSet>
     <notes>Asymmetric Bob Caters methods with a lead length of 18 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>9</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>18</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 8 9 9 8 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m35184">
       <title>St Hugh Bob Caters</title>
@@ -67457,7 +67457,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Caters methods with a lead length of 6 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>9</stage>
       <classification
         little="true"
@@ -67465,7 +67465,7 @@
       <lengthOfLead>6</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m13893">
       <title>Bastow Little Bob Caters</title>
@@ -67493,7 +67493,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Caters methods with a lead length of 8 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>9</stage>
       <classification
         little="true"
@@ -67501,7 +67501,7 @@
       <lengthOfLead>8</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 4 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m13894">
       <title>Reading Little Bob Caters</title>
@@ -67517,7 +67517,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Caters methods with a lead length of 10 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>9</stage>
       <classification
         little="true"
@@ -67525,7 +67525,7 @@
       <lengthOfLead>10</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 4 5 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m13895">
       <title>Little Grandsire Caters</title>
@@ -67565,7 +67565,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Caters methods with a lead length of 12 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>9</stage>
       <classification
         little="true"
@@ -67573,7 +67573,7 @@
       <lengthOfLead>12</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m13897">
       <title>Newport Little Bob Caters</title>
@@ -67589,7 +67589,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Caters methods with a lead length of 14 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>9</stage>
       <classification
         little="true"
@@ -67597,7 +67597,7 @@
       <lengthOfLead>14</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m13898">
       <title>Oxford Little Bob Caters</title>
@@ -67741,14 +67741,14 @@
   </methodSet>
   <methodSet>
     <notes>Bob Caters methods with a lead length of 18 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>9</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>18</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 8 9 9 8 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m13805">
       <title>Wrington Bob Caters</title>
@@ -69049,14 +69049,14 @@
   </methodSet>
   <methodSet>
     <notes>Asymmetric Bob Caters methods with a lead length of 18 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>9</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>18</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 8 9 9 8 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m13908">
       <title>Union Caters</title>
@@ -69078,7 +69078,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Royal methods with a lead length of 4 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>10</stage>
       <classification
         little="true"
@@ -69086,7 +69086,7 @@
       <lengthOfLead>4</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14015">
       <title>Bastow Little Bob Royal</title>
@@ -69150,7 +69150,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Royal methods with a lead length of 8 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>10</stage>
       <classification
         little="true"
@@ -69158,7 +69158,7 @@
       <lengthOfLead>8</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14020">
       <title>Little Bob Royal</title>
@@ -69267,7 +69267,7 @@
   </methodSet>
   <methodSet>
     <notes>Asymmetric Little Bob Royal methods with a lead length of 8 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>10</stage>
       <classification
         little="true"
@@ -69275,7 +69275,7 @@
       <lengthOfLead>8</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14038">
       <title>Erith Little Bob Royal</title>
@@ -69321,7 +69321,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Royal methods with a lead length of 12 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>10</stage>
       <classification
         little="true"
@@ -69329,7 +69329,7 @@
       <lengthOfLead>12</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14023">
       <title>Gainsborough Little Bob Royal</title>
@@ -69392,7 +69392,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Royal methods with a lead length of 16 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>10</stage>
       <classification
         little="true"
@@ -69400,7 +69400,7 @@
       <lengthOfLead>16</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 8 8 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14027">
       <title>Isleworth Little Bob Royal</title>
@@ -69473,7 +69473,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Place Royal methods with a lead length of 18 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>10</stage>
       <classification
         little="true"
@@ -69481,7 +69481,7 @@
       <lengthOfLead>18</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 8 9 9 8 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14029">
       <title>Little Little Penultimus Little Place Royal</title>
@@ -69506,14 +69506,14 @@
   </methodSet>
   <methodSet>
     <notes>Bob Royal methods with a lead length of 20 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>10</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>20</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 8 9 10 10 9 8 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10295">
       <notes>Retroactive recognition. Quarter peal</notes>
@@ -72264,14 +72264,14 @@
   </methodSet>
   <methodSet>
     <notes>Asymmetric Bob Royal methods with a lead length of 20 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>10</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>20</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 8 9 10 10 9 8 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14033">
       <title>Eastern Bob Royal</title>
@@ -72305,14 +72305,14 @@
   </methodSet>
   <methodSet>
     <notes>Bob Royal methods with a lead length of 20 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>10</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>20</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 8 9 10 10 9 8 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14030">
       <title>Grandsire Royal</title>
@@ -72345,7 +72345,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Royal methods with a lead length of 16 and 3 hunt bells</notes>
-    <properties>
+    
       <stage>10</stage>
       <classification
         little="true"
@@ -72353,7 +72353,7 @@
       <lengthOfLead>16</lengthOfLead>
       <numberOfHunts>3</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 8 8 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14032">
       <title>Arist Little Bob Royal</title>
@@ -72380,14 +72380,14 @@
   </methodSet>
   <methodSet>
     <notes>Bob Royal methods with a lead length of 20 and 3 hunt bells</notes>
-    <properties>
+    
       <stage>10</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>20</lengthOfLead>
       <numberOfHunts>3</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 8 9 10 10 9 8 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14031">
       <title>Double Sandbach Bob Royal</title>
@@ -72412,7 +72412,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Cinques methods with a lead length of 8 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>11</stage>
       <classification
         little="true"
@@ -72420,7 +72420,7 @@
       <lengthOfLead>8</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m28975">
       <title>Baldrick Little Bob Cinques</title>
@@ -72448,7 +72448,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Cinques methods with a lead length of 10 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>11</stage>
       <classification
         little="true"
@@ -72456,7 +72456,7 @@
       <lengthOfLead>10</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14068">
       <title>Leiden Little Bob Cinques</title>
@@ -72520,7 +72520,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Cinques methods with a lead length of 14 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>11</stage>
       <classification
         little="true"
@@ -72528,7 +72528,7 @@
       <lengthOfLead>14</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14072">
       <title>Stonesfield Little Bob Cinques</title>
@@ -72544,7 +72544,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Place Cinques methods with a lead length of 20 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>11</stage>
       <classification
         little="true"
@@ -72552,7 +72552,7 @@
       <lengthOfLead>20</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 8 9 10 10 9 8 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14073">
       <title>Little Penultimus Little Place Cinques</title>
@@ -72577,14 +72577,14 @@
   </methodSet>
   <methodSet>
     <notes>Place Cinques methods with a lead length of 22 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>11</stage>
       <classification
         plain="true">Place</classification>
       <lengthOfLead>22</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 8 9 10 11 11 10 9 8 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10299">
       <notes>Retroactive recognition. Quarter peal</notes>
@@ -72601,14 +72601,14 @@
   </methodSet>
   <methodSet>
     <notes>Bob Cinques methods with a lead length of 22 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>11</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>22</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 8 9 10 11 11 10 9 8 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m10300">
       <notes>Retroactive recognition. Quarter peal</notes>
@@ -73147,7 +73147,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Cinques methods with a lead length of 6 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>11</stage>
       <classification
         little="true"
@@ -73155,7 +73155,7 @@
       <lengthOfLead>6</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14225">
       <title>Bastow Little Bob Cinques</title>
@@ -73172,7 +73172,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Cinques methods with a lead length of 8 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>11</stage>
       <classification
         little="true"
@@ -73180,7 +73180,7 @@
       <lengthOfLead>8</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 4 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14226">
       <title>Bedwyn Parva Little Bob Cinques</title>
@@ -73207,7 +73207,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Cinques methods with a lead length of 10 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>11</stage>
       <classification
         little="true"
@@ -73215,7 +73215,7 @@
       <lengthOfLead>10</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 4 5 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14227">
       <title>Little Grandsire Cinques</title>
@@ -73244,7 +73244,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Cinques methods with a lead length of 12 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>11</stage>
       <classification
         little="true"
@@ -73252,7 +73252,7 @@
       <lengthOfLead>12</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14229">
       <title>Glamorgan Little Bob Cinques</title>
@@ -73268,7 +73268,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Cinques methods with a lead length of 14 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>11</stage>
       <classification
         little="true"
@@ -73276,7 +73276,7 @@
       <lengthOfLead>14</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14230">
       <title>Gainsborough Little Bob Cinques</title>
@@ -73306,7 +73306,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Cinques methods with a lead length of 16 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>11</stage>
       <classification
         little="true"
@@ -73314,7 +73314,7 @@
       <lengthOfLead>16</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 8 8 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14232">
       <title>Devon Little Bob Cinques</title>
@@ -73330,7 +73330,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Cinques methods with a lead length of 18 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>11</stage>
       <classification
         little="true"
@@ -73338,7 +73338,7 @@
       <lengthOfLead>18</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 8 9 9 8 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14233">
       <title>Welland Little Bob Cinques</title>
@@ -73378,14 +73378,14 @@
   </methodSet>
   <methodSet>
     <notes>Bob Cinques methods with a lead length of 22 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>11</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>22</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 8 9 10 11 11 10 9 8 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14074">
       <title>Wake Court Bob Cinques</title>
@@ -75286,7 +75286,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Maximus methods with a lead length of 4 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>12</stage>
       <classification
         little="true"
@@ -75294,7 +75294,7 @@
       <lengthOfLead>4</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14245">
       <title>Bastow Little Bob Maximus</title>
@@ -75321,7 +75321,7 @@
   </methodSet>
   <methodSet>
     <notes>Differential Little Place Maximus methods with a lead length of 4 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>12</stage>
       <classification
         differential="true"
@@ -75330,7 +75330,7 @@
       <lengthOfLead>4</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m28277">
       <title>Redback Differential Little Place Maximus</title>
@@ -75356,7 +75356,7 @@
   </methodSet>
   <methodSet>
     <notes>Differential Little Bob Maximus methods with a lead length of 4 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>12</stage>
       <classification
         differential="true"
@@ -75365,7 +75365,7 @@
       <lengthOfLead>4</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m28278">
       <title>Slinkier Differential Little Bob Maximus</title>
@@ -75380,7 +75380,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Maximus methods with a lead length of 6 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>12</stage>
       <classification
         little="true"
@@ -75388,7 +75388,7 @@
       <lengthOfLead>6</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14247">
       <title>Cawston Little Bob Maximus</title>
@@ -75405,7 +75405,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Maximus methods with a lead length of 8 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>12</stage>
       <classification
         little="true"
@@ -75413,7 +75413,7 @@
       <lengthOfLead>8</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14248">
       <title>Little Bob Maximus</title>
@@ -75473,7 +75473,7 @@
   </methodSet>
   <methodSet>
     <notes>Differential Little Bob Maximus methods with a lead length of 10 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>12</stage>
       <classification
         differential="true"
@@ -75482,7 +75482,7 @@
       <lengthOfLead>10</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m28280">
       <title>Zeus Differential Little Bob Maximus</title>
@@ -75497,7 +75497,7 @@
   </methodSet>
   <methodSet>
     <notes>Asymmetric Little Bob Maximus methods with a lead length of 10 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>12</stage>
       <classification
         little="true"
@@ -75505,7 +75505,7 @@
       <lengthOfLead>10</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m30244">
       <notes>Retroactive recognition. Quarter peal</notes>
@@ -75520,7 +75520,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Maximus methods with a lead length of 12 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>12</stage>
       <classification
         little="true"
@@ -75528,7 +75528,7 @@
       <lengthOfLead>12</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14251">
       <title>Clink Little Bob Maximus</title>
@@ -75577,7 +75577,7 @@
   </methodSet>
   <methodSet>
     <notes>Differential Little Bob Maximus methods with a lead length of 12 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>12</stage>
       <classification
         differential="true"
@@ -75586,7 +75586,7 @@
       <lengthOfLead>12</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m28281">
       <title>Ruby Differential Little Bob Maximus</title>
@@ -75634,7 +75634,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Maximus methods with a lead length of 14 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>12</stage>
       <classification
         little="true"
@@ -75642,7 +75642,7 @@
       <lengthOfLead>14</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m28999">
       <title>Pipeline Little Bob Maximus</title>
@@ -75658,7 +75658,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Maximus methods with a lead length of 16 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>12</stage>
       <classification
         little="true"
@@ -75666,7 +75666,7 @@
       <lengthOfLead>16</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 8 8 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14254">
       <title>Wakefield Little Bob Maximus</title>
@@ -75718,7 +75718,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Maximus methods with a lead length of 18 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>12</stage>
       <classification
         little="true"
@@ -75726,7 +75726,7 @@
       <lengthOfLead>18</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 8 9 9 8 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m29114">
       <title>Lepton Little Bob Maximus</title>
@@ -75753,7 +75753,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Maximus methods with a lead length of 20 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>12</stage>
       <classification
         little="true"
@@ -75761,7 +75761,7 @@
       <lengthOfLead>20</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 8 9 10 10 9 8 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14257">
       <title>Sixty Little Bob Maximus</title>
@@ -75813,7 +75813,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Place Maximus methods with a lead length of 22 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>12</stage>
       <classification
         little="true"
@@ -75821,7 +75821,7 @@
       <lengthOfLead>22</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 8 9 10 11 11 10 9 8 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14261">
       <title>Penultimus Little Place Maximus</title>
@@ -75846,14 +75846,14 @@
   </methodSet>
   <methodSet>
     <notes>Bob Maximus methods with a lead length of 24 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>12</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>24</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 8 9 10 11 12 12 11 10 9 8 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14237">
       <title>Double Norwich Court Bob Maximus</title>
@@ -76122,7 +76122,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Maximus methods with a lead length of 4 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>12</stage>
       <classification
         little="true"
@@ -76130,7 +76130,7 @@
       <lengthOfLead>4</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14263">
       <title>Parkway Little Bob Maximus</title>
@@ -76146,14 +76146,14 @@
   </methodSet>
   <methodSet>
     <notes>Bob Maximus methods with a lead length of 24 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>12</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>24</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 8 9 10 11 12 12 11 10 9 8 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14262">
       <title>Grandsire Maximus</title>
@@ -76180,7 +76180,7 @@
   </methodSet>
   <methodSet>
     <notes>Asymmetric Little Bob Maximus methods with a lead length of 8 and 3 hunt bells</notes>
-    <properties>
+    
       <stage>12</stage>
       <classification
         little="true"
@@ -76188,7 +76188,7 @@
       <lengthOfLead>8</lengthOfLead>
       <numberOfHunts>3</numberOfHunts>
       <huntbellPath>1 2 3 4 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m28283">
       <title>RedBlock Little Bob Maximus</title>
@@ -76202,7 +76202,7 @@
   </methodSet>
   <methodSet>
     <notes>Asymmetric Little Place Maximus methods with a lead length of 10 and 3 hunt bells</notes>
-    <properties>
+    
       <stage>12</stage>
       <classification
         little="true"
@@ -76210,7 +76210,7 @@
       <lengthOfLead>10</lengthOfLead>
       <numberOfHunts>3</numberOfHunts>
       <huntbellPath>1 2 3 4 5 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14266">
       <title>Klink Little Place Maximus</title>
@@ -76224,7 +76224,7 @@
   </methodSet>
   <methodSet>
     <notes>Differential Little Place Maximus methods with a lead length of 14 and 3 hunt bells</notes>
-    <properties>
+    
       <stage>12</stage>
       <classification
         differential="true"
@@ -76233,7 +76233,7 @@
       <lengthOfLead>14</lengthOfLead>
       <numberOfHunts>3</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m35664">
       <title>Mercury Differential Little Place Maximus</title>
@@ -76245,7 +76245,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Place Maximus methods with a lead length of 8 and 4 hunt bells</notes>
-    <properties>
+    
       <stage>12</stage>
       <classification
         little="true"
@@ -76253,7 +76253,7 @@
       <lengthOfLead>8</lengthOfLead>
       <numberOfHunts>4</numberOfHunts>
       <huntbellPath>1 2 3 4 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m35880">
       <title>Firebird Little Place Maximus</title>
@@ -76278,7 +76278,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Place Maximus methods with a lead length of 10 and 5 hunt bells</notes>
-    <properties>
+    
       <stage>12</stage>
       <classification
         little="true"
@@ -76286,7 +76286,7 @@
       <lengthOfLead>10</lengthOfLead>
       <numberOfHunts>5</numberOfHunts>
       <huntbellPath>1 2 3 4 5 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m29113">
       <title>Magenta Little Place Maximus</title>
@@ -76301,14 +76301,14 @@
   </methodSet>
   <methodSet>
     <notes>Bob Sextuples methods with a lead length of 26 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>13</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>26</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 8 9 10 11 12 13 13 12 11 10 9 8 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14267">
       <title>Plain Bob Sextuples</title>
@@ -76335,14 +76335,14 @@
   </methodSet>
   <methodSet>
     <notes>Bob Sextuples methods with a lead length of 26 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>13</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>26</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 8 9 10 11 12 13 13 12 11 10 9 8 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14268">
       <title>Grandsire Sextuples</title>
@@ -76376,7 +76376,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Fourteen methods with a lead length of 4 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>14</stage>
       <classification
         little="true"
@@ -76384,7 +76384,7 @@
       <lengthOfLead>4</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m29720">
       <title>Bastow Little Bob Fourteen</title>
@@ -76411,7 +76411,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Fourteen methods with a lead length of 8 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>14</stage>
       <classification
         little="true"
@@ -76419,7 +76419,7 @@
       <lengthOfLead>8</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14270">
       <title>Little Bob Fourteen</title>
@@ -76467,7 +76467,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Fourteen methods with a lead length of 12 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>14</stage>
       <classification
         little="true"
@@ -76475,7 +76475,7 @@
       <lengthOfLead>12</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14271">
       <title>Gainsborough Little Bob Fourteen</title>
@@ -76492,14 +76492,14 @@
   </methodSet>
   <methodSet>
     <notes>Bob Fourteen methods with a lead length of 28 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>14</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>28</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 8 9 10 11 12 13 14 14 13 12 11 10 9 8 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14269">
       <title>Plain Bob Fourteen</title>
@@ -76534,14 +76534,14 @@
   </methodSet>
   <methodSet>
     <notes>Bob Fourteen methods with a lead length of 28 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>14</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>28</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 8 9 10 11 12 13 14 14 13 12 11 10 9 8 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14272">
       <title>Grandsire Fourteen</title>
@@ -76567,14 +76567,14 @@
   </methodSet>
   <methodSet>
     <notes>Bob Septuples methods with a lead length of 30 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>15</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>30</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14273">
       <title>Plain Bob Septuples</title>
@@ -76602,14 +76602,14 @@
   </methodSet>
   <methodSet>
     <notes>Bob Septuples methods with a lead length of 30 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>15</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>30</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14274">
       <title>Grandsire Septuples</title>
@@ -76645,7 +76645,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Sixteen methods with a lead length of 4 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>16</stage>
       <classification
         little="true"
@@ -76653,7 +76653,7 @@
       <lengthOfLead>4</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14277">
       <title>Bastow Little Bob Sixteen</title>
@@ -76670,7 +76670,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Sixteen methods with a lead length of 8 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>16</stage>
       <classification
         little="true"
@@ -76678,7 +76678,7 @@
       <lengthOfLead>8</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14278">
       <title>Little Bob Sixteen</title>
@@ -76727,14 +76727,14 @@
   </methodSet>
   <methodSet>
     <notes>Bob Sixteen methods with a lead length of 32 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>16</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>32</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14275">
       <title>Plain Bob Sixteen</title>
@@ -76774,14 +76774,14 @@
   </methodSet>
   <methodSet>
     <notes>Bob Sixteen methods with a lead length of 32 and 2 hunt bells</notes>
-    <properties>
+    
       <stage>16</stage>
       <classification
         plain="true">Bob</classification>
       <lengthOfLead>32</lengthOfLead>
       <numberOfHunts>2</numberOfHunts>
       <huntbellPath>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14279">
       <title>Grandsire Sixteen</title>
@@ -76808,7 +76808,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Eighteen methods with a lead length of 8 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>18</stage>
       <classification
         little="true"
@@ -76816,7 +76816,7 @@
       <lengthOfLead>8</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14280">
       <title>Little Bob Eighteen</title>
@@ -76842,7 +76842,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Twenty methods with a lead length of 8 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>20</stage>
       <classification
         little="true"
@@ -76850,7 +76850,7 @@
       <lengthOfLead>8</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14281">
       <title>Little Bob Twenty</title>
@@ -76876,7 +76876,7 @@
   </methodSet>
   <methodSet>
     <notes>Little Bob Twenty-two methods with a lead length of 8 and 1 hunt bell</notes>
-    <properties>
+    
       <stage>22</stage>
       <classification
         little="true"
@@ -76884,7 +76884,7 @@
       <lengthOfLead>8</lengthOfLead>
       <numberOfHunts>1</numberOfHunts>
       <huntbellPath>1 2 3 4 4 3 2 1</huntbellPath>
-    </properties>
+    
     <method
       id="m14282">
       <title>Little Bob Twenty-two</title>

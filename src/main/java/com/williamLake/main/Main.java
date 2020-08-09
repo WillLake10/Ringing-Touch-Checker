@@ -1,14 +1,18 @@
 package com.williamLake.main;
 
+import com.williamLake.main.data.CccbrMethod;
 import com.williamLake.main.data.Method;
 import com.williamLake.main.data.Touch;
 
-import static com.williamLake.main.methodGenaration.getMethodXml;
+import java.util.List;
+
+import static com.williamLake.main.methodGenaration.parseMethodxml;
 
 public class Main {
 
     public static void main(String[] args) {
-        getMethodXml();
+        List<CccbrMethod> employees = parseMethodxml();
+        System.out.println(employees);
         Method workingMethod = methodGenaration.getMethodInstanceFromUser();
         System.out.println(workingMethod.toString());
         int answer = getWhatUsertWantsToDoWithMethod();

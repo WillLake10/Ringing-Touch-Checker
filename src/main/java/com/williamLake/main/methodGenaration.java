@@ -1,5 +1,6 @@
 package com.williamLake.main;
 
+import com.williamLake.main.data.CccbrMethod;
 import com.williamLake.main.data.Method;
 
 import java.io.File;
@@ -7,15 +8,20 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import java.io.File;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.ParserConfigurationException;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
 import org.w3c.dom.Element;
+import org.xml.sax.SAXException;
 
 import static com.williamLake.main.data.Method.findPlainCourseLength;
 
@@ -200,144 +206,56 @@ public class methodGenaration {
         }
     }
 
-    public static void getMethodXml() {
-        // try {
-        //
-        //     SAXParserFactory factory = SAXParserFactory.newInstance();
-        //     SAXParser saxParser = factory.newSAXParser();
-        //
-        //     DefaultHandler handler = new DefaultHandler() {
-        //
-        //         int depth = 0;
-        //         boolean hTitle = false;
-        //         boolean hName = false;
-        //         boolean hStage = false;
-        //         boolean hNotation = false;
-        //         String title;
-        //         String name;
-        //         int stage;
-        //         String notation;
-        //         int methodCount = 0;
-        //
-        //         public void startElement(String uri, String localName, String qName,
-        //                                  Attributes attributes) throws SAXException {
-        //
-        //             /*printDepth(depth);
-        //             System.out.println("Start Element :" + qName);
-        //             depth++;
-        //
-        //
-        //             if (qName.equalsIgnoreCase("TITLE")) {
-        //                 hTitle = true;
-        //             }
-        //
-        //             if (qName.equalsIgnoreCase("NAME")) {
-        //                 hName = true;
-        //             }
-        //
-        //             if (qName.equalsIgnoreCase("STAGE")) {
-        //                 hStage = true;
-        //             }
-        //
-        //             if (qName.equalsIgnoreCase("NOTATION")) {
-        //                 hNotation = true;
-        //             }
-        //
-        //         }
-        //
-        //         public void endElement(String uri, String localName,
-        //                                String qName) throws SAXException {
-        //             /*depth--;
-        //             printDepth(depth);
-        //         System.out.println("End Element :" + qName);
-        //         }
-        //
-        //         public void characters(char ch[], int start, int length) throws SAXException {
-        //
-        //             if (hTitle) {
-        //                 title = new String(ch, start, length);
-        //                 hTitle = false;
-        //             }
-        //
-        //             if (hName) {
-        //                 name = new String(ch, start, length);
-        //                 hName = false;
-        //                 methodCount = printEntry(name, title, notation, stage, methodCount);
-        //             }
-        //
-        //             if (hStage) {
-        //                 stage = Integer.parseInt(new String(ch, start, length));
-        //                 hStage = false;
-        //             }
-        //
-        //             if (hNotation) {
-        //                 notation = new String(ch, start, length);
-        //                 hNotation = false;
-        //             }
-        //
-        //         }
-        //
-        //     };
-        //
-        //     saxParser.parse("src/main/resources/CCCBR_methods.xml", handler);
-        //
-        // } catch (Exception e) {
-        //     e.printStackTrace();
-        // }
+    public static List<CccbrMethod> parseMethodxml()
+    {
         try {
-            File inputFile = new File("src/main/resources/CCCBR_methods.xml");
-            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-            Document doc = dBuilder.parse(inputFile);
-            doc.getDocumentElement().normalize();
-            System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
-            NodeList nList = doc.getElementsByTagName("methodSet");
-            System.out.println("----------------------------");
+            //Initialize a list of methods
+            List<CccbrMethod> methods = new ArrayList<CccbrMethod>();
+            CccbrMethod method = null;
 
+            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder builder = factory.newDocumentBuilder();
+            Document document = builder.parse(new File("src/main/resources/CCCBR_methods.xml"));
+            document.getDocumentElement().normalize();
+            NodeList nList = document.getElementsByTagName("methodSet");
             for (int temp = 0; temp < nList.getLength(); temp++) {
-                Node nNode = nList.item(temp);
-                System.out.println("\nCurrent Element :" + nNode.getNodeName());
+                Node node = nList.item(temp);
+                if (node.getNodeType() == Node.ELEMENT_NODE) {
+                    Element eElement = (Element) node;
+                    String notes = (eElement.getElementsByTagName("notes").item(0).getTextContent());
+                    String classification = (eElement.getElementsByTagName("classification").item(0).getTextContent());
+                    int stage = (Integer.parseInt(eElement.getElementsByTagName("stage").item(0).getTextContent()));
+                    int lengthOfLead = (Integer.parseInt(eElement.getElementsByTagName("lengthOfLead").item(0).getTextContent()));
+                    int numberOfHunts = (Integer.parseInt(eElement.getElementsByTagName("stage").item(0).getTextContent()));
 
-                if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-                    Element eElement = (Element) nNode;
-                    System.out.println("Student roll no : "
-                            + eElement.getAttribute("rollno"));
-                    System.out.println("First Name : "
-                            + eElement
-                            .getElementsByTagName("firstname")
-                            .item(0)
-                            .getTextContent());
-                    System.out.println("Last Name : "
-                            + eElement
-                            .getElementsByTagName("lastname")
-                            .item(0)
-                            .getTextContent());
-                    System.out.println("Nick Name : "
-                            + eElement
-                            .getElementsByTagName("nickname")
-                            .item(0)
-                            .getTextContent());
-                    System.out.println("Marks : "
-                            + eElement
-                            .getElementsByTagName("marks")
-                            .item(0)
-                            .getTextContent());
+                    NodeList mList = document.getElementsByTagName("methodSet");
+                    for (int temp2 = 0; temp2 < mList.getLength(); temp2++) {
+                        Node mnode = mList.item(temp2);
+                        if (mnode.getNodeType() == Node.ELEMENT_NODE) {
+                            Element mElement = (Element) mnode;
+                            method = new CccbrMethod();
+                            try{method.setStage(stage);}catch (NullPointerException e){method.setStage(4);}
+                            try{method.setClassification(classification);}catch (NullPointerException e){method.setClassification("");}
+                            try{method.setLengthOfLead(lengthOfLead);}catch (NullPointerException e){method.setLengthOfLead(0);}
+                            try{method.setNumberOfHunts(numberOfHunts);}catch (NullPointerException e){method.setNumberOfHunts(1);}
+
+                            try{method.setId(mElement.getAttribute("id"));}catch (NullPointerException e){method.setId("");}
+                            try{method.setTitle(mElement.getElementsByTagName("title").item(0).getTextContent());}catch (NullPointerException e){method.setTitle("");}
+                            try{method.setName(mElement.getElementsByTagName("name").item(0).getTextContent());}catch (NullPointerException e){method.setName("");}
+                            try{method.setNotation(mElement.getElementsByTagName("notation").item(0).getTextContent());}catch (NullPointerException e){method.setNotation("");}
+                            try{method.setSymmetry(mElement.getElementsByTagName("symmetry").item(0).getTextContent());}catch (NullPointerException e){method.setSymmetry("");}
+                            try{method.setLeadHead(mElement.getElementsByTagName("leadHead").item(0).getTextContent());}catch (NullPointerException e){method.setLeadHead("");}
+
+                            methods.add(method);
+                        }
+                    }
                 }
             }
-        } catch (Exception e) {
+            return methods;
+        }catch (Exception e){
             e.printStackTrace();
         }
-    }
-
-    private static int printEntry(String name, String title, String notation, int stage, int methodCount){
-        methodCount++;
-        System.out.println("Title : " + title);
-        System.out.println("Name : " + name);
-        System.out.println("Stage : " + stage);
-        System.out.println("Notation : " + notation);
-        System.out.println(methodCount);
-        System.out.println();
-        return methodCount;
+        return null;
     }
 }
 
