@@ -3,9 +3,12 @@ package com.williamLake.main;
 import com.williamLake.main.data.Method;
 import com.williamLake.main.data.Touch;
 
+import static com.williamLake.main.methodGenaration.getMethodXml;
+
 public class Main {
 
     public static void main(String[] args) {
+        getMethodXml();
         Method workingMethod = methodGenaration.getMethodInstanceFromUser();
         System.out.println(workingMethod.toString());
         int answer = getWhatUsertWantsToDoWithMethod();
